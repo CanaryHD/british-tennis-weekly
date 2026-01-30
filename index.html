@@ -66,159 +66,115 @@
 
 <header>
   <h1>🇬🇧 British Tennis Weekly</h1>
-  <p>Tracking where British players are competing this week</p>
+  <p>Tracking where British players are competing across the tours</p>
 </header>
 
 <main>
   <p><strong>Last updated:</strong> 30 January 2026</p>
 
-  <h2>Men's Tour (ATP / Challenger / ITF)</h2>
+  <!-- TOUR SELECTOR -->
+  <div style="text-align:center; margin:2rem 0;">
+    <button onclick="showTour('atp')">ATP Tour (Men)</button>
+    <button onclick="showTour('wta')">WTA Tour (Women)</button>
+  </div>
 
-  <h3>Next Week</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Player</th>
-        <th>Tour</th>
-        <th>Tournament</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Jack Draper</td>
-        <td>ATP</td>
-        <td>ATP Rotterdam</td>
-        <td>Rotterdam, Netherlands</td>
-      </tr>
-      <tr>
-        <td>Dan Evans</td>
-        <td>ATP</td>
-        <td>ATP Dallas</td>
-        <td>Dallas, USA</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- ATP SECTION -->
+  <section id="atp" style="display:none;">
+    <h2>Men's Tour</h2>
 
-  <h3>Week After</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Player</th>
-        <th>Tour</th>
-        <th>Tournament</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Andy Murray</td>
-        <td>ATP</td>
-        <td>ATP Doha</td>
-        <td>Doha, Qatar</td>
-      </tr>
-      <tr>
-        <td>British Player</td>
-        <td>Challenger</td>
-        <td>Challenger Pune</td>
-        <td>Pune, India</td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="tabs">
+      <button onclick="showATPWeek('atp1')">Next Week</button>
+      <button onclick="showATPWeek('atp2')">Week After</button>
+      <button onclick="showATPWeek('atp3')">Two Weeks After</button>
+    </div>
 
-  <h3>Two Weeks After</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Player</th>
-        <th>Tour</th>
-        <th>Tournament</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>British Player</td>
-        <td>ITF</td>
-        <td>ITF M25</td>
-        <td>Great Britain</td>
-      </tr>
-    </tbody>
-  </table>
+    <div id="atp1" class="week">
+      <h3>Next Week</h3>
+      <table>
+        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
+        <tr><td>Jack Draper</td><td>ATP</td><td>ATP Rotterdam</td><td>Netherlands</td></tr>
+        <tr><td>British Player</td><td>Challenger</td><td>Challenger Tenerife</td><td>Spain</td></tr>
+      </table>
+    </div>
 
-  <h2>Women's Tour (WTA / ITF)</h2>
+    <div id="atp2" class="week" style="display:none;">
+      <h3>Week After</h3>
+      <table>
+        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
+        <tr><td>Andy Murray</td><td>ATP</td><td>ATP Doha</td><td>Qatar</td></tr>
+      </table>
+    </div>
 
-  <h3>Next Week</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Player</th>
-        <th>Tour</th>
-        <th>Tournament</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Katie Boulter</td>
-        <td>WTA</td>
-        <td>WTA Abu Dhabi</td>
-        <td>Abu Dhabi, UAE</td>
-      </tr>
-    </tbody>
-  </table>
+    <div id="atp3" class="week" style="display:none;">
+      <h3>Two Weeks After</h3>
+      <table>
+        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
+        <tr><td>British Player</td><td>ITF</td><td>ITF M25</td><td>UK</td></tr>
+      </table>
+    </div>
+  </section>
 
-  <h3>Week After</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Player</th>
-        <th>Tour</th>
-        <th>Tournament</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Emma Raducanu</td>
-        <td>WTA</td>
-        <td>WTA Doha</td>
-        <td>Doha, Qatar</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- WTA SECTION -->
+  <section id="wta" style="display:none;">
+    <h2>Women's Tour</h2>
 
-  <h3>Two Weeks After</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Player</th>
-        <th>Tour</th>
-        <th>Tournament</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>British Player</td>
-        <td>ITF</td>
-        <td>ITF W25</td>
-        <td>Europe</td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="tabs">
+      <button onclick="showWTAWeek('wta1')">Next Week</button>
+      <button onclick="showWTAWeek('wta2')">Week After</button>
+      <button onclick="showWTAWeek('wta3')">Two Weeks After</button>
+    </div>
+
+    <div id="wta1" class="week">
+      <h3>Next Week</h3>
+      <table>
+        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
+        <tr><td>Katie Boulter</td><td>WTA</td><td>WTA Abu Dhabi</td><td>UAE</td></tr>
+      </table>
+    </div>
+
+    <div id="wta2" class="week" style="display:none;">
+      <h3>Week After</h3>
+      <table>
+        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
+        <tr><td>Emma Raducanu</td><td>WTA</td><td>WTA Doha</td><td>Qatar</td></tr>
+      </table>
+    </div>
+
+    <div id="wta3" class="week" style="display:none;">
+      <h3>Two Weeks After</h3>
+      <table>
+        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
+        <tr><td>British Player</td><td>ITF</td><td>ITF W25</td><td>Europe</td></tr>
+      </table>
+    </div>
+  </section>
 
   <div class="note">
     <strong>About this site:</strong><br />
-    This website is manually curated each week using official ATP, WTA, Challenger and ITF schedules.
-    Information is provided for fans following British players across the tours.
+    Manually curated weekly using ATP, WTA, Challenger and ITF schedules.
   </div>
 </main>
 
 <footer>
-  <p>© 2026 British Tennis Weekly · Independent & fan‑run</p>
-  <p><a href="#">Privacy Policy</a> · <a href="#">Contact</a></p>
+  <p>© 2026 British Tennis Weekly · Independent & fan-run</p>
 </footer>
+
+<script>
+  function showTour(tour) {
+    document.getElementById('atp').style.display = tour === 'atp' ? 'block' : 'none';
+    document.getElementById('wta').style.display = tour === 'wta' ? 'block' : 'none';
+  }
+
+  function showATPWeek(id) {
+    ['atp1','atp2','atp3'].forEach(w => document.getElementById(w).style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function showWTAWeek(id) {
+    ['wta1','wta2','wta3'].forEach(w => document.getElementById(w).style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
 
 </body>
 </html>
