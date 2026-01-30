@@ -296,9 +296,9 @@
   </div>
 
   <!-- TOUR SELECTOR -->
-  <div class="tour-buttons">
-    <button class="btn-atp" onclick="showTour('atp')">🎾 ATP Tour <span style="font-weight:500">(Men)</span></button>
-    <button class="btn-wta" onclick="showTour('wta')">🎾 WTA Tour <span style="font-weight:500">(Women)</span></button>
+  <div class="tour-buttons" style="justify-content:center;">
+    <button class="btn-atp" onclick="selectTour('atp')">🎾 ATP Tour <span style="font-weight:500">(Men)</span></button>
+    <button class="btn-wta" onclick="selectTour('wta')">🎾 WTA Tour <span style="font-weight:500">(Women)</span></button>
   </div>
 
   <!-- ATP SECTION -->
@@ -385,7 +385,20 @@
 </footer>
 
 <script>
-  function showTour(tour) {
+  function selectTour(tour) {
+    const atp = document.getElementById('atp');
+    const wta = document.getElementById('wta');
+
+    if (tour === 'atp') {
+      atp.style.display = 'block';
+      wta.style.display = 'none';
+    }
+
+    if (tour === 'wta') {
+      wta.style.display = 'block';
+      atp.style.display = 'none';
+    }
+  } {
     document.getElementById('atp').style.display = tour === 'atp' ? 'block' : 'none';
     document.getElementById('wta').style.display = tour === 'wta' ? 'block' : 'none';
   }
@@ -403,13 +416,19 @@
   function searchPlayer() {
     const query = document.getElementById('playerSearch').value.toLowerCase();
     const rows = document.querySelectorAll('tbody tr');
-    const atpSection = document.getElementById('atp');
-    const wtaSection = document.getElementById('wta');
+    const atp = document.getElementById('atp');
+    const wta = document.getElementById('wta');
 
     if (query.length > 0) {
-      atpSection.style.display = 'block';
-      wtaSection.style.display = 'block';
+      atp.style.display = 'block';
+      wta.style.display = 'block';
     }
+
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      row.style.display = text.includes(query) ? '' : 'none';
+    });
+  }
 
     rows.forEach(row => {
       const text = row.innerText.toLowerCase();
