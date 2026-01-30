@@ -41,9 +41,38 @@
     .tour-buttons {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin: 2.5rem 0;
+      gap: 2rem;
+      margin: 3rem 0;
       flex-wrap: wrap;
+    }
+
+    .tour-buttons button {
+      padding: 1.6rem 3.2rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .tour-buttons button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+    }
+
+    .btn-atp {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+    }
+
+    .btn-wta {
+      background: linear-gradient(135deg, #9d174d, #ec4899);
+      color: white;
     }
 
     .tour-buttons button {
@@ -154,13 +183,13 @@
   <p><strong>Last updated:</strong> 30 January 2026</p>
 
   <!-- TOUR SELECTOR -->
-  <div style="text-align:center; margin:2rem 0;">
-    <button onclick="showTour('atp')">ATP Tour (Men)</button>
-    <button onclick="showTour('wta')">WTA Tour (Women)</button>
+  <div class="tour-buttons">
+    <button class="btn-atp" onclick="showTour('atp')">🎾 ATP Tour</button>
+    <button class="btn-wta" onclick="showTour('wta')">🎾 WTA Tour</button>
   </div>
 
   <!-- ATP SECTION -->
-  <section id="atp" style="display:none;">
+  <section id="atp" style="display:none; background:#eef2ff; padding:1.5rem; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,0.08);" style="display:none;">
     <h2>Men's Tour</h2>
 
     <div class="tabs">
@@ -196,7 +225,7 @@
   </section>
 
   <!-- WTA SECTION -->
-  <section id="wta" style="display:none;">
+  <section id="wta" style="display:none; background:#fdf2f8; padding:1.5rem; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,0.08);" style="display:none;">
     <h2>Women's Tour</h2>
 
     <div class="tabs">
