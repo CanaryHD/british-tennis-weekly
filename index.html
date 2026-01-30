@@ -71,7 +71,7 @@
     }
 
     .btn-wta {
-      background: linear-gradient(135deg, #9d174d, #ec4899);
+      background: linear-gradient(135deg, #6d28d9, #8b5cf6);
       color: white;
     }
 
@@ -136,7 +136,7 @@
     }
 
     tr.atp { background: #e0ecff; }
-    tr.wta { background: #fde2f0; }
+    tr.wta { background: #ede9fe; }
     tr.challenger { background: #e8f7ef; }
     tr.itf { background: #fff7e6; }
 
@@ -177,7 +177,59 @@
     }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 1.6rem; }
+      header h1 { font-size: 1.5rem; }
+      header p { font-size: 0.95rem; }
+
+      .tour-buttons {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      .tour-buttons button {
+        width: 100%;
+        justify-content: center;
+        font-size: 1.15rem;
+      }
+
+      .tabs {
+        gap: 0.5rem;
+      }
+
+      .tabs button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        padding: 0.6rem;
+      }
+
+      td {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+      }
+
+      td::before {
+        content: attr(data-label) ": ";
+        font-weight: 600;
+        display: inline-block;
+        width: 110px;
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+    }
       .tour-buttons button { width: 100%; }
     }
   </style>
@@ -185,17 +237,21 @@
 <body>
 
 <header>
-  <h1>🇬🇧 British Tennis Weekly</h1>
+  <h1>British Tennis Weekly</h1>
   <p>Tracking where British players are competing across the tours</p>
 </header>
 
 <main>
   <p><strong>Last updated:</strong> 30 January 2026</p>
 
+  <div style="max-width:400px;margin:2rem auto;">
+    <input id="playerSearch" type="text" placeholder="Search player (e.g. Draper, Raducanu)" style="width:100%;padding:0.8rem 1rem;border-radius:12px;border:1px solid #d1d5db;font-size:1rem;" onkeyup="searchPlayer()" />
+  </div>
+
   <!-- TOUR SELECTOR -->
   <div class="tour-buttons">
-    <button class="btn-atp" onclick="showTour('atp')">🎾 ATP Tour</button>
-    <button class="btn-wta" onclick="showTour('wta')">🎾 WTA Tour</button>
+    <button class="btn-atp" onclick="showTour('atp')">🎾 ATP Tour <span style="font-weight:500">(Men)</span></button>
+    <button class="btn-wta" onclick="showTour('wta')">🎾 WTA Tour <span style="font-weight:500">(Women)</span></button>
   </div>
 
   <!-- ATP SECTION -->
@@ -273,7 +329,8 @@
     <strong>Legend:</strong><br />
     🏆 ATP &nbsp; | &nbsp; 👑 WTA &nbsp; | &nbsp; 🎯 Challenger &nbsp; | &nbsp; 🌱 ITF
     <br /><br />
-    Follow for updates on
+    Follow for updates on X/Twitter: <a href="https://x.com/BritishTennisUp" target="_blank"><strong>@BritishTennisUp</strong></a>
+  </div>
 </main>
 
 <footer>
@@ -294,6 +351,15 @@
   function showWTAWeek(id) {
     ['wta1','wta2','wta3'].forEach(w => document.getElementById(w).style.display = 'none');
     document.getElementById(id).style.display = 'block';
+  }
+
+  function searchPlayer() {
+    const query = document.getElementById('playerSearch').value.toLowerCase();
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      row.style.display = text.includes(query) ? '' : 'none';
+    });
   }
 </script>
 
