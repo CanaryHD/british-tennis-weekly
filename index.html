@@ -47,15 +47,18 @@
     }
 
     .tour-buttons button {
-      padding: 1.6rem 3.2rem;
-      font-size: 1.25rem;
+      padding: 1.4rem 2.6rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      border-radius: 20px;
+      border-radius: 18px;
       border: none;
       cursor: pointer;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.7rem;
+      width: auto;
+      max-width: 320px;
+      justify-content: center;
       box-shadow: 0 10px 28px rgba(0,0,0,0.18);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
@@ -127,6 +130,8 @@
     }
 
     table {
+      margin-bottom: 1.2rem;
+      border: 1px solid #e5e7eb;
       width: 100%;
       border-collapse: collapse;
       background: white;
@@ -178,6 +183,48 @@
 
     @media (max-width: 600px) {
       header h1 { font-size: 1.5rem; }
+      header p { font-size: 0.95rem; }
+
+      .tour-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .tour-buttons button {
+        width: 90%;
+        max-width: 320px;
+        font-size: 1.1rem;
+      }
+
+      .tabs {
+        gap: 0.4rem;
+      }
+
+      .tabs button {
+        font-size: 0.85rem;
+        padding: 0.45rem 0.9rem;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead { display: none; }
+
+      tr {
+        margin-bottom: 0.8rem;
+        border-radius: 12px;
+        padding: 0.6rem;
+      }
+
+      td {
+        padding: 0.35rem 0.5rem;
+        font-size: 0.88rem;
+      }
+
+      footer { font-size: 0.8rem; }
+    }
       header p { font-size: 0.95rem; }
 
       .tour-buttons {
@@ -356,10 +403,19 @@
   function searchPlayer() {
     const query = document.getElementById('playerSearch').value.toLowerCase();
     const rows = document.querySelectorAll('tbody tr');
+    const atpSection = document.getElementById('atp');
+    const wtaSection = document.getElementById('wta');
+
+    if (query.length > 0) {
+      atpSection.style.display = 'block';
+      wtaSection.style.display = 'block';
+    }
+
     rows.forEach(row => {
       const text = row.innerText.toLowerCase();
       row.style.display = text.includes(query) ? '' : 'none';
     });
+  });
   }
 </script>
 
