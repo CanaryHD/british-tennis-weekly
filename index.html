@@ -135,6 +135,16 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
 
+    tr.atp { background: #e0ecff; }
+    tr.wta { background: #fde2f0; }
+    tr.challenger { background: #e8f7ef; }
+    tr.itf { background: #fff7e6; }
+
+    tr.atp td:first-child::before { content: "🏆 "; }
+    tr.wta td:first-child::before { content: "👑 "; }
+    tr.challenger td:first-child::before { content: "🎯 "; }
+    tr.itf td:first-child::before { content: "🌱 "; }
+
     th, td {
       padding: 0.9rem;
       text-align: left;
@@ -202,8 +212,8 @@
       <h3>Next Week</h3>
       <table>
         <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr><td>Jack Draper</td><td>ATP</td><td>ATP Rotterdam</td><td>Netherlands</td></tr>
-        <tr><td>British Player</td><td>Challenger</td><td>Challenger Tenerife</td><td>Spain</td></tr>
+        <tr class="atp"><td>Jack Draper</td><td>ATP</td><td>ATP Rotterdam</td><td>Netherlands</td></tr>
+        <tr class="challenger"><td>British Player</td><td>Challenger</td><td>Challenger Tenerife</td><td>Spain</td></tr>
       </table>
     </div>
 
@@ -211,7 +221,7 @@
       <h3>Week After</h3>
       <table>
         <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr><td>Andy Murray</td><td>ATP</td><td>ATP Doha</td><td>Qatar</td></tr>
+        <tr class="atp"><td>Andy Murray</td><td>ATP</td><td>ATP Doha</td><td>Qatar</td></tr>
       </table>
     </div>
 
@@ -219,7 +229,7 @@
       <h3>Two Weeks After</h3>
       <table>
         <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr><td>British Player</td><td>ITF</td><td>ITF M25</td><td>UK</td></tr>
+        <tr class="itf"><td>British Player</td><td>ITF</td><td>ITF M25</td><td>UK</td></tr>
       </table>
     </div>
   </section>
@@ -238,7 +248,7 @@
       <h3>Next Week</h3>
       <table>
         <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr><td>Katie Boulter</td><td>WTA</td><td>WTA Abu Dhabi</td><td>UAE</td></tr>
+        <tr class="wta"><td>Katie Boulter</td><td>WTA</td><td>WTA Abu Dhabi</td><td>UAE</td></tr>
       </table>
     </div>
 
@@ -246,7 +256,7 @@
       <h3>Week After</h3>
       <table>
         <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr><td>Emma Raducanu</td><td>WTA</td><td>WTA Doha</td><td>Qatar</td></tr>
+        <tr class="wta"><td>Emma Raducanu</td><td>WTA</td><td>WTA Doha</td><td>Qatar</td></tr>
       </table>
     </div>
 
@@ -260,9 +270,10 @@
   </section>
 
   <div class="note">
-    <strong>About this site:</strong><br />
-    Manually curated weekly using ATP, WTA, Challenger and ITF schedules.
-  </div>
+    <strong>Legend:</strong><br />
+    🏆 ATP &nbsp; | &nbsp; 👑 WTA &nbsp; | &nbsp; 🎯 Challenger &nbsp; | &nbsp; 🌱 ITF
+    <br /><br />
+    Follow for updates on
 </main>
 
 <footer>
