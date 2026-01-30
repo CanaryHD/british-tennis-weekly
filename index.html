@@ -39,12 +39,20 @@
     }
 
     .tour-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 3rem 0;
-      flex-wrap: wrap;
-    }
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.tour-btn {
+  padding: 14px 22px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
 
     .tour-buttons button {
       padding: 1.4rem 2.6rem;
@@ -306,7 +314,7 @@
     <h2>Men's Tour</h2>
 
     <div class="tabs">
-      <button onclick="showATPWeek('atp1')">Next Week</button>
+      <button class="tour-btn atp-btn" onclick="selectTour('atp')">🎾 ATP Tour (Men)</button>
       <button onclick="showATPWeek('atp2')">Week After</button>
       <button onclick="showATPWeek('atp3')">Two Weeks After</button>
     </div>
@@ -342,7 +350,7 @@
     <h2>Women's Tour</h2>
 
     <div class="tabs">
-      <button onclick="showWTAWeek('wta1')">Next Week</button>
+      <button class="tour-btn wta-btn" onclick="selectTour('wta')">🎾 WTA Tour (Women)</button>
       <button onclick="showWTAWeek('wta2')">Week After</button>
       <button onclick="showWTAWeek('wta3')">Two Weeks After</button>
     </div>
@@ -386,13 +394,18 @@
 
 <script>
   function selectTour(tour) {
-    const atp = document.getElementById('atp');
-    const wta = document.getElementById('wta');
+  const atpSection = document.getElementById('atp-section');
+  const wtaSection = document.getElementById('wta-section');
 
-    if (tour === 'atp') {
-      atp.style.display = 'block';
-      wta.style.display = 'none';
-    }
+  if (tour === 'atp') {
+    atpSection.style.display = 'block';
+    wtaSection.style.display = 'none';
+  } else if (tour === 'wta') {
+    wtaSection.style.display = 'block';
+    atpSection.style.display = 'none';
+  }
+}
+
 
     if (tour === 'wta') {
       wta.style.display = 'block';
