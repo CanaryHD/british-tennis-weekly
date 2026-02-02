@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>British Tennis Weekly</title>
+  <title>British Tennis Players</title>
+
   <style>
     body {
       margin: 0;
@@ -23,13 +24,11 @@
     header h1 {
       margin: 0;
       font-size: 2rem;
-      letter-spacing: 0.5px;
     }
 
     header p {
       margin-top: 0.5rem;
       opacity: 0.9;
-      font-size: 1rem;
     }
 
     main {
@@ -39,107 +38,55 @@
     }
 
     .tour-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin: 24px 0;
-}
-
-.tour-btn {
-  padding: 14px 22px;
-  font-size: 16px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-}
-
-
-    .tour-buttons button {
-      padding: 1.4rem 2.6rem;
-      font-size: 1.15rem;
-      font-weight: 700;
-      border-radius: 18px;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.7rem;
-      width: auto;
-      max-width: 320px;
+      display: flex;
       justify-content: center;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.18);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+      flex-wrap: wrap;
     }
 
-    .tour-buttons button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+    .tour-buttons button {
+      padding: 1.1rem 2.2rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
     }
 
     .btn-atp {
       background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
     }
 
     .btn-wta {
-      background: linear-gradient(135deg, #6d28d9, #8b5cf6);
-      color: white;
-    }
-
-    .tour-buttons button {
-      padding: 1.2rem 2.5rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 14px;
-      border: none;
-      cursor: pointer;
-      background: white;
-      color: #1e3a8a;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .tour-buttons button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+      background: linear-gradient(135deg, #6b21a8, #a855f7);
     }
 
     h2 {
-      margin-top: 1rem;
       text-align: center;
-      font-size: 1.8rem;
+      margin-top: 0.5rem;
     }
 
     .tabs {
       display: flex;
       justify-content: center;
-      gap: 0.8rem;
-      margin: 2rem 0 1.5rem;
+      gap: 0.6rem;
+      margin: 1.8rem 0 1.2rem;
       flex-wrap: wrap;
     }
 
     .tabs button {
-      padding: 0.6rem 1.4rem;
+      padding: 0.5rem 1.2rem;
       border-radius: 999px;
       border: none;
-      cursor: pointer;
       background: #e5e7eb;
+      cursor: pointer;
       font-weight: 500;
-      transition: background 0.15s ease;
-    }
-
-    .tabs button:hover {
-      background: #d1d5db;
-    }
-
-    .week h3 {
-      margin-bottom: 0.8rem;
-      text-align: center;
     }
 
     table {
-      margin-bottom: 1.2rem;
-      border: 1px solid #e5e7eb;
       width: 100%;
       border-collapse: collapse;
       background: white;
@@ -148,16 +95,6 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
 
-    tr.atp { background: #e0ecff; }
-    tr.wta { background: #ede9fe; }
-    tr.challenger { background: #e8f7ef; }
-    tr.itf { background: #fff7e6; }
-
-    tr.atp td:first-child::before { content: "🏆 "; }
-    tr.wta td:first-child::before { content: "👑 "; }
-    tr.challenger td:first-child::before { content: "🎯 "; }
-    tr.itf td:first-child::before { content: "🌱 "; }
-
     th, td {
       padding: 0.9rem;
       text-align: left;
@@ -165,253 +102,135 @@
 
     th {
       background: #f1f5f9;
-      font-weight: 600;
     }
 
     tr:not(:last-child) td {
       border-bottom: 1px solid #e5e7eb;
     }
 
+    .week h3 {
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+
     .note {
-      margin: 2.5rem auto;
+      margin: 3rem auto 2rem;
       padding: 1.2rem;
       background: #eef2ff;
       border-radius: 12px;
-      font-size: 0.95rem;
       text-align: center;
+      font-size: 0.95rem;
     }
 
     footer {
-      margin-top: 4rem;
-      padding: 1.5rem;
       text-align: center;
       font-size: 0.85rem;
+      margin-bottom: 1.5rem;
       color: #555;
     }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 1.5rem; }
-      header p { font-size: 0.95rem; }
-
-      .tour-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .tour-buttons button {
-        width: 90%;
-        max-width: 320px;
-        font-size: 1.1rem;
-      }
-
-      .tabs {
-        gap: 0.4rem;
-      }
-
-      .tabs button {
-        font-size: 0.85rem;
-        padding: 0.45rem 0.9rem;
-      }
-
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-
-      thead { display: none; }
-
-      tr {
-        margin-bottom: 0.8rem;
-        border-radius: 12px;
-        padding: 0.6rem;
-      }
-
-      td {
-        padding: 0.35rem 0.5rem;
-        font-size: 0.88rem;
-      }
-
-      footer { font-size: 0.8rem; }
-    }
-      header p { font-size: 0.95rem; }
-
-      .tour-buttons {
-        flex-direction: column;
-        gap: 1.2rem;
-      }
-
       .tour-buttons button {
         width: 100%;
-        justify-content: center;
-        font-size: 1.15rem;
       }
-
-      .tabs {
-        gap: 0.5rem;
-      }
-
-      .tabs button {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-      }
-
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-
-      thead {
-        display: none;
-      }
-
-      tr {
-        margin-bottom: 1rem;
-        border-radius: 12px;
-        padding: 0.6rem;
-      }
-
-      td {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.9rem;
-      }
-
-      td::before {
-        content: attr(data-label) ": ";
-        font-weight: 600;
-        display: inline-block;
-        width: 110px;
-      }
-
-      footer {
-        font-size: 0.8rem;
-      }
-    }
-      .tour-buttons button { width: 100%; }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>British Tennis Weekly</h1>
+  <h1>British Tennis Players</h1>
   <p>Tracking where British players are competing across the tours</p>
 </header>
 
 <main>
-  <p><strong>Last updated:</strong> 30 January 2026</p>
 
-  <div style="max-width:400px;margin:2rem auto;">
-    <input id="playerSearch" type="text" placeholder="Search player (e.g. Draper, Raducanu)" style="width:100%;padding:0.8rem 1rem;border-radius:12px;border:1px solid #d1d5db;font-size:1rem;" onkeyup="searchPlayer()" />
+  <p><strong>Last updated:</strong> <span id="updated"></span></p>
+
+  <div class="tour-buttons">
+    <button class="btn-atp" onclick="showTour('atp')">🎾 ATP Tour (Men)</button>
+    <button class="btn-wta" onclick="showTour('wta')">🎾 WTA Tour (Women)</button>
   </div>
 
-  <!-- TOUR SELECTOR -->
-  <div class="tour-buttons" style="justify-content:center;">
-    <button class="btn-atp" onclick="selectTour('atp')">🎾 ATP Tour <span style="font-weight:500">(Men)</span></button>
-    <button class="btn-wta" onclick="selectTour('wta')">🎾 WTA Tour <span style="font-weight:500">(Women)</span></button>
-  </div>
-
-  <!-- ATP SECTION -->
-  <section id="atp" style="display:none; background:#eef2ff; padding:1.5rem; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,0.08);" style="display:none;">
+  <!-- ATP -->
+  <section id="atp" style="display:none;">
     <h2>Men's Tour</h2>
 
     <div class="tabs">
-      <button class="tour-btn atp-btn" onclick="selectTour('atp')">🎾 ATP Tour (Men)</button>
-      <button onclick="showATPWeek('atp2')">Week After</button>
-      <button onclick="showATPWeek('atp3')">Two Weeks After</button>
+      <button onclick="showATPWeek('atp1')" id="atpBtn1"></button>
+      <button onclick="showATPWeek('atp2')" id="atpBtn2"></button>
+      <button onclick="showATPWeek('atp3')" id="atpBtn3"></button>
     </div>
 
     <div id="atp1" class="week">
-      <h3>Next Week</h3>
+      <h3 id="atpDate1"></h3>
       <table>
         <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr class="atp"><td>Jack Draper</td><td>ATP</td><td>ATP Rotterdam</td><td>Netherlands</td></tr>
-        <tr class="challenger"><td>British Player</td><td>Challenger</td><td>Challenger Tenerife</td><td>Spain</td></tr>
+        <tr><td><strong>Jack Draper</strong></td><td>ATP</td><td>ATP Rotterdam</td><td>🇳🇱 Netherlands</td></tr>
       </table>
     </div>
 
     <div id="atp2" class="week" style="display:none;">
-      <h3>Week After</h3>
+      <h3 id="atpDate2"></h3>
       <table>
-        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr class="atp"><td>Andy Murray</td><td>ATP</td><td>ATP Doha</td><td>Qatar</td></tr>
+        <tr><td><strong>Andy Murray</strong></td><td>ATP</td><td>ATP Doha</td><td>🇶🇦 Qatar</td></tr>
       </table>
     </div>
 
     <div id="atp3" class="week" style="display:none;">
-      <h3>Two Weeks After</h3>
+      <h3 id="atpDate3"></h3>
       <table>
-        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr class="itf"><td>British Player</td><td>ITF</td><td>ITF M25</td><td>UK</td></tr>
+        <tr><td><strong>British Player</strong></td><td>ITF</td><td>ITF M25</td><td>🇬🇧 United Kingdom</td></tr>
       </table>
     </div>
   </section>
 
-  <!-- WTA SECTION -->
-  <section id="wta" style="display:none; background:#fdf2f8; padding:1.5rem; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,0.08);" style="display:none;">
+  <!-- WTA -->
+  <section id="wta" style="display:none;">
     <h2>Women's Tour</h2>
 
     <div class="tabs">
-      <button class="tour-btn wta-btn" onclick="selectTour('wta')">🎾 WTA Tour (Women)</button>
-      <button onclick="showWTAWeek('wta2')">Week After</button>
-      <button onclick="showWTAWeek('wta3')">Two Weeks After</button>
+      <button onclick="showWTAWeek('wta1')" id="wtaBtn1"></button>
+      <button onclick="showWTAWeek('wta2')" id="wtaBtn2"></button>
+      <button onclick="showWTAWeek('wta3')" id="wtaBtn3"></button>
     </div>
 
     <div id="wta1" class="week">
-      <h3>Next Week</h3>
+      <h3 id="wtaDate1"></h3>
       <table>
-        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr class="wta"><td>Katie Boulter</td><td>WTA</td><td>WTA Abu Dhabi</td><td>UAE</td></tr>
+        <tr><td><strong>Katie Boulter</strong></td><td>WTA</td><td>WTA Abu Dhabi</td><td>🇦🇪 UAE</td></tr>
       </table>
     </div>
 
     <div id="wta2" class="week" style="display:none;">
-      <h3>Week After</h3>
+      <h3 id="wtaDate2"></h3>
       <table>
-        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr class="wta"><td>Emma Raducanu</td><td>WTA</td><td>WTA Doha</td><td>Qatar</td></tr>
+        <tr><td><strong>Emma Raducanu</strong></td><td>WTA</td><td>WTA Doha</td><td>🇶🇦 Qatar</td></tr>
       </table>
     </div>
 
     <div id="wta3" class="week" style="display:none;">
-      <h3>Two Weeks After</h3>
+      <h3 id="wtaDate3"></h3>
       <table>
-        <tr><th>Player</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-        <tr><td>British Player</td><td>ITF</td><td>ITF W25</td><td>Europe</td></tr>
+        <tr><td><strong>British Player</strong></td><td>ITF</td><td>ITF W25</td><td>🇪🇺 Europe</td></tr>
       </table>
     </div>
   </section>
 
   <div class="note">
-    <strong>Legend:</strong><br />
-    🏆 ATP &nbsp; | &nbsp; 👑 WTA &nbsp; | &nbsp; 🎯 Challenger &nbsp; | &nbsp; 🌱 ITF
-    <br /><br />
-    Follow for updates on X/Twitter: <a href="https://x.com/BritishTennisUp" target="_blank"><strong>@BritishTennisUp</strong></a>
+    Follow for updates on British players worldwide<br />
+    <strong>Follow <a href="https://x.com/BritishTennisUp" target="_blank">@BritishTennisUp</a> on X</strong>
   </div>
+
 </main>
 
 <footer>
-  <p>© 2026 British Tennis Weekly · Independent & fan-run</p>
+  © 2026 British Tennis Players · Independent & fan-run
 </footer>
 
 <script>
-  function selectTour(tour) {
-  const atpSection = document.getElementById('atp-section');
-  const wtaSection = document.getElementById('wta-section');
-
-  if (tour === 'atp') {
-    atpSection.style.display = 'block';
-    wtaSection.style.display = 'none';
-  } else if (tour === 'wta') {
-    wtaSection.style.display = 'block';
-    atpSection.style.display = 'none';
-  }
-}
-
-
-    if (tour === 'wta') {
-      wta.style.display = 'block';
-      atp.style.display = 'none';
-    }
-  } {
+  function showTour(tour) {
     document.getElementById('atp').style.display = tour === 'atp' ? 'block' : 'none';
     document.getElementById('wta').style.display = tour === 'wta' ? 'block' : 'none';
   }
@@ -426,29 +245,24 @@
     document.getElementById(id).style.display = 'block';
   }
 
-  function searchPlayer() {
-    const query = document.getElementById('playerSearch').value.toLowerCase();
-    const rows = document.querySelectorAll('tbody tr');
-    const atp = document.getElementById('atp');
-    const wta = document.getElementById('wta');
-
-    if (query.length > 0) {
-      atp.style.display = 'block';
-      wta.style.display = 'block';
-    }
-
-    rows.forEach(row => {
-      const text = row.innerText.toLowerCase();
-      row.style.display = text.includes(query) ? '' : 'none';
-    });
+  function getMonday(offsetWeeks = 0) {
+    const d = new Date();
+    const day = d.getDay();
+    const diff = d.getDate() - day + (day === 0 ? -6 : 1) + offsetWeeks * 7;
+    const monday = new Date(d.setDate(diff));
+    return monday.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
   }
 
-    rows.forEach(row => {
-      const text = row.innerText.toLowerCase();
-      row.style.display = text.includes(query) ? '' : 'none';
+  document.getElementById('updated').innerText = new Date().toLocaleDateString('en-GB');
+
+  const dates = [0,1,2].map(getMonday);
+
+  ['atp','wta'].forEach(tour => {
+    dates.forEach((d,i) => {
+      document.getElementById(`${tour}Btn${i+1}`).innerText = d;
+      document.getElementById(`${tour}Date${i+1}`).innerText = `Week commencing ${d}`;
     });
   });
-  }
 </script>
 
 </body>
