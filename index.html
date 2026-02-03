@@ -278,19 +278,14 @@ function showWTAWeek(id) {
   document.getElementById(id).style.display = 'block';
 }
 
-function getMonday(offsetWeeks = 0) {
-  const d = new Date();
-  const day = d.getDay();
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1) + offsetWeeks * 7;
-  const monday = new Date(d.setDate(diff));
-  return monday.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-}
+// Fixed: set static Mondays for Feb 2026
+const staticMondays = ['2 Feb', '9 Feb', '16 Feb'];
 
 document.getElementById('updated').innerText = new Date().toLocaleDateString('en-GB');
 
-const dates = [0,1,2].map(getMonday);
+// Apply static dates to buttons and week headings
 ['atp','wta'].forEach(tour => {
-  dates.forEach((d,i) => {
+  staticMondays.forEach((d,i) => {
     document.getElementById(`${tour}Btn${i+1}`).innerText = d;
     document.getElementById(`${tour}Date${i+1}`).innerText = `Week commencing ${d}`;
   });
