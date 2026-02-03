@@ -32,6 +32,7 @@
   @media (max-width: 600px) { .tour-buttons button { width:100%; } }
 </style>
 </head>
+
 <body>
 <header>
   <h1>British Tennis Players</h1>
@@ -85,8 +86,38 @@
     </table>
   </div>
 
-  <div id="atp2" class="week" style="display:none;"><h3 id="atpDate2"></h3></div>
-  <div id="atp3" class="week" style="display:none;"><h3 id="atpDate3"></h3></div>
+  <!-- Week 2 (9th Feb) -->
+  <div id="atp2" class="week" style="display:none">
+    <h3 id="atpDate2"></h3>
+    <div class="section-title">ATP</div>
+    <table>
+      <tr><th>Tournament</th><th>Surface</th><th>Players</th></tr>
+      <tr class="atp"><td>Rotterdam 500</td><td>Indoor Hard</td><td>Draper, Norrie (Harris, Choinski)</td></tr>
+      <tr class="atp"><td>Dallas 500</td><td>Indoor Hard</td><td>(Pinnington-Jones)</td></tr>
+    </table>
+
+    <div class="section-title">Challengers</div>
+    <table>
+      <tr><th>Tournament</th><th>Surface</th><th>Players</th></tr>
+      <tr class="atp"><td>Tenerife 75</td><td>Hard</td><td>Loffhagen, Peniston, Samuel</td></tr>
+      <tr class="atp"><td>Chennai 50</td><td>Hard</td><td>Clarke, Crawford, Gray, Gill</td></tr>
+    </table>
+
+    <div class="section-title">ITF / Futures</div>
+    <table>
+      <tr><th>Tournament</th><th>Surface</th><th>Players</th></tr>
+      <tr class="itf"><td>Portugal M25</td><td>Hard</td><td>Broady, Basing, Maxted (Murgett, Brady, Leather, Hodkin)</td></tr>
+      <tr class="itf"><td>Tunisia M25</td><td>Hard</td><td>(Lumsden, Dhokia, Allen)</td></tr>
+      <tr class="itf"><td>Germany M15</td><td>Indoor Hard</td><td>Stewart, Jubb, Story (Hurrion, Matusevich)</td></tr>
+      <tr class="itf"><td>Spain M15</td><td>Clay</td><td>(Gschwendtner, Carroll)</td></tr>
+      <tr class="itf"><td>Tunisia M15</td><td>Hard</td><td>(Brown)</td></tr>
+      <tr class="itf"><td>USA M15</td><td>Clay</td><td>(Martin)</td></tr>
+      <tr class="itf"><td>Egypt M15</td><td>Hard</td><td>(Habib, Holder)</td></tr>
+    </table>
+  </div>
+
+  <!-- Week 3 can remain empty -->
+  <div id="atp3" class="week" style="display:none"><h3 id="atpDate3"></h3></div>
 </section>
 
 <!-- WOMEN -->
@@ -98,24 +129,9 @@
     <button onclick="showWTAWeek('wta3')" id="wtaBtn3"></button>
   </div>
 
+  <!-- Week 1 (2nd Feb, now with previous 9th Feb data) -->
   <div id="wta1" class="week">
     <h3 id="wtaDate1"></h3>
-    <div class="section-title">WTA</div>
-    <table>
-      <tr><th>Player</th><th>Tournament</th><th>Location</th><th>Entry</th></tr>
-      <tr class="wta"><td>Katie Boulter</td><td>WTA Abu Dhabi</td><td>UAE</td><td>Main Draw</td></tr>
-    </table>
-    <div class="section-title">ITF</div>
-    <table>
-      <tr><th>Player</th><th>Tournament</th><th>Location</th><th>Entry</th></tr>
-      <tr class="itf"><td>British Player</td><td>ITF W25</td><td>Europe</td><td>Qualifying</td></tr>
-    </table>
-  </div>
-
-  <!-- Week 2: 9th Feb WTA -->
-  <div id="wta2" class="week" style="display:none;">
-    <h3 id="wtaDate2"></h3>
-
     <div class="section-title">WTA</div>
     <table>
       <tr><th>Tournament</th><th>Surface</th><th>Players</th></tr>
@@ -124,8 +140,7 @@
       <tr class="wta"><td>Ostrava 250</td><td>Indoor Hard</td><td>Jones, Boulter</td></tr>
       <tr class="wta"><td>Mumbai 125</td><td>Hard</td><td>Xu</td></tr>
     </table>
-
-    <div class="section-title">Futures / ITF</div>
+    <div class="section-title">ITF / Futures</div>
     <table>
       <tr><th>Tournament</th><th>Surface</th><th>Players</th></tr>
       <tr class="itf"><td>Portugal W50</td><td>Hard</td><td>Stojslejevic</td></tr>
@@ -135,7 +150,29 @@
     </table>
   </div>
 
-  <div id="wta3" class="week" style="display:none;"><h3 id="wtaDate3"></h3></div>
+  <!-- Week 2 (9th Feb new data) -->
+  <div id="wta2" class="week" style="display:none">
+    <h3 id="wtaDate2"></h3>
+    <div class="section-title">WTA</div>
+    <table>
+      <tr><th>Tournament</th><th>Surface</th><th>Players</th></tr>
+      <tr class="wta"><td>Doha 1000</td><td>Hard</td><td>Raducanu (Kartal)</td></tr>
+      <tr class="wta"><td>Oeiras 125</td><td>Indoor Hard</td><td>Boulter</td></tr>
+    </table>
+    <div class="section-title">ITF / Futures</div>
+    <table>
+      <tr><th>Tournament</th><th>Surface</th><th>Players</th></tr>
+      <tr class="itf"><td>India W75</td><td>Hard</td><td>Dart, Xu</td></tr>
+      <tr class="itf"><td>Czech Republic W75</td><td>Indoor Hard</td><td>(Stojslejevic, Allen, Rajecki)</td></tr>
+      <tr class="itf"><td>France W50</td><td>Indoor Hard</td><td>Klugman (Dunne, Bains)</td></tr>
+      <tr class="itf"><td>Spain W15</td><td>Hard</td><td>Gillan, Adeshina (Wainwright, Williamson)</td></tr>
+      <tr class="itf"><td>Tunisia W15</td><td>Hard</td><td>Korpanac Davies (Kozak, Hays)</td></tr>
+      <tr class="itf"><td>Egypt W15</td><td>Hard</td><td>(Peet)</td></tr>
+    </table>
+  </div>
+
+  <!-- Week 3 can remain empty -->
+  <div id="wta3" class="week" style="display:none"><h3 id="wtaDate3"></h3></div>
 </section>
 
 <div class="note">
