@@ -1,230 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>British Tennis Players</title>
+<meta charset="UTF-8">
+<title>British Tennis Players</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #f4f6f8;
-      color: #222;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
 
-    header {
-      background: linear-gradient(135deg, #0a2540, #1e3a8a);
-      color: white;
-      padding: 1.8rem 1rem;
-      text-align: center;
-    }
+header {
+  background: linear-gradient(135deg, #0a2540, #1e3a8a);
+  color: white;
+  padding: 1.8rem 1rem;
+  text-align: center;
+}
 
-    main {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-    .tour-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 2.5rem 0;
-      flex-wrap: wrap;
-    }
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+}
 
-    .tour-buttons button {
-      padding: 1.1rem 2.2rem;
-      font-size: 1.05rem;
-      font-weight: 700;
-      border-radius: 14px;
-      border: none;
-      cursor: pointer;
-      color: white;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
-    }
+.tabs button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg,#e0e7ff,#eef2ff);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-    .btn-atp { background: linear-gradient(135deg,#1e3a8a,#2563eb); }
-    .btn-wta { background: linear-gradient(135deg,#6b21a8,#a855f7); }
+.tabs button:hover {
+  transform: translateY(-1px);
+}
 
-    h2, h3 { text-align: center; }
+.section {
+  margin-top: 1.8rem;
+}
 
-    .tabs {
-      display: flex;
-      justify-content: center;
-      gap: 0.8rem;
-      margin: 1.5rem 0;
-    }
+.section h4 {
+  margin-bottom: 0.4rem;
+  color: #1e3a8a;
+}
 
-    .tabs button {
-      padding: 0.6rem 1.4rem;
-      border-radius: 999px;
-      border: none;
-      background: #e5e7eb;
-      font-weight: 600;
-      cursor: pointer;
-    }
+.week {
+  display: none;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 2rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
+.week.active {
+  display: block;
+}
 
-    th, td {
-      padding: 0.9rem;
-      text-align: left;
-    }
+.entry {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
 
-    th {
-      background: #f1f5f9;
-      font-weight: 700;
-    }
-
-    tr:not(:last-child) td {
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    tr.atp { background: #e0ecff; }
-    tr.challenger { background: #e8f7ef; }
-    tr.itf { background: #fff7e6; }
-    tr.wta { background: #ede9fe; }
-
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      margin-bottom: 1.5rem;
-      color: #555;
-    }
-  </style>
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  margin: 2rem 0;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>British Tennis Players</h1>
-  <p>Tracking where British players are competing worldwide</p>
+  <p>Tracking British players across the tours</p>
 </header>
 
 <main>
 
-<p><strong>Last updated:</strong> <span id="updated"></span></p>
+<h2>Men</h2>
 
-<div class="tour-buttons">
-  <button class="btn-atp" onclick="showTour('men')">🎾 Men's Tour</button>
-  <button class="btn-wta" onclick="showTour('women')">🎾 Women's Tour</button>
+<div class="tabs">
+  <button onclick="showWeek('men1')">9 Feb</button>
+  <button onclick="showWeek('men2')">16 Feb</button>
+  <button onclick="showWeek('men3')">23 Feb</button>
 </div>
 
-<!-- MEN -->
-<section id="men" style="display:none;">
-  <h2>Men</h2>
+<!-- MEN WEEK 1 -->
+<div id="men1" class="week active">
+  <p>Entries already added for this week.</p>
+</div>
 
-  <div class="tabs">
-    <button id="menBtn1" onclick="showWeek('men1')"></button>
-    <button id="menBtn2" onclick="showWeek('men2')"></button>
-    <button id="menBtn3" onclick="showWeek('men3')"></button>
-  </div>
+<!-- MEN WEEK 2 (UPDATED) -->
+<div id="men2" class="week">
 
-  <!-- FEB 9 -->
-  <div id="men2">
-    <h3 id="menDate2"></h3>
+<div class="section">
+<h4>ATP</h4>
+<div class="entry">
+Doha 500 (Hard) – (Harris, Choinski)<br>
+Delray Beach 250 (Hard) – Norrie
+</div>
+</div>
 
-    <h3>ATP</h3>
-    <table>
-      <tr><th>Player(s)</th><th>Tour</th><th>Tournament</th><th>Location</th><th>Entry</th></tr>
-      <tr class="atp"><td><strong>Draper, Norrie</strong> (Harris, Choinski)</td><td>ATP</td><td>Rotterdam 500 (Indoor Hard)</td><td>Netherlands</td><td>Main Draw</td></tr>
-      <tr class="atp"><td><strong>Pinnington-Jones</strong></td><td>ATP</td><td>Dallas 500 (Indoor Hard)</td><td>USA</td><td>Qualifying</td></tr>
-    </table>
+<div class="section">
+<h4>Challengers</h4>
+<div class="entry">
+Lille 125 (Indoor Hard) – Fearnley<br>
+Metepec 75 (Hard) – Pinnington-Jones<br>
+New Delhi 75 (Hard) – Clarke, Crawford (Gray, Gill)
+</div>
+</div>
 
-    <h3>Challenger</h3>
-    <table>
-      <tr class="challenger"><td><strong>Loffhagen, Peniston, Samuel</strong></td><td>Challenger</td><td>Tenerife 75 (Hard)</td><td>Spain</td><td>Main Draw</td></tr>
-      <tr class="challenger"><td><strong>Clarke, Crawford, Gray, Gill</strong></td><td>Challenger</td><td>Chennai 50 (Hard)</td><td>India</td><td>Main Draw</td></tr>
-    </table>
+<div class="section">
+<h4>Futures</h4>
+<div class="entry">
+Portugal M25 (Hard) – Peniston, Broady, Basing, Searle (Maxted, Murgett)<br>
+Italy M25 (Indoor Hard) – Wendelken<br>
+Costa Rica M25 (Hard) – Baker<br>
+Tunisia M15 (Hard) – (Lumsden, Brown, Dhokia)<br>
+Holland M15 (Indoor Hard) – Stewart, Matusevich<br>
+Spain M15 (Hard) – (Brady, Leather, Tyler, Drayton)<br>
+France M15 (Indoor Hard) – Summers (Walters)<br>
+USA M15 (Clay) – (Martin, Okonkwo, Connel)<br>
+Egypt M15 (Hard) – Hudd (Habib, Holder)
+</div>
+</div>
 
-    <h3>ITF</h3>
-    <table>
-      <tr class="itf"><td><strong>Broady, Basing, Maxted</strong> (Murgett, Brady, Leather, Hodkin)</td><td>ITF</td><td>Portugal M25</td><td>Portugal</td><td>Main Draw</td></tr>
-      <tr class="itf"><td><strong>Lumsden, Dhokia, Allen</strong></td><td>ITF</td><td>Tunisia M25</td><td>Tunisia</td><td>Qualifying</td></tr>
-      <tr class="itf"><td><strong>Stewart, Jubb, Story</strong> (Hurrion, Matusevich)</td><td>ITF</td><td>Germany M15</td><td>Germany</td><td>Main Draw</td></tr>
-      <tr class="itf"><td><strong>Gschwendtner, Carroll</strong></td><td>ITF</td><td>Spain M15</td><td>Spain</td><td>Qualifying</td></tr>
-      <tr class="itf"><td><strong>Brown</strong></td><td>ITF</td><td>Tunisia M15</td><td>Tunisia</td><td>Main Draw</td></tr>
-      <tr class="itf"><td><strong>Martin</strong></td><td>ITF</td><td>USA M15</td><td>USA</td><td>Main Draw</td></tr>
-      <tr class="itf"><td><strong>Habib, Holder</strong></td><td>ITF</td><td>Egypt M15</td><td>Egypt</td><td>Main Draw</td></tr>
-    </table>
-  </div>
-</section>
+</div>
 
-<!-- WOMEN -->
-<section id="women" style="display:none;">
-  <h2>Women</h2>
+<!-- MEN WEEK 3 -->
+<div id="men3" class="week">
+  <p>No entries yet.</p>
+</div>
 
-  <div class="tabs">
-    <button id="womenBtn1" onclick="showWeek('women1')"></button>
-    <button id="womenBtn2" onclick="showWeek('women2')"></button>
-    <button id="womenBtn3" onclick="showWeek('women3')"></button>
-  </div>
+<hr style="margin:3rem 0">
 
-  <!-- FEB 9 -->
-  <div id="women2">
-    <h3 id="womenDate2"></h3>
+<h2>Women</h2>
 
-    <h3>WTA</h3>
-    <table>
-      <tr><th>Player(s)</th><th>Tour</th><th>Tournament</th><th>Location</th><th>Entry</th></tr>
-      <tr class="wta"><td><strong>Raducanu</strong> (Kartal)</td><td>WTA</td><td>Doha 1000</td><td>Qatar</td><td>Main Draw</td></tr>
-      <tr class="wta"><td><strong>Boulter</strong></td><td>WTA</td><td>Oeiras 125</td><td>Portugal</td><td>Main Draw</td></tr>
-    </table>
+<div class="tabs">
+  <button onclick="showWeek('women1')">9 Feb</button>
+  <button onclick="showWeek('women2')">16 Feb</button>
+  <button onclick="showWeek('women3')">23 Feb</button>
+</div>
 
-    <h3>ITF</h3>
-    <table>
-      <tr class="itf"><td><strong>Dart, Xu</strong></td><td>ITF</td><td>India W75</td><td>India</td><td>Main Draw</td></tr>
-      <tr class="itf"><td><strong>Stojslejevic, Allen, Rajecki</strong></td><td>ITF</td><td>Czech Republic W75</td><td>Czech Republic</td><td>Qualifying</td></tr>
-      <tr class="itf"><td><strong>Klugman</strong> (Dunne, Bains)</td><td>ITF</td><td>France W50</td><td>France</td><td>Main Draw</td></tr>
-      <tr class="itf"><td><strong>Gillan, Adeshina</strong> (Wainwright, Williamson)</td><td>ITF</td><td>Spain W15</td><td>Spain</td><td>Main Draw</td></tr>
-      <tr class="itf"><td><strong>Korpanec Davies</strong> (Kozak, Hays)</td><td>ITF</td><td>Tunisia W15</td><td>Tunisia</td><td>Main Draw</td></tr>
-      <tr class="itf"><td><strong>Peet</strong></td><td>ITF</td><td>Egypt W15</td><td>Egypt</td><td>Qualifying</td></tr>
-    </table>
-  </div>
-</section>
+<!-- WOMEN WEEK 1 -->
+<div id="women1" class="week active">
+  <p>Entries already added for this week.</p>
+</div>
+
+<!-- WOMEN WEEK 2 (UPDATED) -->
+<div id="women2" class="week">
+
+<div class="section">
+<h4>WTA</h4>
+<div class="entry">
+Dubai 1000 (Hard) – Raducanu (Kartal)<br>
+Oeiras 125 (Indoor Hard) – Boulter<br>
+Midland 125 (Hard) – Jones
+</div>
+</div>
+
+<div class="section">
+<h4>Futures</h4>
+<div class="entry">
+India W100 (Hard) – Dart<br>
+Germany W75 (Indoor Carpet) – Dunne (Appleton, Rajecki)<br>
+France W50 (Indoor Hard) – (Bains)<br>
+USA W35 (Hard) – Swan, McDonald<br>
+Holland W35 (Indoor Hard) – (Klugman)<br>
+Spain W15 (Hard) – Gillan, Adeshina (Spink, Bush, Wainwright, Williamson)<br>
+Turkey W15 (Clay) – Stoiber<br>
+USA W15 (Clay) – (Johnson, Schlepphorst, Paskauskas)<br>
+Egypt W15 (Hard) – (Peet)
+</div>
+</div>
+
+</div>
+
+<!-- WOMEN WEEK 3 -->
+<div id="women3" class="week">
+  <p>No entries yet.</p>
+</div>
 
 </main>
 
 <footer>
-  © 2026 British Tennis Players · Independent & fan-run
+© 2026 British Tennis Players · Fan-run
 </footer>
 
 <script>
-  function showTour(tour) {
-    document.getElementById('men').style.display = tour === 'men' ? 'block' : 'none';
-    document.getElementById('women').style.display = tour === 'women' ? 'block' : 'none';
-  }
-
-  function showWeek(id) {
-    document.querySelectorAll('[id$="1"],[id$="2"],[id$="3"]').forEach(w => w.style.display = 'none');
-    document.getElementById(id).style.display = 'block';
-  }
-
-  function getMonday(offset=0) {
-    const d = new Date();
-    const day = d.getDay();
-    const monday = new Date(d.setDate(d.getDate() - day + (day===0?-6:1) + offset*7));
-    return monday.toLocaleDateString('en-GB',{day:'numeric',month:'short'});
-  }
-
-  document.getElementById('updated').innerText = new Date().toLocaleDateString('en-GB');
-
-  ['men','women'].forEach(t=>{
-    [0,1,2].forEach(i=>{
-      document.getElementById(`${t}Btn${i+1}`).innerText = getMonday(i);
-      document.getElementById(`${t}Date2`).innerText = `Week commencing ${getMonday(1)}`;
-    });
-  });
+function showWeek(id) {
+  document.querySelectorAll('.week').forEach(w => w.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
 </script>
 
 </body>
