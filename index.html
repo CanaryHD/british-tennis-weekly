@@ -48,10 +48,7 @@
     .btn-atp { background: linear-gradient(135deg,#1e3a8a,#2563eb); }
     .btn-wta { background: linear-gradient(135deg,#6b21a8,#a855f7); }
 
-    h2, h3 {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
+    h2, h3 { text-align: center; }
 
     .tabs {
       display: flex;
@@ -64,10 +61,9 @@
       padding: 0.6rem 1.4rem;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(135deg,#e5e7eb,#f8fafc);
+      background: #e5e7eb;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
     }
 
     table {
@@ -94,37 +90,16 @@
       border-bottom: 1px solid #e5e7eb;
     }
 
-    tr.atp { background: linear-gradient(90deg,#e0ecff,#f6f9ff); }
-    tr.challenger { background: linear-gradient(90deg,#e8f7ef,#f3fcf7); }
-    tr.itf { background: linear-gradient(90deg,#fff7e6,#fffdf5); }
-    tr.wta { background: linear-gradient(90deg,#ede9fe,#f6f4ff); }
-
-    .coffee {
-      text-align: center;
-      margin: 3rem 0;
-    }
-
-    .coffee a {
-      display: inline-block;
-      padding: 0.9rem 1.8rem;
-      background: #ffdd00;
-      color: #111;
-      font-weight: 700;
-      border-radius: 999px;
-      text-decoration: none;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-    }
+    tr.atp { background: #e0ecff; }
+    tr.challenger { background: #e8f7ef; }
+    tr.itf { background: #fff7e6; }
+    tr.wta { background: #ede9fe; }
 
     footer {
       text-align: center;
       font-size: 0.85rem;
       margin-bottom: 1.5rem;
       color: #555;
-    }
-
-    @media (max-width: 600px) {
-      .tour-buttons button { width: 100%; }
-      table { font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -150,31 +125,37 @@
   <h2>Men</h2>
 
   <div class="tabs">
-    <button onclick="showWeek('men1')" id="menBtn1"></button>
-    <button onclick="showWeek('men2')" id="menBtn2"></button>
-    <button onclick="showWeek('men3')" id="menBtn3"></button>
+    <button id="menBtn1" onclick="showWeek('men1')"></button>
+    <button id="menBtn2" onclick="showWeek('men2')"></button>
+    <button id="menBtn3" onclick="showWeek('men3')"></button>
   </div>
 
+  <!-- FEB 9 -->
   <div id="men2">
     <h3 id="menDate2"></h3>
 
     <h3>ATP</h3>
     <table>
-      <tr><th>Player(s)</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-      <tr class="atp"><td><strong>Draper, Norrie</strong> (Harris, Choinski)</td><td>ATP</td><td>Rotterdam 500 (Indoor Hard)</td><td>Netherlands</td></tr>
-      <tr class="atp"><td><strong>Pinnington-Jones</strong></td><td>ATP</td><td>Dallas 500 (Indoor Hard)</td><td>USA</td></tr>
+      <tr><th>Player(s)</th><th>Tour</th><th>Tournament</th><th>Location</th><th>Entry</th></tr>
+      <tr class="atp"><td><strong>Draper, Norrie</strong> (Harris, Choinski)</td><td>ATP</td><td>Rotterdam 500 (Indoor Hard)</td><td>Netherlands</td><td>Main Draw</td></tr>
+      <tr class="atp"><td><strong>Pinnington-Jones</strong></td><td>ATP</td><td>Dallas 500 (Indoor Hard)</td><td>USA</td><td>Qualifying</td></tr>
     </table>
 
     <h3>Challenger</h3>
     <table>
-      <tr class="challenger"><td><strong>Loffhagen, Peniston, Samuel</strong></td><td>Challenger</td><td>Tenerife 75 (Hard)</td><td>Spain</td></tr>
-      <tr class="challenger"><td><strong>Clarke, Crawford, Gray, Gill</strong></td><td>Challenger</td><td>Chennai 50 (Hard)</td><td>India</td></tr>
+      <tr class="challenger"><td><strong>Loffhagen, Peniston, Samuel</strong></td><td>Challenger</td><td>Tenerife 75 (Hard)</td><td>Spain</td><td>Main Draw</td></tr>
+      <tr class="challenger"><td><strong>Clarke, Crawford, Gray, Gill</strong></td><td>Challenger</td><td>Chennai 50 (Hard)</td><td>India</td><td>Main Draw</td></tr>
     </table>
 
     <h3>ITF</h3>
     <table>
-      <tr class="itf"><td><strong>Broady, Basing, Maxted</strong> (Murgett, Brady, Leather, Hodkin)</td><td>ITF</td><td>Portugal M25</td><td>Portugal</td></tr>
-      <tr class="itf"><td><strong>Stewart, Jubb, Story</strong></td><td>ITF</td><td>Germany M15</td><td>Germany</td></tr>
+      <tr class="itf"><td><strong>Broady, Basing, Maxted</strong> (Murgett, Brady, Leather, Hodkin)</td><td>ITF</td><td>Portugal M25</td><td>Portugal</td><td>Main Draw</td></tr>
+      <tr class="itf"><td><strong>Lumsden, Dhokia, Allen</strong></td><td>ITF</td><td>Tunisia M25</td><td>Tunisia</td><td>Qualifying</td></tr>
+      <tr class="itf"><td><strong>Stewart, Jubb, Story</strong> (Hurrion, Matusevich)</td><td>ITF</td><td>Germany M15</td><td>Germany</td><td>Main Draw</td></tr>
+      <tr class="itf"><td><strong>Gschwendtner, Carroll</strong></td><td>ITF</td><td>Spain M15</td><td>Spain</td><td>Qualifying</td></tr>
+      <tr class="itf"><td><strong>Brown</strong></td><td>ITF</td><td>Tunisia M15</td><td>Tunisia</td><td>Main Draw</td></tr>
+      <tr class="itf"><td><strong>Martin</strong></td><td>ITF</td><td>USA M15</td><td>USA</td><td>Main Draw</td></tr>
+      <tr class="itf"><td><strong>Habib, Holder</strong></td><td>ITF</td><td>Egypt M15</td><td>Egypt</td><td>Main Draw</td></tr>
     </table>
   </div>
 </section>
@@ -184,34 +165,33 @@
   <h2>Women</h2>
 
   <div class="tabs">
-    <button onclick="showWeek('women1')" id="womenBtn1"></button>
-    <button onclick="showWeek('women2')" id="womenBtn2"></button>
-    <button onclick="showWeek('women3')" id="womenBtn3"></button>
+    <button id="womenBtn1" onclick="showWeek('women1')"></button>
+    <button id="womenBtn2" onclick="showWeek('women2')"></button>
+    <button id="womenBtn3" onclick="showWeek('women3')"></button>
   </div>
 
+  <!-- FEB 9 -->
   <div id="women2">
     <h3 id="womenDate2"></h3>
 
     <h3>WTA</h3>
     <table>
-      <tr><th>Player(s)</th><th>Tour</th><th>Tournament</th><th>Location</th></tr>
-      <tr class="wta"><td><strong>Raducanu</strong> (Kartal)</td><td>WTA</td><td>Doha 1000</td><td>Qatar</td></tr>
-      <tr class="wta"><td><strong>Boulter</strong></td><td>WTA</td><td>Oeiras 125</td><td>Portugal</td></tr>
+      <tr><th>Player(s)</th><th>Tour</th><th>Tournament</th><th>Location</th><th>Entry</th></tr>
+      <tr class="wta"><td><strong>Raducanu</strong> (Kartal)</td><td>WTA</td><td>Doha 1000</td><td>Qatar</td><td>Main Draw</td></tr>
+      <tr class="wta"><td><strong>Boulter</strong></td><td>WTA</td><td>Oeiras 125</td><td>Portugal</td><td>Main Draw</td></tr>
     </table>
 
     <h3>ITF</h3>
     <table>
-      <tr class="itf"><td><strong>Dart, Xu</strong></td><td>ITF</td><td>India W75</td><td>India</td></tr>
-      <tr class="itf"><td><strong>Klugman</strong> (Dunne, Bains)</td><td>ITF</td><td>France W50</td><td>France</td></tr>
+      <tr class="itf"><td><strong>Dart, Xu</strong></td><td>ITF</td><td>India W75</td><td>India</td><td>Main Draw</td></tr>
+      <tr class="itf"><td><strong>Stojslejevic, Allen, Rajecki</strong></td><td>ITF</td><td>Czech Republic W75</td><td>Czech Republic</td><td>Qualifying</td></tr>
+      <tr class="itf"><td><strong>Klugman</strong> (Dunne, Bains)</td><td>ITF</td><td>France W50</td><td>France</td><td>Main Draw</td></tr>
+      <tr class="itf"><td><strong>Gillan, Adeshina</strong> (Wainwright, Williamson)</td><td>ITF</td><td>Spain W15</td><td>Spain</td><td>Main Draw</td></tr>
+      <tr class="itf"><td><strong>Korpanec Davies</strong> (Kozak, Hays)</td><td>ITF</td><td>Tunisia W15</td><td>Tunisia</td><td>Main Draw</td></tr>
+      <tr class="itf"><td><strong>Peet</strong></td><td>ITF</td><td>Egypt W15</td><td>Egypt</td><td>Qualifying</td></tr>
     </table>
   </div>
 </section>
-
-<div class="coffee">
-  <a href="https://buymeacoffee.com/britishtennisupdates" target="_blank">
-    ☕ Support the site on Buy Me a Coffee
-  </a>
-</div>
 
 </main>
 
@@ -226,9 +206,7 @@
   }
 
   function showWeek(id) {
-    document.querySelectorAll('[id^="men"], [id^="women"]').forEach(d => {
-      if (d.id.match(/\\d$/)) d.style.display = 'none';
-    });
+    document.querySelectorAll('[id$="1"],[id$="2"],[id$="3"]').forEach(w => w.style.display = 'none');
     document.getElementById(id).style.display = 'block';
   }
 
