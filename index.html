@@ -1,211 +1,361 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123c78">
 <title>British Tennis Players</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f4f6f8;
-  color: #222;
+:root{
+  --navy:#123c78; --blue:#1b4f9c; --orange:#c8102e; --ink:#1e2937;
+  --muted:#687789; --line:#d9e1e9; --page:#f2f5f8; --white:#fff;
+  --pale-blue:#eaf1fb; --pale-orange:#fdecef; --green:#236849; --pale-green:#e6f4eb;
 }
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:var(--navy);color:#fff;border-bottom:5px solid var(--orange);padding:25px 20px}
+.header-inner,main,footer{max-width:1400px;margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800;color:#d8e6f2;margin-bottom:10px}
+.logo{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--orange);color:var(--navy);font-weight:950;letter-spacing:0}
+h1{font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:-.04em;line-height:1.1;margin:0}
+header p{color:#e1eaf2;margin:10px 0 0}
+main{padding:24px 18px 42px}
+.intro{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+h2{font-size:1.45rem;letter-spacing:-.025em;margin:0}
+.muted{color:var(--muted)}.subtext{margin:5px 0 0;font-size:.9rem}
+.demo{background:var(--pale-orange);border:1px solid #efb8c2;color:#9b1026;border-radius:5px;padding:7px 10px;font-size:.75rem;font-weight:850}
+.controls-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+button,select,input{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.nav-btn,.week-btn{border:1px solid #c8d3df;background:#fff;color:#30445a;border-radius:6px;min-height:42px;padding:9px 15px;font-size:.86rem;font-weight:800}
+.nav-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:inset 0 -3px 0 var(--orange)}
+.week-btn[aria-pressed="true"]{background:var(--orange);border-color:#a80d25;color:#fff}
+.filters{display:grid;grid-template-columns:minmax(220px,1.5fr) minmax(160px,.7fr) minmax(160px,.7fr);gap:12px;padding:13px;background:#fff;border:1px solid var(--line);border-radius:8px;margin:14px 0}
+label{display:block;font-size:.73rem;font-weight:850;color:#536377;margin-bottom:6px}
+input,select{width:100%;min-height:42px;padding:9px 11px;border:1px solid #c8d3df;border-radius:5px;background:#fff;color:var(--ink);font-size:.9rem}
+.table-wrap{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.table-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:13px 15px;border-bottom:1px solid var(--line)}
+.table-title{font-weight:900}.count{color:var(--muted);font-size:.8rem}
+.table-scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:820px;font-size:.83rem}
+thead th{text-align:left;background:var(--pale-blue);color:#3d536b;text-transform:uppercase;letter-spacing:.045em;font-size:.67rem;padding:12px;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody td{padding:12px;border-bottom:1px solid #edf1f5;vertical-align:top}
+tbody tr:nth-child(even){background:#fbfcfd}tbody tr:hover{background:#f1f6fb}tbody tr:last-child td{border-bottom:0}
+.player{font-weight:850;white-space:nowrap}.rank,.age{font-weight:900;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:3px 7px;border-radius:4px;font-size:.69rem;font-weight:850;white-space:nowrap}
+.atp{background:#e5eefb;color:#24558b}.challenger{background:#eee8fb;color:#67479b}.itf{background:var(--pale-green);color:var(--green)}
+.up{background:var(--pale-green);color:var(--green)}.down{background:#ffebe7;color:#9a3b2d}.same{background:#edf0f3;color:#536273}
+.event{font-weight:750;color:#25425f}.surface{color:var(--muted);font-size:.75rem;margin-top:3px}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+.note{margin-top:13px;background:#fff4f5;border:1px solid #efc4cc;border-left:4px solid var(--orange);border-radius:5px;padding:11px 13px;font-size:.8rem;color:#7d1b2b}
+footer{text-align:center;color:var(--muted);font-size:.78rem;padding:0 18px 26px}
+@media(max-width:720px){header{padding:22px 15px}main{padding:19px 11px 32px}.filters{grid-template-columns:1fr}.controls-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.nav-btn,.week-btn{padding:9px 8px}.intro{align-items:start}}
 
-header {
-  background: linear-gradient(135deg, #0a2540, #1e3a8a);
-  color: white;
-  padding: 1.8rem 1rem;
-  text-align: center;
-}
+/* Refined British Tennis Players visual design */
+:root{--navy:#071d49;--blue:#174ea6;--orange:#d62839;--ink:#15233a;--muted:#68758a;--line:#e1e8f2;--page:#f4f7fc;--white:#fff;--pale-blue:#edf3ff;--pale-orange:#fff0f1;--green:#14734b;--pale-green:#e7f7ef}
+body{background:linear-gradient(180deg,#eaf1fc 0,#f6f8fc 360px,#f6f8fc 100%);color:var(--ink);font-size:15px}
+header{position:relative;overflow:hidden;background:linear-gradient(115deg,#071d49 0%,#123d83 58%,#1c5ab2 100%);border-bottom:0;padding:34px 22px 56px}
+header:before{content:"";position:absolute;width:360px;height:360px;border:34px solid rgba(255,255,255,.06);border-radius:50%;right:-95px;top:-190px}
+header:after{content:none}
+.header-inner{position:relative;z-index:1}
+.eyebrow{gap:11px;color:#dce8ff;letter-spacing:.15em;font-size:.7rem}
+.logo{width:38px;height:38px;border-radius:12px;background:#fff;color:#123d83;box-shadow:0 5px 15px #00143755;font-size:.85rem}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);letter-spacing:-.055em;max-width:800px}
+header p{max-width:650px;color:#dce7fb;font-size:1.02rem;line-height:1.65;margin-top:14px}
+main{padding:26px 18px 42px;max-width:1300px}
+.intro{background:#fff;border:1px solid #e4eaf4;border-radius:18px;padding:22px 24px;box-shadow:0 10px 28px rgba(18,48,91,.06);margin-top:-8px;position:relative}
+h2{font-size:1.55rem;letter-spacing:-.035em}
+.subtext{line-height:1.6}
+.demo{background:#edf4ff;border:1px solid #c9dcff;color:#214f9c;border-radius:999px;padding:8px 12px;letter-spacing:.045em;font-size:.68rem}
+.controls-row{gap:9px;margin:18px 0 12px}
+.nav-btn,.week-btn{border:1px solid #dbe3ef;background:#fff;color:#3a4b64;border-radius:10px;min-height:44px;padding:10px 16px;box-shadow:0 2px 5px rgba(20,40,80,.025);transition:transform .15s,box-shadow .15s,background .15s}
+.nav-btn:hover,.week-btn:hover{transform:translateY(-1px);box-shadow:0 5px 12px rgba(20,40,80,.09)}
+.nav-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:inset 0 -3px 0 var(--orange),0 5px 12px #071d4920}
+.week-btn[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:inset 0 -3px 0 var(--orange),0 4px 12px #174ea628}
+.filters{gap:14px;padding:17px;background:#fff;border:1px solid #e2e9f3;border-radius:15px;margin:16px 0;box-shadow:0 6px 20px rgba(18,48,91,.035)}
+label{font-size:.72rem;letter-spacing:.035em;color:#53647c}
+input,select{border:1px solid #d5deeb;border-radius:9px;min-height:45px;padding:10px 12px;transition:border .15s,box-shadow .15s}
+input:focus,select:focus{border-color:#3975ce;box-shadow:0 0 0 3px #3975ce1a;outline:0}
+.table-wrap{border:1px solid #e1e8f2;border-radius:16px;box-shadow:0 12px 30px rgba(18,48,91,.07)}
+.table-head{padding:17px 19px;background:linear-gradient(90deg,#fff,#f9fbff);border-bottom:1px solid #e5ebf4}
+.table-title{font-size:1rem;letter-spacing:-.01em}.count{background:#edf3ff;color:#28538f;padding:5px 9px;border-radius:999px;font-weight:750}
+table{font-size:.85rem}
+thead th{background:#edf3ff;color:#29476f;padding:14px 13px;font-size:.67rem}
+tbody td{padding:14px 13px;border-bottom:1px solid #eef2f7}
+tbody tr:nth-child(even){background:#fbfcff}tbody tr:hover{background:#f0f5ff}
+.player{color:#102d5c;font-weight:850}.rank{font-variant-numeric:tabular-nums;color:#142c50}
+.badge{border-radius:999px;padding:4px 8px}.atp{background:#e6efff;color:#214f9c}.challenger{background:#eee9ff;color:#6042a2}.itf{background:#e7f7ef;color:#14734b}
+.up{background:#e7f7ef;color:#14734b}.down{background:#fff0ed;color:#a73c2f}.same{background:#edf1f6;color:#536273}
+.event{color:#1c477f}.surface{font-size:.74rem}
+.note{margin-top:16px;background:#f3f7ff;border:1px solid #d7e4fb;border-left:5px solid var(--blue);border-radius:10px;padding:14px 16px;font-size:.82rem;color:#29476f;line-height:1.6}
+footer{padding:0 18px 30px;color:#7a8799}
+@media(max-width:720px){header{padding:27px 16px 48px}header:before{width:240px;height:240px;right:-100px;top:-120px}main{padding:20px 12px 30px}.intro{padding:18px 16px;border-radius:14px}.filters{padding:14px;border-radius:13px}.controls-row{gap:8px}.nav-btn,.week-btn{font-size:.82rem;padding:10px 8px;border-radius:9px}.table-wrap{border-radius:13px}.table-head{padding:14px}.demo{font-size:.62rem}}
 
-main {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+.about-button{border:1px solid #cbd9ed;background:#fff;color:#173f7b;border-radius:999px;padding:8px 13px;font-size:.8rem;font-weight:800;box-shadow:0 3px 10px rgba(7,29,73,.06)}
+.about-button:hover{background:#edf3ff;border-color:#9bb9e8}
+.about-dialog{width:min(560px,calc(100% - 28px));border:1px solid #dce5f2;border-radius:18px;padding:0;color:var(--ink);box-shadow:0 24px 80px rgba(4,22,55,.3)}
+.about-dialog::backdrop{background:rgba(5,19,43,.62);backdrop-filter:blur(3px)}
+.about-dialog-head{background:linear-gradient(115deg,#071d49,#174ea6);color:#fff;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.about-dialog-head h2{font-size:1.25rem;margin:0}
+.about-close{border:1px solid #ffffff66;background:#ffffff16;color:#fff;border-radius:8px;padding:7px 11px;font-weight:800}
+.about-dialog-body{padding:21px 23px;line-height:1.7}
+.about-dialog-body ul{padding-left:21px;margin:9px 0 14px}
+.about-dialog-body li{margin:6px 0}
+.about-footnote{font-size:.82rem;color:var(--muted);background:#f2f6fc;border-radius:9px;padding:11px 13px;margin-top:14px}
 
-.tabs {
-  display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-  margin: 1.5rem 0;
-}
-
-.tabs button {
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  border: none;
-  background: linear-gradient(135deg,#e0e7ff,#eef2ff);
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.tabs button:hover {
-  transform: translateY(-1px);
-}
-
-.section {
-  margin-top: 1.8rem;
-}
-
-.section h4 {
-  margin-bottom: 0.4rem;
-  color: #1e3a8a;
-}
-
-.week {
-  display: none;
-}
-
-.week.active {
-  display: block;
-}
-
-.entry {
-  background: white;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 0.8rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #555;
-  margin: 2rem 0;
-}
+.creator-banner{padding:14px 18px;background:linear-gradient(110deg,#eaf1ff 0%,#f7f9ff 52%,#fff 100%);border-bottom:1px solid #dce6f5}
+.creator-banner-inner{position:relative;overflow:hidden;max-width:1260px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:16px 19px;border:1px solid #d7e3f7;border-radius:16px;background:linear-gradient(115deg,#0a2456 0%,#174ea6 75%,#2163bd 100%);color:#fff;box-shadow:0 8px 22px rgba(14,48,103,.15)}
+.creator-banner-inner:after{content:"";position:absolute;right:150px;top:-42px;width:140px;height:140px;border:18px solid rgba(255,255,255,.07);border-radius:50%;pointer-events:none}
+.creator-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:14px;background:#fff;color:#123c78;font-size:1.35rem;font-weight:900;box-shadow:0 4px 12px #00143735}
+.creator-copy{position:relative;z-index:1;display:block;min-width:0}
+.creator-kicker{display:block;text-transform:uppercase;letter-spacing:.13em;font-size:.64rem;font-weight:850;color:#c7dcff;margin-bottom:2px}
+.creator-banner-inner strong{display:block;font-size:1rem;line-height:1.35;letter-spacing:-.015em}
+.creator-sub{display:block;color:#e0eaff;font-size:.81rem;margin-top:3px}
+.creator-actions{position:relative;z-index:1;margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}
+.creator-banner-inner .creator-actions a{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:.82rem;font-weight:900;padding:11px 14px;border:1px solid #fff;border-radius:11px;white-space:nowrap;box-shadow:0 4px 12px #00143730;transition:transform .15s,background .15s}
+.creator-banner-inner .creator-follow{background:#fff;color:#123c78}
+.creator-banner-inner .creator-actions a:hover{background:#edf3ff;transform:translateY(-1px)}
+.donate-banner{padding:0 18px 14px;background:linear-gradient(110deg,#eaf1ff 0%,#f7f9ff 52%,#fff 100%)}
+.donate-banner-inner{position:relative;overflow:hidden;max-width:1260px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:16px 19px;border:1px solid #d7e3f7;border-radius:16px;background:linear-gradient(115deg,#0a2456 0%,#174ea6 75%,#2163bd 100%);color:#fff;box-shadow:0 8px 22px rgba(14,48,103,.15)}
+.donate-banner-inner:after{content:"";position:absolute;right:150px;top:-42px;width:140px;height:140px;border:18px solid rgba(255,255,255,.07);border-radius:50%;pointer-events:none}
+.donate-copy{position:relative;z-index:1;display:block;min-width:0;color:#e0eaff;font-size:.81rem;line-height:1.45}
+.donate-banner-inner strong{position:relative;z-index:1;display:block;font-size:1rem;line-height:1.35;letter-spacing:-.015em}
+.donate-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:14px;background:#fff;color:#123c78;font-size:1.35rem;box-shadow:0 4px 12px #00143735}
+.donate-button{position:relative;z-index:1;margin-left:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 22px;min-width:150px;min-height:48px;border:1px solid #fff;border-radius:11px;background:#fff;color:#123c78;text-decoration:none;font-size:.82rem;font-weight:900;white-space:nowrap;box-shadow:0 4px 12px #00143730;transition:transform .15s,background .15s}
+.donate-button:hover{background:#edf3ff;transform:translateY(-1px)}
+@media(max-width:650px){.donate-banner{padding:0 10px 11px}.donate-banner-inner{gap:10px;padding:13px 12px;border-radius:13px;flex-wrap:wrap}.donate-banner-inner strong{font-size:.9rem}.donate-copy{font-size:.72rem}.donate-icon{flex-basis:39px;height:39px;border-radius:11px;font-size:1.15rem}.donate-button{margin-left:49px;padding:8px 12px;min-width:0;width:calc(100% - 49px);min-height:40px;font-size:.76rem}}
+@media(max-width:650px){.creator-banner{padding:11px 10px}.creator-banner-inner{gap:10px;padding:13px 12px;border-radius:13px;flex-wrap:wrap}.creator-icon{flex-basis:39px;height:39px;border-radius:11px;font-size:1.15rem}.creator-banner-inner strong{font-size:.9rem}.creator-sub{font-size:.72rem}.creator-actions{margin-left:49px;justify-content:flex-start}.creator-banner-inner .creator-actions a{padding:9px 12px;font-size:.76rem}}
 </style>
 </head>
-
 <body>
-
-<header>
+<header><div class="header-inner">
+  <div class="eyebrow"><span class="logo">BT</span> British tennis data</div>
   <h1>British Tennis Players</h1>
-  <p>Tracking British players across the tours</p>
-</header>
+  <p>Rankings and tournament entries for British players across the professional tours.</p>
+</div></header>
+
+<div class="creator-banner" role="complementary" aria-label="Website creator">
+  <div class="creator-banner-inner">
+    <span class="creator-icon" aria-hidden="true">𝕏</span>
+    <span class="creator-copy"><strong>BritishTennisUp</strong><span class="creator-sub">Follow on X for more British tennis news, rankings and updates.</span></span>
+    <div class="creator-actions"><a class="creator-follow" href="https://x.com/BritishTennisUp" target="_blank" rel="noopener noreferrer">Follow @BritishTennisUp <span aria-hidden="true">↗</span></a></div>
+  </div>
+</div>
+
+<div class="donate-banner" role="complementary" aria-label="Support the website">
+  <div class="donate-banner-inner">
+    <span class="donate-icon" aria-hidden="true">☕</span>
+    <span class="creator-copy"><strong>Support This Website</strong><span class="donate-copy">Enjoying the site? Help keep it running and support future updates with a small donation.</span></span>
+    <a class="donate-button" href="https://buymeacoffee.com/britishtennisupdates" target="_blank" rel="noopener noreferrer">Donate <span aria-hidden="true">↗</span></a>
+  </div>
+</div>
 
 <main>
+  <div class="intro">
+    <div><h2 id="heading">Men's player summary</h2><p class="subtext muted">Player rankings and tournament schedules for the next three weeks.</p></div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <button type="button" class="about-button" id="aboutOpen" aria-haspopup="dialog" aria-controls="aboutDialog">ⓘ What is this page?</button>
+    </div>
+  </div>
 
-<h2>Men</h2>
+  <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutTitle">
+    <div class="about-dialog-head"><h2 id="aboutTitle">About British Tennis Players</h2><button type="button" class="about-close" id="aboutClose" aria-label="Close description">Close ✕</button></div>
+    <div class="about-dialog-body">
+      <p>This page brings together British players’ world rankings and their tournament entries for <strong>this week, next week and the following week</strong>.</p>
+      <ul>
+        <li><strong>Men:</strong> ATP Tour and ATP Challenger events only, including qualifying entries.</li>
+        <li><strong>Women:</strong> WTA Tour events and ITF World Tennis Tour events at <strong>W50 level and above</strong>, including qualifying entries.</li>
+        <li><strong>Explore the schedule:</strong> switch between Men and Women, choose a week, search for a player or tournament, filter by ranking, and sort the list.</li>
+      </ul>
+      <p class="about-footnote">Rankings and schedules are based on the data supplied for this page and have not been independently verified. Tournament entries can change, so check the relevant tournament source for the latest confirmation.</p>
+    </div>
+  </dialog>
 
-<div class="tabs">
-  <button onclick="showWeek('men1')">9 Feb</button>
-  <button onclick="showWeek('men2')">16 Feb</button>
-  <button onclick="showWeek('men3')">23 Feb</button>
-</div>
+  <div class="controls-row" aria-label="Player category and schedule view">
+    <button type="button" class="nav-btn active" data-gender="men" aria-pressed="true">Men</button>
+    <button type="button" class="nav-btn" data-gender="women" aria-pressed="false">Women</button>
+  </div>
 
-<!-- MEN WEEK 1 -->
-<div id="men1" class="week active">
-  <p>Entries already added for this week.</p>
-</div>
+  <div class="filters">
+    <div><label for="search">Search player or tournament</label><input id="search" type="search" placeholder="Search a player or tournament…"></div>
+    <div><label for="ranking">Ranking filter</label><select id="ranking"><option value="all">All rankings</option><option value="top50">Top 50</option><option value="top100">Top 100</option><option value="outside100">Outside top 100</option></select></div>
+    <div><label for="sort">Sort by</label><select id="sort"><option value="rank">World ranking</option><option value="name">Player name A–Z</option></select></div>
+  </div>
 
-<!-- MEN WEEK 2 (UPDATED) -->
-<div id="men2" class="week">
+  <div class="controls-row" aria-label="Schedule week">
+    <button type="button" class="week-btn" data-week="this" aria-pressed="true">This week</button>
+    <button type="button" class="week-btn" data-week="next" aria-pressed="false">Next week</button>
+    <button type="button" class="week-btn" data-week="following" aria-pressed="false">Following week</button>
+    <button type="button" class="week-btn" data-view="threeweek" aria-pressed="true">Three week schedule</button>
+  </div>
 
-<div class="section">
-<h4>ATP</h4>
-<div class="entry">
-Doha 500 (Hard) – (Harris, Choinski)<br>
-Delray Beach 250 (Hard) – Norrie
-</div>
-</div>
-
-<div class="section">
-<h4>Challengers</h4>
-<div class="entry">
-Lille 125 (Indoor Hard) – Fearnley<br>
-Metepec 75 (Hard) – Pinnington-Jones<br>
-New Delhi 75 (Hard) – Clarke, Crawford (Gray, Gill)
-</div>
-</div>
-
-<div class="section">
-<h4>Futures</h4>
-<div class="entry">
-Portugal M25 (Hard) – Peniston, Broady, Basing, Searle (Maxted, Murgett)<br>
-Italy M25 (Indoor Hard) – Wendelken<br>
-Costa Rica M25 (Hard) – Baker<br>
-Tunisia M15 (Hard) – (Lumsden, Brown, Dhokia)<br>
-Holland M15 (Indoor Hard) – Stewart, Matusevich<br>
-Spain M15 (Hard) – (Brady, Leather, Tyler, Drayton)<br>
-France M15 (Indoor Hard) – Summers (Walters)<br>
-USA M15 (Clay) – (Martin, Okonkwo, Connel)<br>
-Egypt M15 (Hard) – Hudd (Habib, Holder)
-</div>
-</div>
-
-</div>
-
-<!-- MEN WEEK 3 -->
-<div id="men3" class="week">
-  <p>No entries yet.</p>
-</div>
-
-<hr style="margin:3rem 0">
-
-<h2>Women</h2>
-
-<div class="tabs">
-  <button onclick="showWeek('women1')">9 Feb</button>
-  <button onclick="showWeek('women2')">16 Feb</button>
-  <button onclick="showWeek('women3')">23 Feb</button>
-</div>
-
-<!-- WOMEN WEEK 1 -->
-<div id="women1" class="week active">
-  <p>Entries already added for this week.</p>
-</div>
-
-<!-- WOMEN WEEK 2 (UPDATED) -->
-<div id="women2" class="week">
-
-<div class="section">
-<h4>WTA</h4>
-<div class="entry">
-Dubai 1000 (Hard) – Raducanu (Kartal)<br>
-Oeiras 125 (Indoor Hard) – Boulter<br>
-Midland 125 (Hard) – Jones
-</div>
-</div>
-
-<div class="section">
-<h4>Futures</h4>
-<div class="entry">
-India W100 (Hard) – Dart<br>
-Germany W75 (Indoor Carpet) – Dunne (Appleton, Rajecki)<br>
-France W50 (Indoor Hard) – (Bains)<br>
-USA W35 (Hard) – Swan, McDonald<br>
-Holland W35 (Indoor Hard) – (Klugman)<br>
-Spain W15 (Hard) – Gillan, Adeshina (Spink, Bush, Wainwright, Williamson)<br>
-Turkey W15 (Clay) – Stoiber<br>
-USA W15 (Clay) – (Johnson, Schlepphorst, Paskauskas)<br>
-Egypt W15 (Hard) – (Peet)
-</div>
-</div>
-
-</div>
-
-<!-- WOMEN WEEK 3 -->
-<div id="women3" class="week">
-  <p>No entries yet.</p>
-</div>
-
+  <section class="table-wrap" aria-live="polite">
+    <div class="table-head"><div class="table-title" id="tableTitle">Men's player summary</div><div class="count" id="count">10 players</div></div>
+    <div class="table-scroll"><table><thead id="columns"></thead><tbody id="rows"></tbody></table></div>
+    <div id="empty" class="empty" hidden>No matching players found, or no data has been added for this category yet.</div>
+  </section>
 </main>
 
-<footer>
-© 2026 British Tennis Players · Fan-run
-</footer>
+<footer>© 2026 British Tennis Players · Independent fan-run project</footer>
 
 <script>
-function showWeek(id) {
-  document.querySelectorAll('.week').forEach(w => w.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-</script>
+(function () {
+  const players = {
+    men: [
+      {"name":"Arthur Fery","rank":37,"thisEvent":"ATP Masters 1000 Shanghai","nextEvent":"ATP 250 Lyon","laterEvent":"ATP 500 Vienna","age":24},
+      {"name":"Cameron Norrie","rank":40,"thisEvent":"ATP Masters 1000 Shanghai","nextEvent":"ATP 250 Lyon","laterEvent":"ATP 500 Vienna","age":31},
+      {"name":"Jan Choinski","rank":91,"thisEvent":"—","nextEvent":"Ch 100 Lisbon","laterEvent":"—","age":30},
+      {"name":"Jake Fearnley","rank":96,"thisEvent":"Ch 125 Olbia","nextEvent":"ATP 250 Brussels Qualifying","laterEvent":"—","age":25},
+      {"name":"Toby Samuel","rank":100,"thisEvent":"—","nextEvent":"ATP 250 Brussels Qualifying","laterEvent":"—","age":24},
+      {"name":"Jack Pinnington Jones","rank":205,"thisEvent":"—","nextEvent":"Ch 75 Fort Worth","laterEvent":"—","age":23},
+      {"name":"Liam Broady","rank":213,"thisEvent":"Ch 100 Roanne","nextEvent":"Ch 75 Guangzhou","laterEvent":"—","age":32},
+      {"name":"Felix Gill","rank":222,"thisEvent":"Ch 50 Catania","nextEvent":"Ch 50 Florence","laterEvent":"—","age":24},
+      {"name":"Henry Searle","rank":228,"thisEvent":"Ch 50 Catania","nextEvent":"Ch 50 Florence","laterEvent":"—","age":20},
+      {"name":"Jay Clarke","rank":240,"thisEvent":"—","nextEvent":"Ch 50 Florence","laterEvent":"—","age":28},
+      {"name":"Billy Harris","rank":241,"thisEvent":"Ch 100 Roanne","nextEvent":"—","laterEvent":"—","age":31},
+      {"name":"Max Basing","rank":248,"thisEvent":"—","nextEvent":"Ch 75 Guangzhou","laterEvent":"—","age":24},
+      {"name":"Charles Broom","rank":268,"thisEvent":"—","nextEvent":"Ch 75 Guangzhou","laterEvent":"—","age":28},
+      {"name":"Alastair Gray","rank":292,"thisEvent":"—","nextEvent":"Ch 75 Fort Worth","laterEvent":"—","age":28},
+      {"name":"George Loffhagen","rank":374,"thisEvent":"Ch 100 Olbia Qualifying","nextEvent":"—","laterEvent":"—","age":25},
+      {"name":"Ryan Peniston","rank":541,"thisEvent":"Ch 100 Olbia Qualifying","nextEvent":"—","laterEvent":"—","age":30},
+      {"name":"Patrick Brady","rank":715,"thisEvent":"Ch 100 Roanne Qualifying","nextEvent":"—","laterEvent":"—","age":21}
+    ],
+    women: [
+      {"name":"Katie Boulter","rank":54,"age":30,"thisEvent":"WTA1000 Wuhan","nextEvent":"WTA250 Osaka","laterEvent":"WTA500 Tokyo Qualifying"},
+      {"name":"Fran Jones","rank":107,"age":26,"thisEvent":"WTA125 Lisbon","nextEvent":"—","laterEvent":"WTA125 Curibita"},
+      {"name":"Harriet Dart","rank":113,"age":30,"thisEvent":"—","nextEvent":"WTA250 Osaka Qualifying","laterEvent":"WTA250 Guangzhou Qualifying"},
+      {"name":"Sonay Kartal","rank":170,"age":24,"thisEvent":"WTA1000 Wuhan (SR)","nextEvent":"WTA250 Osaka (SR)","laterEvent":"WTA500 Tokyo Qualifying"},
+      {"name":"Alicia Dudeney","rank":236,"age":23,"thisEvent":"—","nextEvent":"W100 Wrexham Qualifying","laterEvent":"—"},
+      {"name":"Mimi Xu","rank":339,"age":19,"thisEvent":"W50 Quebec City","nextEvent":"W75 Saguenay Qualifying","laterEvent":"—"},
+      {"name":"Hannah Klugman","rank":341,"age":17,"thisEvent":"WTA125 Lisbon Qualifying","nextEvent":"W100 Wrexham Qualifying","laterEvent":"—"},
+      {"name":"Ella Mcdonald","rank":351,"age":21,"thisEvent":"—","nextEvent":"W50 Austin Qualifying","laterEvent":"—"},
+      {"name":"Naiktha Bains","rank":362,"age":28,"thisEvent":"—","nextEvent":"W50 Sydney","laterEvent":"WTA125 Queretaro"},
+      {"name":"Sofia Johnson","rank":372,"age":22,"thisEvent":"W100 Edmond, OK Qualifying","nextEvent":"W50 Austin Qualifying","laterEvent":"WTA125 Queretaro Qualifying"},
+      {"name":"Millie Rajecki","rank":380,"age":24,"thisEvent":"—","nextEvent":"W100 Wrexham Qualifying","laterEvent":"—"},
+      {"name":"Vic Allen","rank":460,"age":25,"thisEvent":"—","nextEvent":"W100 Wrexham Qualifying","laterEvent":"—"},
+      {"name":"Indi Spink","rank":605,"age":24,"thisEvent":"—","nextEvent":"W100 Wrexham (Alternate)","laterEvent":"—"},
+      {"name":"Jodie Burrage","rank":622,"age":27,"thisEvent":"—","nextEvent":"W100 Wrexham (Alternate)","laterEvent":"—"},
+      {"name":"Ranah Stoiber","rank":649,"age":21,"thisEvent":"—","nextEvent":"W75 Saguenay Qualifying","laterEvent":"—"},
+      {"name":"Alice Gillan","rank":695,"age":28,"thisEvent":"—","nextEvent":"W100 Wrexham (Alternate)","laterEvent":"—"},
+      {"name":"Eliz Maloney","rank":710,"age":26,"thisEvent":"—","nextEvent":"W100 Wrexham (Alternate)","laterEvent":"—"},
+      {"name":"Amelie Brooks","rank":1008,"age":20,"thisEvent":"—","nextEvent":"W100 Wrexham (Alternate)","laterEvent":"—"},
+      {"name":"Mia Wainwright","rank":1107,"age":19,"thisEvent":"—","nextEvent":"W100 Wrexham (Alternate)","laterEvent":"—"},
+      {"name":"Leticia Romanova","rank":1155,"age":18,"thisEvent":"—","nextEvent":"W100 Wrexham (Alternate)","laterEvent":"—"},
+      {"name":"Summer Yardley","rank":1161,"age":26,"thisEvent":"—","nextEvent":"W100 Wrexham (Alternate)","laterEvent":"—"}
+    ]
+  };
 
+  const state = {gender:"men",view:"threeweek",week:"this"};
+  const el = id => document.getElementById(id);
+  const safe = value => String(value == null ? "—" : value).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+  const eventKey = () => state.week === "this" ? "thisEvent" : state.week === "next" ? "nextEvent" : "laterEvent";
+
+  function tourLevel(event) {
+    if (!event || event === "—") return "—";
+    if (event.startsWith("ATP ")) return "ATP Tour";
+    if (event.startsWith("Ch ")) return "Challenger";
+    if (/WTA/i.test(event)) return "WTA";
+    if (/^W\d+\b/i.test(event)) return "ITF";
+    return "—";
+  }
+
+  function filtered() {
+    const query = el("search").value.trim().toLowerCase();
+    const range = el("ranking").value;
+    let list = players[state.gender].filter(p => {
+      const rankOK = range === "all" || (range === "top50" && p.rank <= 50) ||
+        (range === "top100" && p.rank <= 100) || (range === "outside100" && p.rank > 100);
+      const textOK = (p.name+" "+p.thisEvent+" "+p.nextEvent+" "+p.laterEvent).toLowerCase().includes(query);
+      const key = eventKey();
+      const scheduleOK = state.view === "schedule" ? p[key] !== "—" :
+        state.view === "threeweek" ? [p.thisEvent,p.nextEvent,p.laterEvent].some(event => event !== "—") : true;
+      return rankOK && textOK && scheduleOK;
+    });
+    const sort = el("sort").value;
+    list.sort((a,b) => sort === "name" ? a.name.localeCompare(b.name) : a.rank-b.rank);
+    return list;
+  }
+
+  function render() {
+    const list = filtered();
+    const gender = state.gender === "men" ? "Men's" : "Women's";
+    const weekLabel = state.week === "this" ? "This week" : state.week === "next" ? "Next week" : "Following week";
+    const isThreeWeek = state.view === "threeweek";
+    el("heading").textContent = gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
+    el("tableTitle").textContent = gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
+
+    if (isThreeWeek) {
+      const entries = list.reduce((n,p) => n + [p.thisEvent,p.nextEvent,p.laterEvent].filter(event => event !== "—").length, 0);
+      el("count").textContent = list.length + (list.length === 1 ? " player" : " players") + " · " + entries + (entries === 1 ? " entry" : " entries");
+      el("columns").innerHTML = "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>This week</th><th>Next week</th><th>Following week</th></tr>";
+
+      const eventCell = event => {
+        if (!event || event === "—") return '<span class="muted">—</span>';
+        const level = tourLevel(event);
+        const badgeClass = level === "Challenger" ? "challenger" : level === "ITF" ? "itf" : "atp";
+        return '<span class="badge '+badgeClass+'">'+safe(level)+'</span><div class="event" style="margin-top:6px">'+safe(event)+'</div>';
+      };
+
+      el("rows").innerHTML = list.map(p => '<tr><td class="player">'+safe(p.name)+'</td><td class="rank">'+safe(p.rank)+'</td><td class="age">'+safe(p.age)+'</td><td>'+eventCell(p.thisEvent)+'</td><td>'+eventCell(p.nextEvent)+'</td><td>'+eventCell(p.laterEvent)+'</td></tr>').join("");
+    } else {
+      const key = eventKey();
+      el("count").textContent = list.length + " entries";
+      el("columns").innerHTML = "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>Tour level</th><th>Tournament</th><th>Week</th></tr>";
+
+      el("rows").innerHTML = list.map(p => {
+        const level = tourLevel(p[key]);
+        const badgeClass = level === "Challenger" ? "challenger" : level === "ITF" ? "itf" : "atp";
+        return '<tr><td class="player">'+safe(p.name)+'</td><td class="rank">'+safe(p.rank)+'</td><td class="age">'+safe(p.age)+'</td><td>'+(level === "—" ? '—' : '<span class="badge '+badgeClass+'">'+safe(level)+'</span>')+'</td><td class="event">'+safe(p[key])+'</td><td>'+safe(weekLabel)+'</td></tr>';
+      }).join("");
+    }
+
+    el("empty").hidden = list.length !== 0;
+    document.querySelectorAll("[data-gender]").forEach(b => {
+      const active = b.dataset.gender === state.gender;
+      b.classList.toggle("active",active);
+      b.setAttribute("aria-pressed",String(active));
+    });
+    document.querySelectorAll("[data-view]").forEach(b => {
+      const active = b.dataset.view === state.view;
+      b.classList.toggle("active",active);
+      b.setAttribute("aria-pressed",String(active));
+    });
+    document.querySelectorAll("[data-week]").forEach(b => {
+      const active = state.view === "schedule" && b.dataset.week === state.week;
+      b.classList.toggle("active",active);
+      b.setAttribute("aria-pressed",String(active));
+    });
+  }
+
+  document.querySelectorAll("[data-gender]").forEach(b => b.addEventListener("click", () => {
+    state.gender = b.dataset.gender;
+    render();
+  }));
+  document.querySelectorAll("[data-view]").forEach(b => b.addEventListener("click", () => {
+    state.view = b.dataset.view;
+    render();
+  }));
+  document.querySelectorAll("[data-week]").forEach(b => b.addEventListener("click", () => {
+    state.week = b.dataset.week;
+    state.view = "schedule";
+    render();
+  }));
+
+  el("search").addEventListener("input",render);
+  el("ranking").addEventListener("change",render);
+  el("sort").addEventListener("change",render);
+
+  const aboutDialog = el("aboutDialog");
+  el("aboutOpen").addEventListener("click", () => aboutDialog.showModal());
+  el("aboutClose").addEventListener("click", () => aboutDialog.close());
+  aboutDialog.addEventListener("click", event => {
+    if (event.target === aboutDialog) aboutDialog.close();
+  });
+
+  render();
+})();
+</script>
 </body>
 </html>
