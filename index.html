@@ -53,7 +53,7 @@ tbody tr:nth-child(even){background:#fbfcfd}tbody tr:hover{background:#f1f6fb}tb
 footer{text-align:center;color:var(--muted);font-size:.78rem;padding:0 18px 26px}
 @media(max-width:720px){header{padding:22px 15px}main{padding:19px 11px 32px}.filters{grid-template-columns:1fr}.controls-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.nav-btn,.week-btn{padding:9px 8px}.intro{align-items:start}}
 
-/* Refined British Tennis Players visual design */
+/* Refined visual design */
 :root{--navy:#071d49;--blue:#174ea6;--orange:#d62839;--ink:#15233a;--muted:#68758a;--line:#e1e8f2;--page:#f4f7fc;--white:#fff;--pale-blue:#edf3ff;--pale-orange:#fff0f1;--green:#14734b;--pale-green:#e7f7ef}
 body{background:linear-gradient(180deg,#eaf1fc 0,#f6f8fc 360px,#f6f8fc 100%);color:var(--ink);font-size:15px}
 header{position:relative;overflow:hidden;background:linear-gradient(115deg,#071d49 0%,#123d83 58%,#1c5ab2 100%);border-bottom:0;padding:34px 22px 56px}
@@ -125,8 +125,68 @@ footer{padding:0 18px 30px;color:#7a8799}
 .donate-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:14px;background:#fff;color:#123c78;font-size:1.35rem;box-shadow:0 4px 12px #00143735}
 .donate-button{position:relative;z-index:1;margin-left:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 22px;min-width:150px;min-height:48px;border:1px solid #fff;border-radius:11px;background:#fff;color:#123c78;text-decoration:none;font-size:.82rem;font-weight:900;white-space:nowrap;box-shadow:0 4px 12px #00143730;transition:transform .15s,background .15s}
 .donate-button:hover{background:#edf3ff;transform:translateY(-1px)}
-@media(max-width:650px){.donate-banner{padding:0 10px 11px}.donate-banner-inner{gap:10px;padding:13px 12px;border-radius:13px;flex-wrap:wrap}.donate-banner-inner strong{font-size:.9rem}.donate-copy{font-size:.72rem}.donate-icon{flex-basis:39px;height:39px;border-radius:11px;font-size:1.15rem}.donate-button{margin-left:49px;padding:8px 12px;min-width:0;width:calc(100% - 49px);min-height:40px;font-size:.76rem}}
-@media(max-width:650px){.creator-banner{padding:11px 10px}.creator-banner-inner{gap:10px;padding:13px 12px;border-radius:13px;flex-wrap:wrap}.creator-icon{flex-basis:39px;height:39px;border-radius:11px;font-size:1.15rem}.creator-banner-inner strong{font-size:.9rem}.creator-sub{font-size:.72rem}.creator-actions{margin-left:49px;justify-content:flex-start}.creator-banner-inner .creator-actions a{padding:9px 12px;font-size:.76rem}}
+
+/* Mobile: place both action buttons across the full bottom of their banners */
+@media(max-width:650px){
+  .creator-banner{padding:11px 10px}
+  .creator-banner-inner{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    gap:10px;
+    padding:13px 12px;
+    border-radius:13px;
+  }
+  .creator-icon,.donate-icon{
+    flex:0 0 39px;
+    width:39px;
+    height:39px;
+    border-radius:11px;
+    font-size:1.15rem;
+  }
+  .creator-copy{
+    flex:1 1 calc(100% - 50px);
+    min-width:0;
+  }
+  .creator-banner-inner strong,.donate-banner-inner strong{font-size:.9rem}
+  .creator-sub,.donate-copy{font-size:.76rem}
+  .creator-actions{
+    width:100%;
+    flex:0 0 100%;
+    margin:0;
+    display:flex;
+  }
+  .creator-banner-inner .creator-actions a{
+    width:100%;
+    flex:1 1 100%;
+    padding:10px 12px;
+    font-size:.82rem;
+    min-height:44px;
+  }
+  .donate-banner{padding:0 10px 11px}
+  .donate-banner-inner{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    gap:10px;
+    padding:13px 12px;
+    border-radius:13px;
+  }
+  .donate-banner-inner .creator-copy{
+    flex:1 1 calc(100% - 50px);
+    min-width:0;
+  }
+  .donate-copy{line-height:1.45}
+  .donate-button{
+    flex:0 0 100%;
+    width:100%;
+    min-width:0;
+    min-height:44px;
+    margin:0;
+    padding:10px 12px;
+    font-size:.82rem;
+  }
+}
 </style>
 </head>
 <body>
