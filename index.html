@@ -2,201 +2,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4256059628196575"
-     crossorigin="anonymous"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#123c78">
-<title>British Tennis Players</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4256059628196575"
+       crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c78">
+  <meta name="description" content="Follow British tennis players with searchable rankings and a three-week schedule of professional tournament entries.">
+  <title>British Tennis Players</title>
 <style>
 :root{
-  --navy:#123c78; --blue:#1b4f9c; --orange:#c8102e; --ink:#1e2937;
-  --muted:#687789; --line:#d9e1e9; --page:#f2f5f8; --white:#fff;
-  --pale-blue:#eaf1fb; --pale-orange:#fdecef; --green:#236849; --pale-green:#e6f4eb;
+  --navy:#071d49;--blue:#174ea6;--orange:#d62839;--ink:#15233a;
+  --muted:#68758a;--line:#e1e8f2;--page:#f4f7fc;--white:#fff;
+  --pale-blue:#edf3ff;--pale-orange:#fff0f1;--green:#14734b;--pale-green:#e7f7ef
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--page);color:var(--ink);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{background:var(--navy);color:#fff;border-bottom:5px solid var(--orange);padding:25px 20px}
-.header-inner,main,footer{max-width:1400px;margin:0 auto}
-.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800;color:#d8e6f2;margin-bottom:10px}
-.logo{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--orange);color:var(--navy);font-weight:950;letter-spacing:0}
-h1{font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:-.04em;line-height:1.1;margin:0}
-header p{color:#e1eaf2;margin:10px 0 0}
-main{padding:24px 18px 42px}
-.intro{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:18px}
-h2{font-size:1.45rem;letter-spacing:-.025em;margin:0}
-.muted{color:var(--muted)}.subtext{margin:5px 0 0;font-size:.9rem}
-.demo{background:var(--pale-orange);border:1px solid #efb8c2;color:#9b1026;border-radius:5px;padding:7px 10px;font-size:.75rem;font-weight:850}
-.controls-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+body{margin:0;background:linear-gradient(180deg,#eaf1fc 0,#f6f8fc 360px,#f6f8fc 100%);color:var(--ink);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{position:relative;overflow:hidden;background:linear-gradient(115deg,#071d49 0%,#123d83 58%,#1c5ab2 100%);padding:34px 22px 56px;color:#fff}
+header:before{content:"";position:absolute;width:360px;height:360px;border:34px solid rgba(255,255,255,.06);border-radius:50%;right:-95px;top:-190px}
+.header-inner,main,footer{max-width:1300px;margin:0 auto}
+.header-inner{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:11px;text-transform:uppercase;letter-spacing:.15em;font-size:.7rem;font-weight:800;color:#dce8ff;margin-bottom:10px}
+.logo{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#fff;color:#123d83;box-shadow:0 5px 15px #00143755;font-size:.85rem;font-weight:950}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);letter-spacing:-.055em;line-height:1.1;margin:0;max-width:800px}
+header p{max-width:650px;color:#dce7fb;font-size:1.02rem;line-height:1.65;margin:14px 0 0}
+main{padding:26px 18px 42px}
+.intro{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;background:#fff;border:1px solid #e4eaf4;border-radius:18px;padding:22px 24px;box-shadow:0 10px 28px rgba(18,48,91,.06);margin-top:-8px;position:relative;margin-bottom:18px}
+h2{font-size:1.55rem;letter-spacing:-.035em;margin:0}
+.muted{color:var(--muted)}
+.subtext{margin:5px 0 0;font-size:.9rem;line-height:1.6}
 button,select,input{font:inherit}
 button{cursor:pointer}
 button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
-.nav-btn,.week-btn{border:1px solid #c8d3df;background:#fff;color:#30445a;border-radius:6px;min-height:42px;padding:9px 15px;font-size:.86rem;font-weight:800}
-.nav-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:inset 0 -3px 0 var(--orange)}
-.week-btn[aria-pressed="true"]{background:var(--orange);border-color:#a80d25;color:#fff}
-.filters{display:grid;grid-template-columns:minmax(220px,1.5fr) minmax(160px,.7fr) minmax(160px,.7fr);gap:12px;padding:13px;background:#fff;border:1px solid var(--line);border-radius:8px;margin:14px 0}
-label{display:block;font-size:.73rem;font-weight:850;color:#536377;margin-bottom:6px}
-input,select{width:100%;min-height:42px;padding:9px 11px;border:1px solid #c8d3df;border-radius:5px;background:#fff;color:var(--ink);font-size:.9rem}
-.table-wrap{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.table-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:13px 15px;border-bottom:1px solid var(--line)}
-.table-title{font-weight:900}.count{color:var(--muted);font-size:.8rem}
-.table-scroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:820px;font-size:.83rem}
-thead th{text-align:left;background:var(--pale-blue);color:#3d536b;text-transform:uppercase;letter-spacing:.045em;font-size:.67rem;padding:12px;border-bottom:1px solid var(--line);white-space:nowrap}
-tbody td{padding:12px;border-bottom:1px solid #edf1f5;vertical-align:top}
-tbody tr:nth-child(even){background:#fbfcfd}tbody tr:hover{background:#f1f6fb}tbody tr:last-child td{border-bottom:0}
-.player{font-weight:850;white-space:nowrap}.rank,.age{font-weight:900;font-variant-numeric:tabular-nums}
-.badge{display:inline-block;padding:3px 7px;border-radius:4px;font-size:.69rem;font-weight:850;white-space:nowrap}
-.atp{background:#e5eefb;color:#24558b}.challenger{background:#eee8fb;color:#67479b}.itf{background:var(--pale-green);color:var(--green)}
-.up{background:var(--pale-green);color:var(--green)}.down{background:#ffebe7;color:#9a3b2d}.same{background:#edf0f3;color:#536273}
-.event{font-weight:750;color:#25425f}.surface{color:var(--muted);font-size:.75rem;margin-top:3px}
-.empty{padding:28px;text-align:center;color:var(--muted)}
-.note{margin-top:13px;background:#fff4f5;border:1px solid #efc4cc;border-left:4px solid var(--orange);border-radius:5px;padding:11px 13px;font-size:.8rem;color:#7d1b2b}
-footer{text-align:center;color:var(--muted);font-size:.78rem;padding:0 18px 26px}
-@media(max-width:720px){header{padding:22px 15px}main{padding:19px 11px 32px}.filters{grid-template-columns:1fr}.controls-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.nav-btn,.week-btn{padding:9px 8px}.intro{align-items:start}}
-
-/* Refined visual design */
-:root{--navy:#071d49;--blue:#174ea6;--orange:#d62839;--ink:#15233a;--muted:#68758a;--line:#e1e8f2;--page:#f4f7fc;--white:#fff;--pale-blue:#edf3ff;--pale-orange:#fff0f1;--green:#14734b;--pale-green:#e7f7ef}
-body{background:linear-gradient(180deg,#eaf1fc 0,#f6f8fc 360px,#f6f8fc 100%);color:var(--ink);font-size:15px}
-header{position:relative;overflow:hidden;background:linear-gradient(115deg,#071d49 0%,#123d83 58%,#1c5ab2 100%);border-bottom:0;padding:34px 22px 56px}
-header:before{content:"";position:absolute;width:360px;height:360px;border:34px solid rgba(255,255,255,.06);border-radius:50%;right:-95px;top:-190px}
-header:after{content:none}
-.header-inner{position:relative;z-index:1}
-.eyebrow{gap:11px;color:#dce8ff;letter-spacing:.15em;font-size:.7rem}
-.logo{width:38px;height:38px;border-radius:12px;background:#fff;color:#123d83;box-shadow:0 5px 15px #00143755;font-size:.85rem}
-h1{font-size:clamp(2.1rem,5vw,3.4rem);letter-spacing:-.055em;max-width:800px}
-header p{max-width:650px;color:#dce7fb;font-size:1.02rem;line-height:1.65;margin-top:14px}
-main{padding:26px 18px 42px;max-width:1300px}
-.intro{background:#fff;border:1px solid #e4eaf4;border-radius:18px;padding:22px 24px;box-shadow:0 10px 28px rgba(18,48,91,.06);margin-top:-8px;position:relative}
-h2{font-size:1.55rem;letter-spacing:-.035em}
-.subtext{line-height:1.6}
-.demo{background:#edf4ff;border:1px solid #c9dcff;color:#214f9c;border-radius:999px;padding:8px 12px;letter-spacing:.045em;font-size:.68rem}
-.controls-row{gap:9px;margin:18px 0 12px}
-.nav-btn,.week-btn{border:1px solid #dbe3ef;background:#fff;color:#3a4b64;border-radius:10px;min-height:44px;padding:10px 16px;box-shadow:0 2px 5px rgba(20,40,80,.025);transition:transform .15s,box-shadow .15s,background .15s}
+.controls-row{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 12px}
+.nav-btn,.week-btn{border:1px solid #dbe3ef;background:#fff;color:#3a4b64;border-radius:10px;min-height:44px;padding:10px 16px;font-size:.86rem;font-weight:800;box-shadow:0 2px 5px rgba(20,40,80,.025);transition:transform .15s,box-shadow .15s,background .15s}
 .nav-btn:hover,.week-btn:hover{transform:translateY(-1px);box-shadow:0 5px 12px rgba(20,40,80,.09)}
 .nav-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:inset 0 -3px 0 var(--orange),0 5px 12px #071d4920}
 .week-btn[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:inset 0 -3px 0 var(--orange),0 4px 12px #174ea628}
-.filters{gap:14px;padding:17px;background:#fff;border:1px solid #e2e9f3;border-radius:15px;margin:16px 0;box-shadow:0 6px 20px rgba(18,48,91,.035)}
-label{font-size:.72rem;letter-spacing:.035em;color:#53647c}
-input,select{border:1px solid #d5deeb;border-radius:9px;min-height:45px;padding:10px 12px;transition:border .15s,box-shadow .15s}
+.filters{display:grid;grid-template-columns:minmax(220px,1.5fr) minmax(160px,.7fr) minmax(160px,.7fr);gap:14px;padding:17px;background:#fff;border:1px solid #e2e9f3;border-radius:15px;margin:16px 0;box-shadow:0 6px 20px rgba(18,48,91,.035)}
+label{display:block;font-size:.72rem;letter-spacing:.035em;font-weight:850;color:#53647c;margin-bottom:6px}
+input,select{width:100%;min-height:45px;padding:10px 12px;border:1px solid #d5deeb;border-radius:9px;background:#fff;color:var(--ink);font-size:.9rem}
 input:focus,select:focus{border-color:#3975ce;box-shadow:0 0 0 3px #3975ce1a;outline:0}
-.table-wrap{border:1px solid #e1e8f2;border-radius:16px;box-shadow:0 12px 30px rgba(18,48,91,.07)}
-.table-head{padding:17px 19px;background:linear-gradient(90deg,#fff,#f9fbff);border-bottom:1px solid #e5ebf4}
-.table-title{font-size:1rem;letter-spacing:-.01em}.count{background:#edf3ff;color:#28538f;padding:5px 9px;border-radius:999px;font-weight:750}
-table{font-size:.85rem}
-thead th{background:#edf3ff;color:#29476f;padding:14px 13px;font-size:.67rem}
-tbody td{padding:14px 13px;border-bottom:1px solid #eef2f7}
-tbody tr:nth-child(even){background:#fbfcff}tbody tr:hover{background:#f0f5ff}
-.player{color:#102d5c;font-weight:850}.rank{font-variant-numeric:tabular-nums;color:#142c50}
-.badge{border-radius:999px;padding:4px 8px}.atp{background:#e6efff;color:#214f9c}.challenger{background:#eee9ff;color:#6042a2}.itf{background:#e7f7ef;color:#14734b}
-.up{background:#e7f7ef;color:#14734b}.down{background:#fff0ed;color:#a73c2f}.same{background:#edf1f6;color:#536273}
-.event{color:#1c477f}.surface{font-size:.74rem}
-.note{margin-top:16px;background:#f3f7ff;border:1px solid #d7e4fb;border-left:5px solid var(--blue);border-radius:10px;padding:14px 16px;font-size:.82rem;color:#29476f;line-height:1.6}
-footer{padding:0 18px 30px;color:#7a8799}
-@media(max-width:720px){header{padding:27px 16px 48px}header:before{width:240px;height:240px;right:-100px;top:-120px}main{padding:20px 12px 30px}.intro{padding:18px 16px;border-radius:14px}.filters{padding:14px;border-radius:13px}.controls-row{gap:8px}.nav-btn,.week-btn{font-size:.82rem;padding:10px 8px;border-radius:9px}.table-wrap{border-radius:13px}.table-head{padding:14px}.demo{font-size:.62rem}}
-
+.table-wrap{background:#fff;border:1px solid #e1e8f2;border-radius:16px;box-shadow:0 12px 30px rgba(18,48,91,.07);overflow:hidden}
+.table-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:17px 19px;background:linear-gradient(90deg,#fff,#f9fbff);border-bottom:1px solid #e5ebf4}
+.table-title{font-size:1rem;font-weight:900;letter-spacing:-.01em}
+.count{background:#edf3ff;color:#28538f;padding:5px 9px;border-radius:999px;font-size:.8rem;font-weight:750}
+.table-scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:820px;font-size:.85rem}
+thead th{text-align:left;background:#edf3ff;color:#29476f;text-transform:uppercase;letter-spacing:.045em;font-size:.67rem;padding:14px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody td{padding:14px 13px;border-bottom:1px solid #eef2f7;vertical-align:top}
+tbody tr:nth-child(even){background:#fbfcff}
+tbody tr:hover{background:#f0f5ff}
+tbody tr:last-child td{border-bottom:0}
+.player{color:#102d5c;font-weight:850;white-space:nowrap}
+.rank,.age{font-weight:900;font-variant-numeric:tabular-nums;color:#142c50}
+.badge{display:inline-block;border-radius:999px;padding:4px 8px;font-size:.69rem;font-weight:850;white-space:nowrap}
+.atp{background:#e6efff;color:#214f9c}
+.challenger{background:#eee9ff;color:#6042a2}
+.itf{background:#e7f7ef;color:#14734b}
+.up{background:#e7f7ef;color:#14734b}
+.down{background:#fff0ed;color:#a73c2f}
+.same{background:#edf1f6;color:#536273}
+.event{font-weight:750;color:#1c477f}
+.surface{color:var(--muted);font-size:.74rem}
+.empty{padding:28px;text-align:center;color:var(--muted)}
 .about-button{border:1px solid #cbd9ed;background:#fff;color:#173f7b;border-radius:999px;padding:8px 13px;font-size:.8rem;font-weight:800;box-shadow:0 3px 10px rgba(7,29,73,.06)}
 .about-button:hover{background:#edf3ff;border-color:#9bb9e8}
-.about-dialog{width:min(560px,calc(100% - 28px));border:1px solid #dce5f2;border-radius:18px;padding:0;color:var(--ink);box-shadow:0 24px 80px rgba(4,22,55,.3)}
-.about-dialog::backdrop{background:rgba(5,19,43,.62);backdrop-filter:blur(3px)}
-.about-dialog-head{background:linear-gradient(115deg,#071d49,#174ea6);color:#fff;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.about-dialog-head h2{font-size:1.25rem;margin:0}
+.about-dialog,.policy-dialog{width:min(560px,calc(100% - 28px));max-height:85vh;overflow:auto;border:1px solid #dce5f2;border-radius:18px;padding:0;color:var(--ink);box-shadow:0 24px 80px rgba(4,22,55,.3)}
+.about-dialog::backdrop,.policy-dialog::backdrop{background:rgba(5,19,43,.62);backdrop-filter:blur(3px)}
+.about-dialog-head,.policy-head{background:linear-gradient(115deg,#071d49,#174ea6);color:#fff;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.about-dialog-head h2,.policy-head h2{font-size:1.25rem;margin:0}
 .about-close{border:1px solid #ffffff66;background:#ffffff16;color:#fff;border-radius:8px;padding:7px 11px;font-weight:800}
-.about-dialog-body{padding:21px 23px;line-height:1.7}
+.about-dialog-body,.policy-body{padding:21px 23px;line-height:1.7}
 .about-dialog-body ul{padding-left:21px;margin:9px 0 14px}
 .about-dialog-body li{margin:6px 0}
 .about-footnote{font-size:.82rem;color:var(--muted);background:#f2f6fc;border-radius:9px;padding:11px 13px;margin-top:14px}
-
-.creator-banner{padding:14px 18px;background:linear-gradient(110deg,#eaf1ff 0%,#f7f9ff 52%,#fff 100%);border-bottom:1px solid #dce6f5}
-.creator-banner-inner{position:relative;overflow:hidden;max-width:1260px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:16px 19px;border:1px solid #d7e3f7;border-radius:16px;background:linear-gradient(115deg,#0a2456 0%,#174ea6 75%,#2163bd 100%);color:#fff;box-shadow:0 8px 22px rgba(14,48,103,.15)}
-.creator-banner-inner:after{content:"";position:absolute;right:150px;top:-42px;width:140px;height:140px;border:18px solid rgba(255,255,255,.07);border-radius:50%;pointer-events:none}
-.creator-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:14px;background:#fff;color:#123c78;font-size:1.35rem;font-weight:900;box-shadow:0 4px 12px #00143735}
+.policy-body h3{font-size:1rem;margin:18px 0 5px}
+.policy-body p{margin:10px 0}
+.policy-body a{color:#174ea6}
+.creator-banner,.donate-banner{background:linear-gradient(110deg,#eaf1ff 0%,#f7f9ff 52%,#fff 100%)}
+.creator-banner{padding:14px 18px;border-bottom:1px solid #dce6f5}
+.creator-banner-inner,.donate-banner-inner{position:relative;overflow:hidden;max-width:1260px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:16px 19px;border:1px solid #d7e3f7;border-radius:16px;background:linear-gradient(115deg,#0a2456 0%,#174ea6 75%,#2163bd 100%);color:#fff;box-shadow:0 8px 22px rgba(14,48,103,.15)}
+.creator-banner-inner:after,.donate-banner-inner:after{content:"";position:absolute;right:150px;top:-42px;width:140px;height:140px;border:18px solid rgba(255,255,255,.07);border-radius:50%;pointer-events:none}
+.creator-icon,.donate-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:14px;background:#fff;color:#123c78;font-size:1.35rem;font-weight:900;box-shadow:0 4px 12px #00143735}
 .creator-copy{position:relative;z-index:1;display:block;min-width:0}
-.creator-kicker{display:block;text-transform:uppercase;letter-spacing:.13em;font-size:.64rem;font-weight:850;color:#c7dcff;margin-bottom:2px}
-.creator-banner-inner strong{display:block;font-size:1rem;line-height:1.35;letter-spacing:-.015em}
-.creator-sub{display:block;color:#e0eaff;font-size:.81rem;margin-top:3px}
+.creator-banner-inner strong,.donate-banner-inner strong{display:block;font-size:1rem;line-height:1.35;letter-spacing:-.015em}
+.creator-sub,.donate-copy{display:block;color:#e0eaff;font-size:.81rem;margin-top:3px}
+.donate-copy{line-height:1.45}
 .creator-actions{position:relative;z-index:1;margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}
-.creator-banner-inner .creator-actions a{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:.82rem;font-weight:900;padding:11px 14px;border:1px solid #fff;border-radius:11px;white-space:nowrap;box-shadow:0 4px 12px #00143730;transition:transform .15s,background .15s}
-.creator-banner-inner .creator-follow{background:#fff;color:#123c78}
-.creator-banner-inner .creator-actions a:hover{background:#edf3ff;transform:translateY(-1px)}
-.donate-banner{padding:0 18px 14px;background:linear-gradient(110deg,#eaf1ff 0%,#f7f9ff 52%,#fff 100%)}
-.donate-banner-inner{position:relative;overflow:hidden;max-width:1260px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:16px 19px;border:1px solid #d7e3f7;border-radius:16px;background:linear-gradient(115deg,#0a2456 0%,#174ea6 75%,#2163bd 100%);color:#fff;box-shadow:0 8px 22px rgba(14,48,103,.15)}
-.donate-banner-inner:after{content:"";position:absolute;right:150px;top:-42px;width:140px;height:140px;border:18px solid rgba(255,255,255,.07);border-radius:50%;pointer-events:none}
-.donate-copy{position:relative;z-index:1;display:block;min-width:0;color:#e0eaff;font-size:.81rem;line-height:1.45}
-.donate-banner-inner strong{position:relative;z-index:1;display:block;font-size:1rem;line-height:1.35;letter-spacing:-.015em}
-.donate-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:14px;background:#fff;color:#123c78;font-size:1.35rem;box-shadow:0 4px 12px #00143735}
-.donate-button{position:relative;z-index:1;margin-left:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 22px;min-width:150px;min-height:48px;border:1px solid #fff;border-radius:11px;background:#fff;color:#123c78;text-decoration:none;font-size:.82rem;font-weight:900;white-space:nowrap;box-shadow:0 4px 12px #00143730;transition:transform .15s,background .15s}
-.donate-button:hover{background:#edf3ff;transform:translateY(-1px)}
-
-/* Mobile: place both action buttons across the full bottom of their banners */
+.creator-banner-inner .creator-actions a,.donate-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:.82rem;font-weight:900;padding:11px 14px;border:1px solid #fff;border-radius:11px;white-space:nowrap;box-shadow:0 4px 12px #00143730;transition:transform .15s,background .15s}
+.creator-banner-inner .creator-follow,.donate-button{background:#fff;color:#123c78}
+.creator-banner-inner .creator-actions a:hover,.donate-button:hover{background:#edf3ff;transform:translateY(-1px)}
+.donate-banner{padding:0 18px 14px}
+.donate-button{position:relative;z-index:1;margin-left:auto;min-width:150px;min-height:48px;padding:9px 22px}
+footer{padding:0 18px 30px;text-align:center;color:#7a8799;font-size:.78rem}
+.footer-links{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:12px 0}
+.footer-links button{border:0;background:transparent;color:#174ea6;text-decoration:underline;padding:5px 8px;font-size:.8rem}
+@media(max-width:720px){
+  header{padding:27px 16px 48px}
+  header:before{width:240px;height:240px;right:-100px;top:-120px}
+  main{padding:20px 12px 30px}
+  .intro{padding:18px 16px;border-radius:14px;align-items:start}
+  .filters{grid-template-columns:1fr;padding:14px;border-radius:13px}
+  .controls-row{gap:8px}
+  .nav-btn,.week-btn{font-size:.82rem;padding:10px 8px;border-radius:9px}
+  .table-wrap{border-radius:13px}
+  .table-head{padding:14px}
+}
 @media(max-width:650px){
   .creator-banner{padding:11px 10px}
-  .creator-banner-inner{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:flex-start;
-    gap:10px;
-    padding:13px 12px;
-    border-radius:13px;
-  }
-  .creator-icon,.donate-icon{
-    flex:0 0 39px;
-    width:39px;
-    height:39px;
-    border-radius:11px;
-    font-size:1.15rem;
-  }
-  .creator-copy{
-    flex:1 1 calc(100% - 50px);
-    min-width:0;
-  }
+  .creator-banner-inner,.donate-banner-inner{display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px;padding:13px 12px;border-radius:13px}
+  .creator-icon,.donate-icon{flex:0 0 39px;width:39px;height:39px;border-radius:11px;font-size:1.15rem}
+  .creator-copy{flex:1 1 calc(100% - 50px);min-width:0}
   .creator-banner-inner strong,.donate-banner-inner strong{font-size:.9rem}
   .creator-sub,.donate-copy{font-size:.76rem}
-  .creator-actions{
-    width:100%;
-    flex:0 0 100%;
-    margin:0;
-    display:flex;
-  }
-  .creator-banner-inner .creator-actions a{
-    width:100%;
-    flex:1 1 100%;
-    padding:10px 12px;
-    font-size:.82rem;
-    min-height:44px;
-  }
+  .creator-actions{width:100%;flex:0 0 100%;margin:0;display:flex}
+  .creator-banner-inner .creator-actions a{width:100%;flex:1 1 100%;padding:10px 12px;font-size:.82rem;min-height:44px}
   .donate-banner{padding:0 10px 11px}
-  .donate-banner-inner{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:flex-start;
-    gap:10px;
-    padding:13px 12px;
-    border-radius:13px;
-  }
-  .donate-banner-inner .creator-copy{
-    flex:1 1 calc(100% - 50px);
-    min-width:0;
-  }
-  .donate-copy{line-height:1.45}
-  .donate-button{
-    flex:0 0 100%;
-    width:100%;
-    min-width:0;
-    min-height:44px;
-    margin:0;
-    padding:10px 12px;
-    font-size:.82rem;
-  }
+  .donate-banner-inner .creator-copy{flex:1 1 calc(100% - 50px);min-width:0}
+  .donate-button{flex:0 0 100%;width:100%;min-width:0;min-height:44px;margin:0;padding:10px 12px;font-size:.82rem}
 }
 </style>
 </head>
 <body>
-<header><div class="header-inner">
-  <div class="eyebrow"><span class="logo">BT</span> British tennis data</div>
-  <h1>British Tennis Players</h1>
-  <p>Rankings and tournament entries for British players across the professional tours.</p>
-</div></header>
+<header>
+  <div class="header-inner">
+    <div class="eyebrow"><span class="logo">BT</span> British tennis data</div>
+    <h1>British Tennis Players</h1>
+    <p>Rankings and tournament entries for British players across the professional tours.</p>
+  </div>
+</header>
 
 <div class="creator-banner" role="complementary" aria-label="Website creator">
   <div class="creator-banner-inner">
@@ -216,10 +150,11 @@ footer{padding:0 18px 30px;color:#7a8799}
 
 <main>
   <div class="intro">
-    <div><h2 id="heading">Men's player summary</h2><p class="subtext muted">Player rankings and tournament schedules for the next three weeks.</p></div>
-    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-      <button type="button" class="about-button" id="aboutOpen" aria-haspopup="dialog" aria-controls="aboutDialog">ⓘ What is this page?</button>
+    <div>
+      <h2 id="heading">Men's player summary</h2>
+      <p class="subtext muted">Player rankings and tournament schedules for the next three weeks.</p>
     </div>
+    <button type="button" class="about-button" id="aboutOpen" aria-haspopup="dialog" aria-controls="aboutDialog">ⓘ What is this page?</button>
   </div>
 
   <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutTitle">
@@ -247,20 +182,64 @@ footer{padding:0 18px 30px;color:#7a8799}
   </div>
 
   <div class="controls-row" aria-label="Schedule week">
-    <button type="button" class="week-btn" data-week="this" aria-pressed="true">This week</button>
+    <button type="button" class="week-btn" data-week="this" aria-pressed="false">This week</button>
     <button type="button" class="week-btn" data-week="next" aria-pressed="false">Next week</button>
     <button type="button" class="week-btn" data-week="following" aria-pressed="false">Following week</button>
     <button type="button" class="week-btn" data-view="threeweek" aria-pressed="true">Three week schedule</button>
   </div>
 
   <section class="table-wrap" aria-live="polite">
-    <div class="table-head"><div class="table-title" id="tableTitle">Men's player summary</div><div class="count" id="count">10 players</div></div>
+    <div class="table-head"><div class="table-title" id="tableTitle">Men's player summary</div><div class="count" id="count">Loading players…</div></div>
     <div class="table-scroll"><table><thead id="columns"></thead><tbody id="rows"></tbody></table></div>
     <div id="empty" class="empty" hidden>No matching players found, or no data has been added for this category yet.</div>
   </section>
 </main>
 
-<footer>© 2026 British Tennis Players · Independent fan-run project</footer>
+<footer>
+  <div>© 2026 British Tennis Players · Independent fan-run project</div>
+  <div class="footer-links">
+    <button type="button" data-policy="aboutSite">About this site</button>
+    <button type="button" data-policy="privacy">Privacy policy</button>
+    <button type="button" data-policy="contact">Contact</button>
+  </div>
+  <p style="max-width:760px;margin:0 auto">Tournament information is provided as a guide and may change. Please verify entries with official sources. This site is independent and is not affiliated with the ATP, WTA, ITF or LTA.</p>
+</footer>
+
+<dialog class="policy-dialog" id="aboutSiteDialog" aria-labelledby="aboutSiteTitle">
+  <div class="policy-head"><h2 id="aboutSiteTitle">About this site</h2><button type="button" class="about-close" data-close-policy>Close ✕</button></div>
+  <div class="policy-body">
+    <p><strong>British Tennis Players</strong> is an independent fan-run project designed to make it easier to follow British players on the professional tennis tours. It brings together a searchable player list and a three-week tournament schedule in one place.</p>
+    <p>The site is not affiliated with or endorsed by the ATP, WTA, ITF or Lawn Tennis Association. Tournament entries, rankings and player availability can change; please check the official tour or tournament source for confirmation.</p>
+    <p>We aim to make the information useful and easy to navigate, and to improve the site as the project develops.</p>
+  </div>
+</dialog>
+
+<dialog class="policy-dialog" id="privacyDialog" aria-labelledby="privacyTitle">
+  <div class="policy-head"><h2 id="privacyTitle">Privacy policy</h2><button type="button" class="about-close" data-close-policy>Close ✕</button></div>
+  <div class="policy-body">
+    <p><strong>Last updated: 14 October 2026</strong></p>
+    <p>This policy explains how British Tennis Players may handle information when you visit this website.</p>
+    <h3>Information you provide</h3>
+    <p>This site does not currently provide user accounts or ask visitors to submit personal information through a site form. If you contact the project through an external service such as X, that service’s own privacy policy applies to information you share there.</p>
+    <h3>Cookies and advertising</h3>
+    <p>If Google AdSense is enabled on this site, Google and its partners may use cookies or similar technologies to serve, measure and personalise advertisements, subject to your settings, applicable law and the consent choices presented to you. Third-party vendors, including Google, may use information about visits to this and other websites to provide advertising services.</p>
+    <p>Learn more about <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">how Google uses information for advertising</a> and review <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google ad personalisation settings</a>. You can also control cookies through your browser settings. Blocking cookies may affect some website features or advertising choices.</p>
+    <h3>Site operation and analytics</h3>
+    <p>The website is hosted by Netlify. The hosting provider may process technical information such as IP address, browser details and server logs to deliver and protect the site, according to its own policies. If analytics tools are added, this policy should be updated to describe them.</p>
+    <h3>External links</h3>
+    <p>This site links to third-party websites and social platforms. We are not responsible for their content or privacy practices; please read their policies directly.</p>
+    <h3>Your choices and contact</h3>
+    <p>You can manage browser cookies and Google advertising preferences using the links above. This is a starter policy for this independent project, not legal advice. It should be reviewed and updated to reflect the actual advertising, consent and analytics setup before relying on it for compliance.</p>
+  </div>
+</dialog>
+
+<dialog class="policy-dialog" id="contactDialog" aria-labelledby="contactTitle">
+  <div class="policy-head"><h2 id="contactTitle">Contact</h2><button type="button" class="about-close" data-close-policy>Close ✕</button></div>
+  <div class="policy-body">
+    <p>For feedback, corrections or suggestions about British Tennis Players, contact the project through <a href="https://x.com/BritishTennisUp" target="_blank" rel="noopener noreferrer">@BritishTennisUp on X</a>.</p>
+    <p>If you spot a ranking or tournament entry that appears incorrect, please include the player’s name, tournament and relevant week, along with an official source link if possible.</p>
+  </div>
+</dialog>
 
 <script>
 (function () {
@@ -415,6 +394,18 @@ footer{padding:0 18px 30px;color:#7a8799}
   aboutDialog.addEventListener("click", event => {
     if (event.target === aboutDialog) aboutDialog.close();
   });
+
+  document.querySelectorAll("[data-policy]").forEach(button => button.addEventListener("click", () => {
+    const dialog = document.getElementById(button.dataset.policy + "Dialog");
+    if (dialog) dialog.showModal();
+  }));
+  document.querySelectorAll("[data-close-policy]").forEach(button => button.addEventListener("click", () => {
+    const dialog = button.closest("dialog");
+    if (dialog) dialog.close();
+  }));
+  document.querySelectorAll(".policy-dialog").forEach(dialog => dialog.addEventListener("click", event => {
+    if (event.target === dialog) dialog.close();
+  }));
 
   render();
 })();
