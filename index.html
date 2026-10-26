@@ -1,412 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4256059628196575"
-       crossorigin="anonymous"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#123c78">
-  <meta name="description" content="Follow British tennis players with searchable rankings and a three-week schedule of professional tournament entries.">
-  <title>British Tennis Players</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123c78">
+<title>British Tennis Players</title>
 <style>
-:root{
-  --navy:#071d49;--blue:#174ea6;--orange:#d62839;--ink:#15233a;
-  --muted:#68758a;--line:#e1e8f2;--page:#f4f7fc;--white:#fff;
-  --pale-blue:#edf3ff;--pale-orange:#fff0f1;--green:#14734b;--pale-green:#e7f7ef
+:root {
+  --navy:#071d49;
+  --blue:#174ea6;
+  --red:#d62839;
+  --ink:#15233a;
+  --muted:#68758a;
+  --line:#e1e8f2;
+  --page:#f4f7fc;
+  --pale-blue:#edf3ff;
+  --pale-green:#e7f7ef;
+  --green:#14734b;
 }
-*{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,#eaf1fc 0,#f6f8fc 360px,#f6f8fc 100%);color:var(--ink);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{position:relative;overflow:hidden;background:linear-gradient(115deg,#071d49 0%,#123d83 58%,#1c5ab2 100%);padding:34px 22px 56px;color:#fff}
-header:before{content:"";position:absolute;width:360px;height:360px;border:34px solid rgba(255,255,255,.06);border-radius:50%;right:-95px;top:-190px}
-.header-inner,main,footer{max-width:1300px;margin:0 auto}
-.header-inner{position:relative;z-index:1}
-.eyebrow{display:flex;align-items:center;gap:11px;text-transform:uppercase;letter-spacing:.15em;font-size:.7rem;font-weight:800;color:#dce8ff;margin-bottom:10px}
-.logo{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#fff;color:#123d83;box-shadow:0 5px 15px #00143755;font-size:.85rem;font-weight:950}
-h1{font-size:clamp(2.1rem,5vw,3.4rem);letter-spacing:-.055em;line-height:1.1;margin:0;max-width:800px}
-header p{max-width:650px;color:#dce7fb;font-size:1.02rem;line-height:1.65;margin:14px 0 0}
-main{padding:26px 18px 42px}
-.intro{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;background:#fff;border:1px solid #e4eaf4;border-radius:18px;padding:22px 24px;box-shadow:0 10px 28px rgba(18,48,91,.06);margin-top:-8px;position:relative;margin-bottom:18px}
-h2{font-size:1.55rem;letter-spacing:-.035em;margin:0}
-.muted{color:var(--muted)}
-.subtext{margin:5px 0 0;font-size:.9rem;line-height:1.6}
-button,select,input{font:inherit}
-button{cursor:pointer}
-button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
-.controls-row{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 12px}
-.nav-btn,.week-btn{border:1px solid #dbe3ef;background:#fff;color:#3a4b64;border-radius:10px;min-height:44px;padding:10px 16px;font-size:.86rem;font-weight:800;box-shadow:0 2px 5px rgba(20,40,80,.025);transition:transform .15s,box-shadow .15s,background .15s}
-.nav-btn:hover,.week-btn:hover{transform:translateY(-1px);box-shadow:0 5px 12px rgba(20,40,80,.09)}
-.nav-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:inset 0 -3px 0 var(--orange),0 5px 12px #071d4920}
-.week-btn[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:inset 0 -3px 0 var(--orange),0 4px 12px #174ea628}
-.filters{display:grid;grid-template-columns:minmax(220px,1.5fr) minmax(160px,.7fr) minmax(160px,.7fr);gap:14px;padding:17px;background:#fff;border:1px solid #e2e9f3;border-radius:15px;margin:16px 0;box-shadow:0 6px 20px rgba(18,48,91,.035)}
-label{display:block;font-size:.72rem;letter-spacing:.035em;font-weight:850;color:#53647c;margin-bottom:6px}
-input,select{width:100%;min-height:45px;padding:10px 12px;border:1px solid #d5deeb;border-radius:9px;background:#fff;color:var(--ink);font-size:.9rem}
-input:focus,select:focus{border-color:#3975ce;box-shadow:0 0 0 3px #3975ce1a;outline:0}
-.table-wrap{background:#fff;border:1px solid #e1e8f2;border-radius:16px;box-shadow:0 12px 30px rgba(18,48,91,.07);overflow:hidden}
-.table-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:17px 19px;background:linear-gradient(90deg,#fff,#f9fbff);border-bottom:1px solid #e5ebf4}
-.table-title{font-size:1rem;font-weight:900;letter-spacing:-.01em}
-.count{background:#edf3ff;color:#28538f;padding:5px 9px;border-radius:999px;font-size:.8rem;font-weight:750}
-.table-scroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:820px;font-size:.85rem}
-thead th{text-align:left;background:#edf3ff;color:#29476f;text-transform:uppercase;letter-spacing:.045em;font-size:.67rem;padding:14px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
-tbody td{padding:14px 13px;border-bottom:1px solid #eef2f7;vertical-align:top}
-tbody tr:nth-child(even){background:#fbfcff}
-tbody tr:hover{background:#f0f5ff}
-tbody tr:last-child td{border-bottom:0}
-.player{color:#102d5c;font-weight:850;white-space:nowrap}
-.rank,.age{font-weight:900;font-variant-numeric:tabular-nums;color:#142c50}
-.badge{display:inline-block;border-radius:999px;padding:4px 8px;font-size:.69rem;font-weight:850;white-space:nowrap}
-.atp{background:#e6efff;color:#214f9c}
-.challenger{background:#eee9ff;color:#6042a2}
-.itf{background:#e7f7ef;color:#14734b}
-.up{background:#e7f7ef;color:#14734b}
-.down{background:#fff0ed;color:#a73c2f}
-.same{background:#edf1f6;color:#536273}
-.event{font-weight:750;color:#1c477f}
-.surface{color:var(--muted);font-size:.74rem}
-.empty{padding:28px;text-align:center;color:var(--muted)}
-.about-button{border:1px solid #cbd9ed;background:#fff;color:#173f7b;border-radius:999px;padding:8px 13px;font-size:.8rem;font-weight:800;box-shadow:0 3px 10px rgba(7,29,73,.06)}
-.about-button:hover{background:#edf3ff;border-color:#9bb9e8}
-.about-dialog,.policy-dialog{width:min(560px,calc(100% - 28px));max-height:85vh;overflow:auto;border:1px solid #dce5f2;border-radius:18px;padding:0;color:var(--ink);box-shadow:0 24px 80px rgba(4,22,55,.3)}
-.about-dialog::backdrop,.policy-dialog::backdrop{background:rgba(5,19,43,.62);backdrop-filter:blur(3px)}
-.about-dialog-head,.policy-head{background:linear-gradient(115deg,#071d49,#174ea6);color:#fff;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.about-dialog-head h2,.policy-head h2{font-size:1.25rem;margin:0}
-.about-close{border:1px solid #ffffff66;background:#ffffff16;color:#fff;border-radius:8px;padding:7px 11px;font-weight:800}
-.about-dialog-body,.policy-body{padding:21px 23px;line-height:1.7}
-.about-dialog-body ul{padding-left:21px;margin:9px 0 14px}
-.about-dialog-body li{margin:6px 0}
-.about-footnote{font-size:.82rem;color:var(--muted);background:#f2f6fc;border-radius:9px;padding:11px 13px;margin-top:14px}
-.policy-body h3{font-size:1rem;margin:18px 0 5px}
-.policy-body p{margin:10px 0}
-.policy-body a{color:#174ea6}
-.creator-banner,.donate-banner{background:linear-gradient(110deg,#eaf1ff 0%,#f7f9ff 52%,#fff 100%)}
-.creator-banner{padding:14px 18px;border-bottom:1px solid #dce6f5}
-.creator-banner-inner,.donate-banner-inner{position:relative;overflow:hidden;max-width:1260px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:16px 19px;border:1px solid #d7e3f7;border-radius:16px;background:linear-gradient(115deg,#0a2456 0%,#174ea6 75%,#2163bd 100%);color:#fff;box-shadow:0 8px 22px rgba(14,48,103,.15)}
-.creator-banner-inner:after,.donate-banner-inner:after{content:"";position:absolute;right:150px;top:-42px;width:140px;height:140px;border:18px solid rgba(255,255,255,.07);border-radius:50%;pointer-events:none}
-.creator-icon,.donate-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:14px;background:#fff;color:#123c78;font-size:1.35rem;font-weight:900;box-shadow:0 4px 12px #00143735}
-.creator-copy{position:relative;z-index:1;display:block;min-width:0}
-.creator-banner-inner strong,.donate-banner-inner strong{display:block;font-size:1rem;line-height:1.35;letter-spacing:-.015em}
-.creator-sub,.donate-copy{display:block;color:#e0eaff;font-size:.81rem;margin-top:3px}
-.donate-copy{line-height:1.45}
-.creator-actions{position:relative;z-index:1;margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}
-.creator-banner-inner .creator-actions a,.donate-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:.82rem;font-weight:900;padding:11px 14px;border:1px solid #fff;border-radius:11px;white-space:nowrap;box-shadow:0 4px 12px #00143730;transition:transform .15s,background .15s}
-.creator-banner-inner .creator-follow,.donate-button{background:#fff;color:#123c78}
-.creator-banner-inner .creator-actions a:hover,.donate-button:hover{background:#edf3ff;transform:translateY(-1px)}
-.donate-banner{padding:0 18px 14px}
-.donate-button{position:relative;z-index:1;margin-left:auto;min-width:150px;min-height:48px;padding:9px 22px}
-footer{padding:0 18px 30px;text-align:center;color:#7a8799;font-size:.78rem}
-.footer-links{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:12px 0}
-.footer-links button{border:0;background:transparent;color:#174ea6;text-decoration:underline;padding:5px 8px;font-size:.8rem}
-@media(max-width:720px){
-  header{padding:27px 16px 48px}
-  header:before{width:240px;height:240px;right:-100px;top:-120px}
-  main{padding:20px 12px 30px}
-  .intro{padding:18px 16px;border-radius:14px;align-items:start}
-  .filters{grid-template-columns:1fr;padding:14px;border-radius:13px}
-  .controls-row{gap:8px}
-  .nav-btn,.week-btn{font-size:.82rem;padding:10px 8px;border-radius:9px}
-  .table-wrap{border-radius:13px}
-  .table-head{padding:14px}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  background:linear-gradient(180deg,#eaf1fc 0,#f6f8fc 360px);
+  color:var(--ink);
+  font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
-@media(max-width:650px){
-  .creator-banner{padding:11px 10px}
-  .creator-banner-inner,.donate-banner-inner{display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px;padding:13px 12px;border-radius:13px}
-  .creator-icon,.donate-icon{flex:0 0 39px;width:39px;height:39px;border-radius:11px;font-size:1.15rem}
-  .creator-copy{flex:1 1 calc(100% - 50px);min-width:0}
-  .creator-banner-inner strong,.donate-banner-inner strong{font-size:.9rem}
-  .creator-sub,.donate-copy{font-size:.76rem}
-  .creator-actions{width:100%;flex:0 0 100%;margin:0;display:flex}
-  .creator-banner-inner .creator-actions a{width:100%;flex:1 1 100%;padding:10px 12px;font-size:.82rem;min-height:44px}
-  .donate-banner{padding:0 10px 11px}
-  .donate-banner-inner .creator-copy{flex:1 1 calc(100% - 50px);min-width:0}
-  .donate-button{flex:0 0 100%;width:100%;min-width:0;min-height:44px;margin:0;padding:10px 12px;font-size:.82rem}
+header {
+  background:linear-gradient(115deg,#071d49,#123d83 58%,#1c5ab2);
+  color:white;
+  padding:32px 20px 48px;
+  border-bottom:5px solid var(--red);
+}
+.header-inner, main, footer { max-width:1300px; margin:auto; }
+.eyebrow {
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.72rem;
+  font-weight:800;
+  color:#dce8ff;
+  margin-bottom:10px;
+}
+h1 {
+  font-size:clamp(2rem,5vw,3.3rem);
+  letter-spacing:-.05em;
+  line-height:1.1;
+  margin:0;
+}
+header p { color:#dce7fb; margin:12px 0 0; }
+main { padding:25px 18px 40px; }
+.intro {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:12px;
+  flex-wrap:wrap;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:21px 23px;
+  box-shadow:0 10px 28px #12305b0f;
+}
+h2 { font-size:1.5rem; letter-spacing:-.03em; margin:0; }
+.subtext { margin:5px 0 0; color:var(--muted); }
+.controls-row { display:flex; flex-wrap:wrap; gap:9px; margin:17px 0 12px; }
+button,select,input { font:inherit; }
+button { cursor:pointer; }
+button:focus-visible,input:focus-visible,select:focus-visible {
+  outline:3px solid var(--red);
+  outline-offset:2px;
+}
+.nav-btn,.week-btn {
+  border:1px solid #dbe3ef;
+  background:white;
+  color:#3a4b64;
+  border-radius:9px;
+  min-height:43px;
+  padding:9px 15px;
+  font-size:.86rem;
+  font-weight:800;
+}
+.nav-btn.active {
+  background:var(--navy);
+  border-color:var(--navy);
+  color:white;
+  box-shadow:inset 0 -3px var(--red);
+}
+.week-btn.active { background:var(--blue); color:white; border-color:var(--blue); }
+.filters {
+  display:grid;
+  grid-template-columns:minmax(220px,1.5fr) minmax(150px,.7fr) minmax(150px,.7fr);
+  gap:13px;
+  padding:16px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:13px;
+  margin:15px 0;
+}
+label {
+  display:block;
+  font-size:.73rem;
+  font-weight:850;
+  color:#536377;
+  margin-bottom:6px;
+}
+input,select {
+  width:100%;
+  min-height:43px;
+  padding:9px 11px;
+  border:1px solid #d5deeb;
+  border-radius:8px;
+  background:white;
+  color:var(--ink);
+}
+.table-wrap {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 12px 30px #12305b12;
+}
+.table-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:15px 18px;
+  border-bottom:1px solid var(--line);
+}
+.table-title { font-weight:900; }
+.count {
+  color:#28538f;
+  background:var(--pale-blue);
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:.8rem;
+  font-weight:750;
+}
+.table-scroll { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; min-width:820px; font-size:.83rem; }
+thead th {
+  text-align:left;
+  background:var(--pale-blue);
+  color:#29476f;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  font-size:.67rem;
+  padding:13px 12px;
+  white-space:nowrap;
+}
+tbody td { padding:12px; border-bottom:1px solid #edf1f5; vertical-align:top; }
+tbody tr:nth-child(even) { background:#fbfcff; }
+tbody tr:hover { background:#f0f5ff; }
+tbody tr:last-child td { border-bottom:0; }
+.player { font-weight:850; white-space:nowrap; color:#102d5c; }
+.rank,.age { font-weight:900; font-variant-numeric:tabular-nums; }
+.badge {
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:999px;
+  font-size:.69rem;
+  font-weight:850;
+  white-space:nowrap;
+}
+.atp { background:#e6efff; color:#214f9c; }
+.challenger { background:#eee9ff; color:#6042a2; }
+.wta { background:#e6efff; color:#214f9c; }
+.itf { background:var(--pale-green); color:var(--green); }
+.event { font-weight:750; color:#1c477f; margin-top:5px; }
+.muted { color:var(--muted); }
+.empty { padding:28px; text-align:center; color:var(--muted); }
+.note {
+  margin-top:15px;
+  background:#f3f7ff;
+  border:1px solid #d7e4fb;
+  border-left:5px solid var(--blue);
+  border-radius:9px;
+  padding:13px 15px;
+  color:#29476f;
+  font-size:.82rem;
+  line-height:1.6;
+}
+footer { text-align:center; color:var(--muted); font-size:.78rem; padding:0 18px 25px; }
+@media(max-width:720px) {
+  header { padding:25px 15px 40px; }
+  main { padding:19px 11px 30px; }
+  .intro { padding:17px 15px; }
+  .filters { grid-template-columns:1fr; }
+  .controls-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .nav-btn,.week-btn { padding:9px 7px; font-size:.81rem; }
 }
 </style>
 </head>
 <body>
 <header>
   <div class="header-inner">
-    <div class="eyebrow"><span class="logo">BT</span> British tennis data</div>
+    <div class="eyebrow">British Tennis · Weekly tracker</div>
     <h1>British Tennis Players</h1>
-    <p>Rankings and tournament entries for British players across the professional tours.</p>
+    <p>Follow British players in ATP, Challenger, WTA and eligible ITF tournaments across the next three weeks.</p>
   </div>
 </header>
 
-<div class="creator-banner" role="complementary" aria-label="Website creator">
-  <div class="creator-banner-inner">
-    <span class="creator-icon" aria-hidden="true">𝕏</span>
-    <span class="creator-copy"><strong>BritishTennisUp</strong><span class="creator-sub">Follow on X for more British tennis news, rankings and updates.</span></span>
-    <div class="creator-actions"><a class="creator-follow" href="https://x.com/BritishTennisUp" target="_blank" rel="noopener noreferrer">Follow @BritishTennisUp <span aria-hidden="true">↗</span></a></div>
-  </div>
-</div>
-
-<div class="donate-banner" role="complementary" aria-label="Support the website">
-  <div class="donate-banner-inner">
-    <span class="donate-icon" aria-hidden="true">☕</span>
-    <span class="creator-copy"><strong>Support This Website</strong><span class="donate-copy">Enjoying the site? Help keep it running and support future updates with a small donation.</span></span>
-    <a class="donate-button" href="https://buymeacoffee.com/britishtennisupdates" target="_blank" rel="noopener noreferrer">Donate <span aria-hidden="true">↗</span></a>
-  </div>
-</div>
-
 <main>
-  <div class="intro">
+  <section class="intro">
     <div>
-      <h2 id="heading">Men's player summary</h2>
-      <p class="subtext muted">Player rankings and tournament schedules for the next three weeks.</p>
+      <h2 id="heading">Men's three-week schedule</h2>
+      <p class="subtext">Week commencing 26 October 2026 · Tournament entries and world rankings</p>
     </div>
-    <button type="button" class="about-button" id="aboutOpen" aria-haspopup="dialog" aria-controls="aboutDialog">ⓘ What is this page?</button>
-  </div>
-
-  <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutTitle">
-    <div class="about-dialog-head"><h2 id="aboutTitle">About British Tennis Players</h2><button type="button" class="about-close" id="aboutClose" aria-label="Close description">Close ✕</button></div>
-    <div class="about-dialog-body">
-      <p>This page brings together British players’ world rankings and their tournament entries for <strong>this week, next week and the following week</strong>.</p>
-      <ul>
-        <li><strong>Men:</strong> ATP Tour and ATP Challenger events only, including qualifying entries.</li>
-        <li><strong>Women:</strong> WTA Tour events and ITF World Tennis Tour events at <strong>W50 level and above</strong>, including qualifying entries.</li>
-        <li><strong>Explore the schedule:</strong> switch between Men and Women, choose a week, search for a player or tournament, filter by ranking, and sort the list.</li>
-      </ul>
-      <p class="about-footnote">Rankings and schedules are based on the data supplied for this page and have not been independently verified. Tournament entries can change, so check the relevant tournament source for the latest confirmation.</p>
-    </div>
-  </dialog>
-
-  <div class="controls-row" aria-label="Player category and schedule view">
-    <button type="button" class="nav-btn active" data-gender="men" aria-pressed="true">Men</button>
-    <button type="button" class="nav-btn" data-gender="women" aria-pressed="false">Women</button>
-  </div>
-
-  <div class="filters">
-    <div><label for="search">Search player or tournament</label><input id="search" type="search" placeholder="Search a player or tournament…"></div>
-    <div><label for="ranking">Ranking filter</label><select id="ranking"><option value="all">All rankings</option><option value="top50">Top 50</option><option value="top100">Top 100</option><option value="outside100">Outside top 100</option></select></div>
-    <div><label for="sort">Sort by</label><select id="sort"><option value="rank">World ranking</option><option value="name">Player name A–Z</option></select></div>
-  </div>
-
-  <div class="controls-row" aria-label="Schedule week">
-    <button type="button" class="week-btn" data-week="this" aria-pressed="false">This week</button>
-    <button type="button" class="week-btn" data-week="next" aria-pressed="false">Next week</button>
-    <button type="button" class="week-btn" data-week="following" aria-pressed="false">Following week</button>
-    <button type="button" class="week-btn" data-view="threeweek" aria-pressed="true">Three week schedule</button>
-  </div>
-
-  <section class="table-wrap" aria-live="polite">
-    <div class="table-head"><div class="table-title" id="tableTitle">Men's player summary</div><div class="count" id="count">Loading players…</div></div>
-    <div class="table-scroll"><table><thead id="columns"></thead><tbody id="rows"></tbody></table></div>
-    <div id="empty" class="empty" hidden>No matching players found, or no data has been added for this category yet.</div>
   </section>
+
+  <div class="controls-row" aria-label="Player category">
+    <button class="nav-btn active" data-gender="men" aria-pressed="true">Men</button>
+    <button class="nav-btn" data-gender="women" aria-pressed="false">Women</button>
+  </div>
+
+  <div class="controls-row" aria-label="Schedule view">
+    <button class="nav-btn active" data-view="threeweek" aria-pressed="true">Three-week schedule</button>
+    <button class="nav-btn" data-view="schedule" aria-pressed="false">Single-week view</button>
+  </div>
+
+  <div class="controls-row" aria-label="Select week">
+    <button class="week-btn" data-week="this" aria-pressed="false">This week</button>
+    <button class="week-btn" data-week="next" aria-pressed="false">Next week</button>
+    <button class="week-btn" data-week="later" aria-pressed="false">Following week</button>
+  </div>
+
+  <section class="filters">
+    <div>
+      <label for="search">Search player or tournament</label>
+      <input id="search" type="search" placeholder="e.g. Fery, Glasgow, Paris">
+    </div>
+    <div>
+      <label for="ranking">Ranking filter</label>
+      <select id="ranking">
+        <option value="all">All rankings</option>
+        <option value="top50">Top 50</option>
+        <option value="top100">Top 100</option>
+        <option value="outside100">Outside top 100</option>
+      </select>
+    </div>
+    <div>
+      <label for="sort">Sort players</label>
+      <select id="sort">
+        <option value="rank">World ranking</option>
+        <option value="name">Player name</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="table-wrap">
+    <div class="table-head">
+      <div class="table-title" id="tableTitle">Men's three-week schedule</div>
+      <div class="count" id="count">Players and entries</div>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead id="columns"></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No eligible tournament entries match your filters.</div>
+    </div>
+  </section>
+
+  <div class="note">
+    <strong>Eligibility rules:</strong> Men's entries include ATP Tour and ATP Challenger tournaments, including qualifying. Women's entries include WTA Tour tournaments and ITF W50 or higher, including qualifying. M25, M15, W35 and W15 events are excluded. Only players with at least one eligible entry are listed.
+  </div>
 </main>
 
 <footer>
-  <div>© 2026 British Tennis Players · Independent fan-run project</div>
-  <div class="footer-links">
-    <button type="button" data-policy="aboutSite">About this site</button>
-    <button type="button" data-policy="privacy">Privacy policy</button>
-    <button type="button" data-policy="contact">Contact</button>
-  </div>
-  <p style="max-width:760px;margin:0 auto">Tournament information is provided as a guide and may change. Please verify entries with official sources. This site is independent and is not affiliated with the ATP, WTA, ITF or LTA.</p>
+  British Tennis Players · Weekly schedule for 26 October 2026
 </footer>
-
-<dialog class="policy-dialog" id="aboutSiteDialog" aria-labelledby="aboutSiteTitle">
-  <div class="policy-head"><h2 id="aboutSiteTitle">About this site</h2><button type="button" class="about-close" data-close-policy>Close ✕</button></div>
-  <div class="policy-body">
-    <p><strong>British Tennis Players</strong> is an independent fan-run project designed to make it easier to follow British players on the professional tennis tours. It brings together a searchable player list and a three-week tournament schedule in one place.</p>
-    <p>The site is not affiliated with or endorsed by the ATP, WTA, ITF or Lawn Tennis Association. Tournament entries, rankings and player availability can change; please check the official tour or tournament source for confirmation.</p>
-    <p>We aim to make the information useful and easy to navigate, and to improve the site as the project develops.</p>
-  </div>
-</dialog>
-
-<dialog class="policy-dialog" id="privacyDialog" aria-labelledby="privacyTitle">
-  <div class="policy-head"><h2 id="privacyTitle">Privacy policy</h2><button type="button" class="about-close" data-close-policy>Close ✕</button></div>
-  <div class="policy-body">
-    <p><strong>Last updated: 14 October 2026</strong></p>
-    <p>This policy explains how British Tennis Players may handle information when you visit this website.</p>
-    <h3>Information you provide</h3>
-    <p>This site does not currently provide user accounts or ask visitors to submit personal information through a site form. If you contact the project through an external service such as X, that service’s own privacy policy applies to information you share there.</p>
-    <h3>Cookies and advertising</h3>
-    <p>If Google AdSense is enabled on this site, Google and its partners may use cookies or similar technologies to serve, measure and personalise advertisements, subject to your settings, applicable law and the consent choices presented to you. Third-party vendors, including Google, may use information about visits to this and other websites to provide advertising services.</p>
-    <p>Learn more about <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">how Google uses information for advertising</a> and review <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google ad personalisation settings</a>. You can also control cookies through your browser settings. Blocking cookies may affect some website features or advertising choices.</p>
-    <h3>Site operation and analytics</h3>
-    <p>The website is hosted by Netlify. The hosting provider may process technical information such as IP address, browser details and server logs to deliver and protect the site, according to its own policies. If analytics tools are added, this policy should be updated to describe them.</p>
-    <h3>External links</h3>
-    <p>This site links to third-party websites and social platforms. We are not responsible for their content or privacy practices; please read their policies directly.</p>
-    <h3>Your choices and contact</h3>
-    <p>You can manage browser cookies and Google advertising preferences using the links above. This is a starter policy for this independent project, not legal advice. It should be reviewed and updated to reflect the actual advertising, consent and analytics setup before relying on it for compliance.</p>
-  </div>
-</dialog>
-
-<dialog class="policy-dialog" id="contactDialog" aria-labelledby="contactTitle">
-  <div class="policy-head"><h2 id="contactTitle">Contact</h2><button type="button" class="about-close" data-close-policy>Close ✕</button></div>
-  <div class="policy-body">
-    <p>For feedback, corrections or suggestions about British Tennis Players, contact the project through <a href="https://x.com/BritishTennisUp" target="_blank" rel="noopener noreferrer">@BritishTennisUp on X</a>.</p>
-    <p>If you spot a ranking or tournament entry that appears incorrect, please include the player’s name, tournament and relevant week, along with an official source link if possible.</p>
-  </div>
-</dialog>
 
 <script>
 (function () {
   const players = {
     men: [
-      {"name":"Arthur Fery","rank":37,"thisEvent":"ATP 250 Lyon","nextEvent":"ATP 500 Vienna","laterEvent":"ATP Masters 1000 Paris","age":24},
-      {"name":"Cameron Norrie","rank":40,"thisEvent":"ATP 250 Lyon","nextEvent":"ATP 500 Vienna","laterEvent":"ATP Masters 1000 Paris","age":31},
-      {"name":"Jan Choinski","rank":91,"thisEvent":"Ch 100 Lisbon","nextEvent":"—","laterEvent":"Ch 100 Bratislava","age":30},
-      {"name":"Jake Fearnley","rank":96,"thisEvent":"ATP 250 Brussels","nextEvent":"—","laterEvent":"Ch 100 Bratislava","age":25},
-      {"name":"Toby Samuel","rank":100,"thisEvent":"ATP 250 Brussels","nextEvent":"Ch 100 Brest","laterEvent":"Ch 100 Bratislava","age":24},
-      {"name":"Harry Wendelken","rank":182,"thisEvent":"ATP 250 Brussels Qualifying","nextEvent":"Ch 100 Sioux Falls","laterEvent":"Ch 75 Charlottesville","age":24},
-      {"name":"Jack Pinnington Jones","rank":205,"thisEvent":"—","nextEvent":"Ch 100 Sioux Falls","laterEvent":"Ch 75 Charlottesville","age":23},
-      {"name":"Liam Broady","rank":213,"thisEvent":"Ch 75 Guangzhou","nextEvent":"Ch 75 Ningbo","laterEvent":"Ch 100 Taipei","age":32},
-      {"name":"Felix Gill","rank":222,"thisEvent":"Ch 50 Florence","nextEvent":"—","laterEvent":"Ch 50 Taranto","age":24},
-      {"name":"Henry Searle","rank":228,"thisEvent":"Ch 50 Florence","nextEvent":"—","laterEvent":"Ch 50 Taranto","age":20},
-      {"name":"Jay Clarke","rank":240,"thisEvent":"Ch 50 Florence","nextEvent":"—","laterEvent":"Ch 50 Taranto","age":28},
-      {"name":"Billy Harris","rank":241,"thisEvent":"—","nextEvent":"Ch 125 Seoul Qualifying","laterEvent":"—","age":31},
-      {"name":"Max Basing","rank":248,"thisEvent":"—","nextEvent":"Ch 75 Ningbo","laterEvent":"—","age":24},
-      {"name":"Charles Broom","rank":268,"thisEvent":"—","nextEvent":"Ch 75 Ningbo","laterEvent":"—","age":28},
-      {"name":"Alastair Gray","rank":292,"thisEvent":"Ch 75 Fort Worth","nextEvent":"—","laterEvent":"—","age":28},
-      {"name":"Lui Maxted","rank":394,"thisEvent":"Ch 75 Fort Worth","nextEvent":"—","laterEvent":"—","age":22},
-      {"name":"Aidan McHugh","rank":476,"thisEvent":"Ch 75 Fort Worth Qualifying","nextEvent":"—","laterEvent":"—","age":26},
-      {"name":"Millen Hurrion","rank":538,"thisEvent":"—","nextEvent":"Ch 75 Ningbo Qualifying","laterEvent":"—","age":27}
+      {name:"Arthur Fery",rank:34,weekChange:"▲ 3",age:24,thisEvent:"ATP 500 Vienna",nextEvent:"ATP Masters 1000 Paris",laterEvent:"ATP 250 Stockholm",drop:"18 pts on 26 Oct 2026",counter18:"3",counter19:"3",careerHigh:33,notes:"–"},
+      {name:"Cameron Norrie",rank:40,weekChange:"➤ 0",age:31,thisEvent:"ATP 500 Vienna",nextEvent:"ATP Masters 1000 Paris",laterEvent:"ATP 250 Stockholm",drop:"50 pts on 26 Oct 2026",counter18:"50",counter19:"25",careerHigh:8,notes:"–"},
+      {name:"Jake Fearnley",rank:87,weekChange:"▲ 9",age:25,thisEvent:"ATP 500 Vienna Qualifying",nextEvent:"Ch 100 Bratislava",laterEvent:"—",drop:"25 pts on 26 Oct 2026",counter18:"8",counter19:"7",careerHigh:49,notes:"–"},
+      {name:"Toby Samuel",rank:96,weekChange:"▲ 4",age:24,thisEvent:"Ch 100 Brest",nextEvent:"Ch 100 Bratislava",laterEvent:"—",drop:"8 pts on 9 Nov 2026",counter18:"7",counter19:"6",careerHigh:95,notes:"–"},
+      {name:"Jan Choinski",rank:113,weekChange:"▼ -22",age:30,thisEvent:"—",nextEvent:"Ch 100 Bratislava",laterEvent:"—",drop:"13 pts on 9 Nov 2026",counter18:"7",counter19:"7",careerHigh:74,notes:"Last played 7 weeks ago"},
+      {name:"Jack Pinnington Jones",rank:191,weekChange:"▲ 14",age:23,thisEvent:"—",nextEvent:"Ch 75 Charlottesville",laterEvent:"Ch 75 Knoxville",drop:"13 pts on 11 Jan 2027",counter18:"7",counter19:"—",careerHigh:132,notes:"–"},
+      {name:"Harry Wendelken",rank:213,weekChange:"▼ -31",age:24,thisEvent:"Ch 100 Sioux Falls",nextEvent:"Ch 75 Charlottesville",laterEvent:"Ch 75 Knoxville",drop:"25 pts on 9 Nov 2026",counter18:"3",counter19:"1",careerHigh:175,notes:"–"},
+      {name:"Henry Searle",rank:220,weekChange:"▲ 8",age:20,thisEvent:"—",nextEvent:"Ch 50 Taranto",laterEvent:"Ch 50 Hersonissos",drop:"1 pts on 2 Nov 2026",counter18:"1",counter19:"—",careerHigh:214,notes:"–"},
+      {name:"Felix Gill",rank:227,weekChange:"▼ -5",age:24,thisEvent:"—",nextEvent:"Ch 50 Taranto",laterEvent:"Ch 50 Hersonissos",drop:"15 pts on 23 Nov 2026",counter18:"4",counter19:"1",careerHigh:211,notes:"–"},
+      {name:"Liam Broady",rank:233,weekChange:"▼ -20",age:32,thisEvent:"Ch 75 Ningbo",nextEvent:"Ch 100 Taipei",laterEvent:"Ch 75 Matsuyama",drop:"8 pts on 26 Oct 2026",counter18:"2",counter19:"1",careerHigh:93,notes:"–"},
+      {name:"Jay Clarke",rank:238,weekChange:"▲ 2",age:28,thisEvent:"—",nextEvent:"Ch 50 Taranto",laterEvent:"Ch 50 Monastir",drop:"6 pts on 2 Nov 2026",counter18:"4",counter19:"1",careerHigh:153,notes:"–"},
+      {name:"Billy Harris",rank:249,weekChange:"▼ -8",age:31,thisEvent:"Ch 125 Seoul Qualifying",nextEvent:"Ch 100 Taipei Qualifying",laterEvent:"Ch 75 Matsuyama",drop:"8 pts on 2 Nov 2026",counter18:"6",counter19:"—",careerHigh:101,notes:"–"},
+      {name:"Max Basing",rank:256,weekChange:"▼ -8",age:24,thisEvent:"—",nextEvent:"Ch 100 Taipei Qualifying",laterEvent:"Ch 75 Matsuyama",drop:"10 pts on 9 Nov 2026",counter18:"1",counter19:"—",careerHigh:219,notes:"–"},
+      {name:"Charles Broom",rank:264,weekChange:"▲ 4",age:28,thisEvent:"Ch 75 Ningbo",nextEvent:"—",laterEvent:"Ch 75 Brisbane",drop:"22 pts on 16 Nov 2026",counter18:"3",counter19:"2",careerHigh:235,notes:"–"},
+      {name:"Alastair Gray",rank:283,weekChange:"▲ 9",age:28,thisEvent:"—",nextEvent:"Ch 75 Charlottesville Qualifying",laterEvent:"—",drop:"8 pts on 9 Nov 2026",counter18:"3",counter19:"—",careerHigh:237,notes:"–"},
+      {name:"Ollie Tarvet",rank:289,weekChange:"▲ 18",age:22,thisEvent:"—",nextEvent:"Ch 75 Charlottesville Qualifying",laterEvent:"—",drop:"12 pts on 2 Nov 2026",counter18:"—",counter19:"—",careerHigh:289,notes:"Career High"},
+      {name:"Giles Hussey",rank:322,weekChange:"▼ -11",age:29,thisEvent:"—",nextEvent:"Ch 75 Charlottesville Qualifying",laterEvent:"—",drop:"3 pts on 2 Nov 2026",counter18:"2",counter19:"—",careerHigh:253,notes:"–"},
+      {name:"Lui Maxted",rank:380,weekChange:"▲ 14",age:22,thisEvent:"—",nextEvent:"Ch 75 Charlottesville Qualifying",laterEvent:"—",drop:"25 pts on 26 Oct 2026",counter18:"1",counter19:"—",careerHigh:360,notes:"–"},
+      {name:"Millen Hurrion",rank:494,weekChange:"▲ 44",age:27,thisEvent:"Ch 75 Ningbo Qualifying",nextEvent:"—",laterEvent:"—",drop:"2 pts on 26 Oct 2026",counter18:"1",counter19:"1",careerHigh:494,notes:"Career High"}
     ],
     women: [
-      {"name":"Katie Boulter","rank":54,"age":30,"thisEvent":"WTA250 Osaka","nextEvent":"WTA500 Tokyo Qualifying","laterEvent":"WTA250 Hong Kong"},
-      {"name":"Fran Jones","rank":104,"age":26,"thisEvent":"—","nextEvent":"WTA125 Curibita","laterEvent":"WTA125 Cali"},
-      {"name":"Harriet Dart","rank":113,"age":30,"thisEvent":"WTA250 Osaka Qualifying","nextEvent":"WTA250 Guangzhou Qualifying","laterEvent":"WTA250 Chennai"},
-      {"name":"Sonay Kartal","rank":170,"age":24,"thisEvent":"WTA250 Osaka (SR)","nextEvent":"WTA500 Tokyo Qualifying","laterEvent":"WTA250 Hong Kong"},
-      {"name":"Alicia Dudeney","rank":236,"age":23,"thisEvent":"W100 Wrexham","nextEvent":"W75 Glasgow","laterEvent":"WTA125 Angola"},
-      {"name":"Mika Stojsavljevic","rank":308,"age":17,"thisEvent":"—","nextEvent":"WTA500 Tokyo (WC)","laterEvent":"—"},
-      {"name":"Mimi Xu","rank":339,"age":19,"thisEvent":"W75 Saguenay Qualifying","nextEvent":"W75 Toronto","laterEvent":"—"},
-      {"name":"Hannah Klugman","rank":341,"age":17,"thisEvent":"W100 Wrexham (WC)","nextEvent":"W75 Glasgow","laterEvent":"—"},
-      {"name":"Ella Mcdonald","rank":351,"age":21,"thisEvent":"W50 Austin Qualifying","nextEvent":"W100 New Braunfels, TX Qualifying","laterEvent":"—"},
-      {"name":"Sofia Johnson","rank":372,"age":22,"thisEvent":"W50 Austin","nextEvent":"WTA125 Queretaro Qualifying","laterEvent":"—"},
-      {"name":"Millie Rajecki","rank":380,"age":24,"thisEvent":"W100 Wrexham (WC)","nextEvent":"W75 Glasgow","laterEvent":"—"},
-      {"name":"Heather Watson","rank":388,"age":34,"thisEvent":"WTA250 Osaka Qualifying","nextEvent":"—","laterEvent":"—"},
-      {"name":"Emily Appleton","rank":440,"age":27,"thisEvent":"—","nextEvent":"W75 Glasgow","laterEvent":"—"},
-      {"name":"Vic Allen","rank":460,"age":25,"thisEvent":"W100 Wrexham Qualifying","nextEvent":"W75 Glasgow Qualifying","laterEvent":"—"},
-      {"name":"Indi Spink","rank":605,"age":24,"thisEvent":"W100 Wrexham Qualifying","nextEvent":"W75 Glasgow Qualifying","laterEvent":"—"},
-      {"name":"Jodie Burrage","rank":622,"age":27,"thisEvent":"W100 Wrexham (WC)","nextEvent":"W75 Glasgow Qualifying","laterEvent":"WTA250 Chennai"},
-      {"name":"Ranah Stoiber","rank":649,"age":21,"thisEvent":"W75 Saguenay Qualifying","nextEvent":"W75 Toronto Qualifying","laterEvent":"—"},
-      {"name":"Alice Gillan","rank":695,"age":28,"thisEvent":"W100 Wrexham Qualifying","nextEvent":"W75 Glasgow Qualifying","laterEvent":"—"},
-      {"name":"Eliz Maloney","rank":710,"age":26,"thisEvent":"W100 Wrexham Qualifying","nextEvent":"W75 Glasgow Qualifying","laterEvent":"—"},
-      {"name":"Savannah Dada-Mascoll","rank":1277,"age":23,"thisEvent":"W100 Wrexham Qualifying","nextEvent":"W75 Glasgow (Alternate)","laterEvent":"—"},
-      {"name":"Lois Newberry","rank":1291,"age":19,"thisEvent":"W100 Wrexham Qualifying","nextEvent":"W75 Glasgow Qualifying","laterEvent":"—"},
-      {"name":"Lily Hutchings","rank":1504,"age":23,"thisEvent":"W100 Wrexham Qualifying","nextEvent":"W75 Glasgow (Alternate)","laterEvent":"—"}
+      {name:"Katie Boulter",rank:48,weekChange:"▲ 10",age:30,thisEvent:"—",nextEvent:"WTA250 Hong Kong",laterEvent:"—",drop:"25 pts on 26 Oct 2026",counter18:"20",counter19:"15",careerHigh:23,notes:"–"},
+      {name:"Sonay Kartal",rank:52,weekChange:"▼ -3",age:24,thisEvent:"—",nextEvent:"WTA250 Hong Kong",laterEvent:"—",drop:"15 pts on 14 Dec 2026",counter18:"—",counter19:"—",careerHigh:44,notes:"–"},
+      {name:"Fran Jones",rank:98,weekChange:"▲ 1",age:26,thisEvent:"WTA125 Curibita",nextEvent:"WTA125 Cali",laterEvent:"WTA125 Sopo",drop:"54 pts on 11 Jan 2027",counter18:"15",counter19:"1",careerHigh:65,notes:"–"},
+      {name:"Harriet Dart",rank:115,weekChange:"▲ 2",age:30,thisEvent:"WTA250 Guangzhou Qualifying",nextEvent:"WTA250 Chennai",laterEvent:"—",drop:"75 pts on 2 Nov 2026",counter18:"11",counter19:"2",careerHigh:70,notes:"–"},
+      {name:"Katie Swan",rank:192,weekChange:"▲ 3",age:27,thisEvent:"—",nextEvent:"W100 Incheon",laterEvent:"—",drop:"23 pts on 2 Nov 2026",counter18:"1",counter19:"1",careerHigh:118,notes:"–"},
+      {name:"Alicia Dudeney",rank:209,weekChange:"▲ 23",age:23,thisEvent:"W75 Glasgow",nextEvent:"WTA125 Angola",laterEvent:"—",drop:"8 pts on 26 Oct 2026",counter18:"8",counter19:"6",careerHigh:209,notes:"Career High"},
+      {name:"Hannah Klugman",rank:248,weekChange:"▲ 93",age:17,thisEvent:"W75 Glasgow",nextEvent:"W75 Petange Qualifying",laterEvent:"—",drop:"1 pts on 17 Jan 2027",counter18:"1",counter19:"1",careerHigh:248,notes:"Career High"},
+      {name:"Ella Mcdonald",rank:327,weekChange:"▲ 26",age:21,thisEvent:"W100 New Braunfels, TX Qualifying",nextEvent:"—",laterEvent:"—",drop:"21 pts on 26 Oct 2026",counter18:"—",counter19:"—",careerHigh:327,notes:"Career High"},
+      {name:"Naiktha Bains",rank:349,weekChange:"▲ 9",age:28,thisEvent:"—",nextEvent:"W100 Incheon Qualifying",laterEvent:"—",drop:"4 pts on 2 Nov 2026",counter18:"1",counter19:"1",careerHigh:199,notes:"–"},
+      {name:"Sofia Johnson",rank:354,weekChange:"▲ 10",age:22,thisEvent:"WTA125 Queretaro",nextEvent:"W50 Huamantla",laterEvent:"—",drop:"3 pts on 9 Nov 2026",counter18:"3",counter19:"1",careerHigh:354,notes:"Career High"},
+      {name:"Heather Watson",rank:373,weekChange:"▲ 11",age:34,thisEvent:"WTA500 Tokyo Qualifying",nextEvent:"W100 Incheon Qualifying",laterEvent:"—",drop:"25 pts on 1 Mar 2027",counter18:"—",counter19:"—",careerHigh:38,notes:"–"},
+      {name:"Millie Rajecki",rank:381,weekChange:"▲ 1",age:24,thisEvent:"W75 Glasgow",nextEvent:"WTA250 Chennai (Doubles)",laterEvent:"—",drop:"9 pts on 26 Oct 2026",counter18:"1",counter19:"1",careerHigh:367,notes:"–"},
+      {name:"Mika Stojsavljevic",rank:411,weekChange:"▼ -103",age:17,thisEvent:"WTA500 Tokyo (WC)",nextEvent:"—",laterEvent:"—",drop:"65 pts on 26 Oct 2026",counter18:"1",counter19:"—",careerHigh:261,notes:"–"},
+      {name:"Emily Appleton",rank:424,weekChange:"▲ 13",age:27,thisEvent:"—",nextEvent:"W75 Petange Qualifying",laterEvent:"—",drop:"1 pts on 2 Nov 2026",counter18:"1",counter19:"1",careerHigh:347,notes:"–"},
+      {name:"Jodie Burrage",rank:471,weekChange:"▲ 150",age:27,thisEvent:"W75 Glasgow (WC)",nextEvent:"WTA250 Chennai",laterEvent:"—",drop:"1 pts on 7 Jun 2027",counter18:"—",counter19:"—",careerHigh:85,notes:"–"},
+      {name:"Vic Allen",rank:573,weekChange:"▼ -115",age:25,thisEvent:"W75 Glasgow",nextEvent:"W50 Heraklion",laterEvent:"—",drop:"35 pts on 26 Oct 2026",counter18:"—",counter19:"—",careerHigh:425,notes:"–"},
+      {name:"Eliz Maloney",rank:678,weekChange:"▲ 30",age:26,thisEvent:"W75 Glasgow (WC)",nextEvent:"—",laterEvent:"—",drop:"4 pts on 8 Feb 2027",counter18:"—",counter19:"—",careerHigh:371,notes:"–"},
+      {name:"Alice Gillan",rank:700,weekChange:"▼ -9",age:28,thisEvent:"W75 Glasgow (WC)",nextEvent:"—",laterEvent:"—",drop:"4 pts on 26 Oct 2026",counter18:"—",counter19:"—",careerHigh:466,notes:"–"},
+      {name:"Amelie Brooks",rank:1033,weekChange:"▼ -26",age:20,thisEvent:"W75 Glasgow Qualifying",nextEvent:"—",laterEvent:"—",drop:"3 pts on 26 Oct 2026",counter18:"—",counter19:"—",careerHigh:1007,notes:"–"},
+      {name:"Lois Newberry",rank:1116,weekChange:"▲ 180",age:19,thisEvent:"W75 Glasgow Qualifying",nextEvent:"—",laterEvent:"—",drop:"2 pts on 2 Nov 2026",counter18:"—",counter19:"—",careerHigh:1116,notes:"Career High"},
+      {name:"Leticia Romanova",rank:1149,weekChange:"▲ 4",age:18,thisEvent:"W75 Glasgow Qualifying",nextEvent:"—",laterEvent:"—",drop:"1 pts on 3 May 2027",counter18:"—",counter19:"—",careerHigh:1149,notes:"Career High"},
+      {name:"Summer Yardley",rank:1207,weekChange:"▲ 2",age:26,thisEvent:"W75 Glasgow Qualifying",nextEvent:"—",laterEvent:"—",drop:"1 pts on 7 Jun 2027",counter18:"—",counter19:"—",careerHigh:1102,notes:"–"},
+      {name:"Mia Wainwright",rank:1262,weekChange:"▼ -158",age:19,thisEvent:"W75 Glasgow Qualifying",nextEvent:"—",laterEvent:"—",drop:"5 pts on 26 Oct 2026",counter18:"—",counter19:"—",careerHigh:1104,notes:"–"},
+      {name:"Savannah Dada-Mascoll",rank:1275,weekChange:"▲ 10",age:23,thisEvent:"W75 Glasgow (WC)",nextEvent:"—",laterEvent:"—",drop:"1 pts on 14 Jun 2027",counter18:"—",counter19:"—",careerHigh:1275,notes:"Career High"}
     ]
   };
 
-  const state = {gender:"men",view:"threeweek",week:"this"};
+  const state = { gender:"men", view:"threeweek", week:"this" };
   const el = id => document.getElementById(id);
-  const safe = value => String(value == null ? "—" : value).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+  const dash = "—";
+  const escapeHTML = value => String(value == null ? dash : value).replace(/[&<>"']/g, ch => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[ch]));
   const eventKey = () => state.week === "this" ? "thisEvent" : state.week === "next" ? "nextEvent" : "laterEvent";
 
   function tourLevel(event) {
-    if (!event || event === "—") return "—";
+    if (!event || event === dash) return dash;
     if (event.startsWith("ATP ")) return "ATP Tour";
     if (event.startsWith("Ch ")) return "Challenger";
-    if (/WTA/i.test(event)) return "WTA";
+    if (/^WTA/i.test(event)) return "WTA";
     if (/^W\d+\b/i.test(event)) return "ITF";
-    return "—";
+    return dash;
+  }
+
+  function badgeClass(level) {
+    if (level === "Challenger") return "challenger";
+    if (level === "ITF") return "itf";
+    if (level === "WTA") return "wta";
+    return "atp";
   }
 
   function filtered() {
     const query = el("search").value.trim().toLowerCase();
     const range = el("ranking").value;
     let list = players[state.gender].filter(p => {
-      const rankOK = range === "all" || (range === "top50" && p.rank <= 50) ||
-        (range === "top100" && p.rank <= 100) || (range === "outside100" && p.rank > 100);
+      const rankOK = range === "all" ||
+        (range === "top50" && p.rank <= 50) ||
+        (range === "top100" && p.rank <= 100) ||
+        (range === "outside100" && p.rank > 100);
       const textOK = (p.name+" "+p.thisEvent+" "+p.nextEvent+" "+p.laterEvent).toLowerCase().includes(query);
       const key = eventKey();
-      const scheduleOK = state.view === "schedule" ? p[key] !== "—" :
-        state.view === "threeweek" ? [p.thisEvent,p.nextEvent,p.laterEvent].some(event => event !== "—") : true;
+      const scheduleOK = state.view === "schedule"
+        ? p[key] !== dash
+        : [p.thisEvent,p.nextEvent,p.laterEvent].some(event => event !== dash);
       return rankOK && textOK && scheduleOK;
     });
-    const sort = el("sort").value;
-    list.sort((a,b) => sort === "name" ? a.name.localeCompare(b.name) : a.rank-b.rank);
+    list.sort((a,b) => el("sort").value === "name"
+      ? a.name.localeCompare(b.name)
+      : a.rank-b.rank);
     return list;
+  }
+
+  function eventCell(event) {
+    if (!event || event === dash) return '<span class="muted">—</span>';
+    const level = tourLevel(event);
+    return '<span class="badge '+badgeClass(level)+'">'+escapeHTML(level)+'</span>' +
+      '<div class="event">'+escapeHTML(event)+'</div>';
   }
 
   function render() {
     const list = filtered();
     const gender = state.gender === "men" ? "Men's" : "Women's";
-    const weekLabel = state.week === "this" ? "This week" : state.week === "next" ? "Next week" : "Following week";
+    const weekLabel = state.week === "this" ? "This week" :
+      state.week === "next" ? "Next week" : "Following week";
     const isThreeWeek = state.view === "threeweek";
-    el("heading").textContent = gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
-    el("tableTitle").textContent = gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
+    const heading = gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
+    el("heading").textContent = heading;
+    el("tableTitle").textContent = heading;
 
     if (isThreeWeek) {
-      const entries = list.reduce((n,p) => n + [p.thisEvent,p.nextEvent,p.laterEvent].filter(event => event !== "—").length, 0);
-      el("count").textContent = list.length + (list.length === 1 ? " player" : " players") + " · " + entries + (entries === 1 ? " entry" : " entries");
-      el("columns").innerHTML = "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>This week</th><th>Next week</th><th>Following week</th></tr>";
-
-      const eventCell = event => {
-        if (!event || event === "—") return '<span class="muted">—</span>';
-        const level = tourLevel(event);
-        const badgeClass = level === "Challenger" ? "challenger" : level === "ITF" ? "itf" : "atp";
-        return '<span class="badge '+badgeClass+'">'+safe(level)+'</span><div class="event" style="margin-top:6px">'+safe(event)+'</div>';
-      };
-
-      el("rows").innerHTML = list.map(p => '<tr><td class="player">'+safe(p.name)+'</td><td class="rank">'+safe(p.rank)+'</td><td class="age">'+safe(p.age)+'</td><td>'+eventCell(p.thisEvent)+'</td><td>'+eventCell(p.nextEvent)+'</td><td>'+eventCell(p.laterEvent)+'</td></tr>').join("");
+      const entries = list.reduce((n,p) =>
+        n + [p.thisEvent,p.nextEvent,p.laterEvent].filter(event => event !== dash).length, 0);
+      el("count").textContent = list.length + (list.length === 1 ? " player" : " players") +
+        " · " + entries + (entries === 1 ? " entry" : " entries");
+      el("columns").innerHTML =
+        "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>This week</th><th>Next week</th><th>Following week</th></tr>";
+      el("rows").innerHTML = list.map(p =>
+        '<tr><td class="player">'+escapeHTML(p.name)+'</td>' +
+        '<td class="rank">'+escapeHTML(p.rank)+'</td>' +
+        '<td class="age">'+escapeHTML(p.age)+'</td>' +
+        '<td>'+eventCell(p.thisEvent)+'</td>' +
+        '<td>'+eventCell(p.nextEvent)+'</td>' +
+        '<td>'+eventCell(p.laterEvent)+'</td></tr>'
+      ).join("");
     } else {
       const key = eventKey();
-      el("count").textContent = list.length + " entries";
-      el("columns").innerHTML = "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>Tour level</th><th>Tournament</th><th>Week</th></tr>";
-
+      el("count").textContent = list.length + (list.length === 1 ? " entry" : " entries");
+      el("columns").innerHTML =
+        "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>Tour level</th><th>Tournament</th><th>Week</th></tr>";
       el("rows").innerHTML = list.map(p => {
         const level = tourLevel(p[key]);
-        const badgeClass = level === "Challenger" ? "challenger" : level === "ITF" ? "itf" : "atp";
-        return '<tr><td class="player">'+safe(p.name)+'</td><td class="rank">'+safe(p.rank)+'</td><td class="age">'+safe(p.age)+'</td><td>'+(level === "—" ? '—' : '<span class="badge '+badgeClass+'">'+safe(level)+'</span>')+'</td><td class="event">'+safe(p[key])+'</td><td>'+safe(weekLabel)+'</td></tr>';
+        return '<tr><td class="player">'+escapeHTML(p.name)+'</td>' +
+          '<td class="rank">'+escapeHTML(p.rank)+'</td>' +
+          '<td class="age">'+escapeHTML(p.age)+'</td>' +
+          '<td><span class="badge '+badgeClass(level)+'">'+escapeHTML(level)+'</span></td>' +
+          '<td class="event">'+escapeHTML(p[key])+'</td>' +
+          '<td>'+escapeHTML(weekLabel)+'</td></tr>';
       }).join("");
     }
 
     el("empty").hidden = list.length !== 0;
-    document.querySelectorAll("[data-gender]").forEach(b => {
-      const active = b.dataset.gender === state.gender;
-      b.classList.toggle("active",active);
-      b.setAttribute("aria-pressed",String(active));
+
+    document.querySelectorAll("[data-gender]").forEach(button => {
+      const active = button.dataset.gender === state.gender;
+      button.classList.toggle("active",active);
+      button.setAttribute("aria-pressed",String(active));
     });
-    document.querySelectorAll("[data-view]").forEach(b => {
-      const active = b.dataset.view === state.view;
-      b.classList.toggle("active",active);
-      b.setAttribute("aria-pressed",String(active));
+    document.querySelectorAll("[data-view]").forEach(button => {
+      const active = button.dataset.view === state.view;
+      button.classList.toggle("active",active);
+      button.setAttribute("aria-pressed",String(active));
     });
-    document.querySelectorAll("[data-week]").forEach(b => {
-      const active = state.view === "schedule" && b.dataset.week === state.week;
-      b.classList.toggle("active",active);
-      b.setAttribute("aria-pressed",String(active));
+    document.querySelectorAll("[data-week]").forEach(button => {
+      const active = state.view === "schedule" && button.dataset.week === state.week;
+      button.classList.toggle("active",active);
+      button.setAttribute("aria-pressed",String(active));
     });
   }
 
-  document.querySelectorAll("[data-gender]").forEach(b => b.addEventListener("click", () => {
-    state.gender = b.dataset.gender;
-    render();
-  }));
-  document.querySelectorAll("[data-view]").forEach(b => b.addEventListener("click", () => {
-    state.view = b.dataset.view;
-    render();
-  }));
-  document.querySelectorAll("[data-week]").forEach(b => b.addEventListener("click", () => {
-    state.week = b.dataset.week;
-    state.view = "schedule";
-    render();
-  }));
+  document.querySelectorAll("[data-gender]").forEach(button =>
+    button.addEventListener("click", () => {
+      state.gender = button.dataset.gender;
+      render();
+    })
+  );
+
+  document.querySelectorAll("[data-view]").forEach(button =>
+    button.addEventListener("click", () => {
+      state.view = button.dataset.view;
+      render();
+    })
+  );
+
+  document.querySelectorAll("[data-week]").forEach(button =>
+    button.addEventListener("click", () => {
+      state.week = button.dataset.week;
+      state.view = "schedule";
+      render();
+    })
+  );
 
   el("search").addEventListener("input",render);
   el("ranking").addEventListener("change",render);
   el("sort").addEventListener("change",render);
-
-  const aboutDialog = el("aboutDialog");
-  el("aboutOpen").addEventListener("click", () => aboutDialog.showModal());
-  el("aboutClose").addEventListener("click", () => aboutDialog.close());
-  aboutDialog.addEventListener("click", event => {
-    if (event.target === aboutDialog) aboutDialog.close();
-  });
-
-  document.querySelectorAll("[data-policy]").forEach(button => button.addEventListener("click", () => {
-    const dialog = document.getElementById(button.dataset.policy + "Dialog");
-    if (dialog) dialog.showModal();
-  }));
-  document.querySelectorAll("[data-close-policy]").forEach(button => button.addEventListener("click", () => {
-    const dialog = button.closest("dialog");
-    if (dialog) dialog.close();
-  }));
-  document.querySelectorAll(".policy-dialog").forEach(dialog => dialog.addEventListener("click", event => {
-    if (event.target === dialog) dialog.close();
-  }));
 
   render();
 })();
