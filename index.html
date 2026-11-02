@@ -1,154 +1,768 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4256059628196575"
-     crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#123c78">
 <title>British Tennis Players</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4256059628196575" crossorigin="anonymous"></script>
+
 <style>
-:root{
-  --navy:#123c78; --blue:#1b4f9c; --orange:#c8102e; --ink:#1e2937;
-  --muted:#687789; --line:#d9e1e9; --page:#f2f5f8; --white:#fff;
-  --pale-blue:#eaf1fb; --pale-orange:#fdecef; --green:#236849; --pale-green:#e6f4eb;
+:root {
+  --navy:#071d49;
+  --blue:#174ea6;
+  --orange:#d62839;
+  --ink:#15233a;
+  --muted:#68758a;
+  --line:#e1e8f2;
+  --page:#f4f7fc;
+  --pale-blue:#edf3ff;
+  --green:#14734b;
 }
-*{box-sizing:border-box}
-body{margin:0;background:var(--page);color:var(--ink);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{background:var(--navy);color:#fff;border-bottom:5px solid var(--orange);padding:25px 20px}
-.header-inner,main,footer{max-width:1400px;margin:0 auto}
-.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800;color:#d8e6f2;margin-bottom:10px}
-.logo{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--orange);color:var(--navy);font-weight:950;letter-spacing:0}
-h1{font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:-.04em;line-height:1.1;margin:0}
-header p{color:#e1eaf2;margin:10px 0 0}
-main{padding:24px 18px 42px}
-.intro{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:18px}
-h2{font-size:1.45rem;letter-spacing:-.025em;margin:0}
-.muted{color:var(--muted)}.subtext{margin:5px 0 0;font-size:.9rem}
-.controls-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
-button,select,input{font:inherit}
-button{cursor:pointer}
-button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
-.nav-btn,.week-btn{border:1px solid #c8d3df;background:#fff;color:#30445a;border-radius:6px;min-height:42px;padding:9px 15px;font-size:.86rem;font-weight:800}
-.nav-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:inset 0 -3px 0 var(--orange)}
-.week-btn[aria-pressed="true"]{background:var(--orange);border-color:#a80d25;color:#fff}
-.filters{display:grid;grid-template-columns:minmax(220px,1.5fr) minmax(160px,.7fr) minmax(160px,.7fr);gap:12px;padding:13px;background:#fff;border:1px solid var(--line);border-radius:8px;margin:14px 0}
-label{display:block;font-size:.73rem;font-weight:850;color:#536377;margin-bottom:6px}
-input,select{width:100%;min-height:42px;padding:9px 11px;border:1px solid #c8d3df;border-radius:5px;background:#fff;color:var(--ink);font-size:.9rem}
-.table-wrap{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.table-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:13px 15px;border-bottom:1px solid var(--line)}
-.table-title{font-weight:900}.count{color:var(--muted);font-size:.8rem}
-.table-scroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:820px;font-size:.83rem}
-thead th{text-align:left;background:var(--pale-blue);color:#3d536b;text-transform:uppercase;letter-spacing:.045em;font-size:.67rem;padding:12px;border-bottom:1px solid var(--line);white-space:nowrap}
-tbody td{padding:12px;border-bottom:1px solid #edf1f5;vertical-align:top}
-tbody tr:nth-child(even){background:#fbfcfd}tbody tr:hover{background:#f1f6fb}tbody tr:last-child td{border-bottom:0}
-.player{font-weight:850;white-space:nowrap}.rank,.age{font-weight:900;font-variant-numeric:tabular-nums}
-.badge{display:inline-block;padding:3px 7px;border-radius:4px;font-size:.69rem;font-weight:850;white-space:nowrap}
-.atp{background:#e5eefb;color:#24558b}.challenger{background:#eee8fb;color:#67479b}.itf{background:var(--pale-green);color:var(--green)}
-.up{background:var(--pale-green);color:var(--green)}.down{background:#ffebe7;color:#9a3b2d}.same{background:#edf0f3;color:#536273}
-.event{font-weight:750;color:#25425f}.surface{color:var(--muted);font-size:.75rem;margin-top:3px}
-.empty{padding:28px;text-align:center;color:var(--muted)}
-.note{margin-top:13px;background:#fff4f5;border:1px solid #efc4cc;border-left:4px solid var(--orange);border-radius:5px;padding:11px 13px;font-size:.8rem;color:#7d1b2b}
-footer{text-align:center;color:var(--muted);font-size:.78rem;padding:0 18px 26px}
-@media(max-width:720px){header{padding:22px 15px}main{padding:19px 11px 32px}.filters{grid-template-columns:1fr}.controls-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.nav-btn,.week-btn{padding:9px 8px}.intro{align-items:start}}
 
-/* Refined visual design */
-:root{--navy:#071d49;--blue:#174ea6;--orange:#d62839;--ink:#15233a;--muted:#68758a;--line:#e1e8f2;--page:#f4f7fc;--white:#fff;--pale-blue:#edf3ff;--pale-orange:#fff0f1;--green:#14734b;--pale-green:#e7f7ef}
-body{background:linear-gradient(180deg,#eaf1fc 0,#f6f8fc 360px,#f6f8fc 100%);color:var(--ink);font-size:15px}
-header{position:relative;overflow:hidden;background:linear-gradient(115deg,#071d49 0%,#123d83 58%,#1c5ab2 100%);border-bottom:0;padding:34px 22px 56px}
-header:before{content:"";position:absolute;width:360px;height:360px;border:34px solid rgba(255,255,255,.06);border-radius:50%;right:-95px;top:-190px}
-header:after{content:none}
-.header-inner{position:relative;z-index:1}
-.eyebrow{gap:11px;color:#dce8ff;letter-spacing:.15em;font-size:.7rem}
-.logo{width:38px;height:38px;border-radius:12px;background:#fff;color:#123d83;box-shadow:0 5px 15px #00143755;font-size:.85rem}
-h1{font-size:clamp(2.1rem,5vw,3.4rem);letter-spacing:-.055em;max-width:800px}
-header p{max-width:650px;color:#dce7fb;font-size:1.02rem;line-height:1.65;margin-top:14px}
-main{padding:26px 18px 42px;max-width:1300px}
-.intro{background:#fff;border:1px solid #e4eaf4;border-radius:18px;padding:22px 24px;box-shadow:0 10px 28px rgba(18,48,91,.06);margin-top:-8px;position:relative}
-h2{font-size:1.55rem;letter-spacing:-.035em}
-.subtext{line-height:1.6}
-.controls-row{gap:9px;margin:18px 0 12px}
-.nav-btn,.week-btn{border:1px solid #dbe3ef;background:#fff;color:#3a4b64;border-radius:10px;min-height:44px;padding:10px 16px;box-shadow:0 2px 5px rgba(20,40,80,.025);transition:transform .15s,box-shadow .15s,background .15s}
-.nav-btn:hover,.week-btn:hover{transform:translateY(-1px);box-shadow:0 5px 12px rgba(20,40,80,.09)}
-.nav-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:inset 0 -3px 0 var(--orange),0 5px 12px #071d4920}
-.week-btn[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:inset 0 -3px 0 var(--orange),0 4px 12px #174ea628}
-.filters{gap:14px;padding:17px;background:#fff;border:1px solid #e2e9f3;border-radius:15px;margin:16px 0;box-shadow:0 6px 20px rgba(18,48,91,.035)}
-label{font-size:.72rem;letter-spacing:.035em;color:#53647c}
-input,select{border:1px solid #d5deeb;border-radius:9px;min-height:45px;padding:10px 12px;transition:border .15s,box-shadow .15s}
-input:focus,select:focus{border-color:#3975ce;box-shadow:0 0 0 3px #3975ce1a;outline:0}
-.table-wrap{border:1px solid #e1e8f2;border-radius:16px;box-shadow:0 12px 30px rgba(18,48,91,.07)}
-.table-head{padding:17px 19px;background:linear-gradient(90deg,#fff,#f9fbff);border-bottom:1px solid #e5ebf4}
-.table-title{font-size:1rem;letter-spacing:-.01em}.count{background:#edf3ff;color:#28538f;padding:5px 9px;border-radius:999px;font-weight:750}
-table{font-size:.85rem}
-thead th{background:#edf3ff;color:#29476f;padding:14px 13px;font-size:.67rem}
-tbody td{padding:14px 13px;border-bottom:1px solid #eef2f7}
-tbody tr:nth-child(even){background:#fbfcff}tbody tr:hover{background:#f0f5ff}
-.player{color:#102d5c;font-weight:850}.rank{font-variant-numeric:tabular-nums;color:#142c50}
-.badge{border-radius:999px;padding:4px 8px}.atp{background:#e6efff;color:#214f9c}.challenger{background:#eee9ff;color:#6042a2}.itf{background:#e7f7ef;color:#14734b}
-.up{background:#e7f7ef;color:#14734b}.down{background:#fff0ed;color:#a73c2f}.same{background:#edf1f6;color:#536273}
-.event{color:#1c477f}.surface{font-size:.74rem}
-.note{margin-top:16px;background:#f3f7ff;border:1px solid #d7e4fb;border-left:5px solid var(--blue);border-radius:10px;padding:14px 16px;font-size:.82rem;color:#29476f;line-height:1.6}
-footer{padding:0 18px 30px;color:#7a8799}
-@media(max-width:720px){header{padding:27px 16px 48px}header:before{width:240px;height:240px;right:-100px;top:-120px}main{padding:20px 12px 30px}.intro{padding:18px 16px;border-radius:14px}.filters{padding:14px;border-radius:13px}.controls-row{gap:8px}.nav-btn,.week-btn{font-size:.82rem;padding:10px 8px;border-radius:9px}.table-wrap{border-radius:13px}.table-head{padding:14px}.demo{font-size:.62rem}}
+* { box-sizing:border-box; }
 
-.about-button{border:1px solid #cbd9ed;background:#fff;color:#173f7b;border-radius:999px;padding:8px 13px;font-size:.8rem;font-weight:800;box-shadow:0 3px 10px rgba(7,29,73,.06)}
-.about-button:hover{background:#edf3ff;border-color:#9bb9e8}
-.about-dialog{width:min(560px,calc(100% - 28px));border:1px solid #dce5f2;border-radius:18px;padding:0;color:var(--ink);box-shadow:0 24px 80px rgba(4,22,55,.3)}
-.about-dialog::backdrop{background:rgba(5,19,43,.62);backdrop-filter:blur(3px)}
-.about-dialog-head{background:linear-gradient(115deg,#071d49,#174ea6);color:#fff;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.about-dialog-head h2{font-size:1.25rem;margin:0}
-.about-close{border:1px solid #ffffff66;background:#ffffff16;color:#fff;border-radius:8px;padding:7px 11px;font-weight:800}
-.about-dialog-body{padding:21px 23px;line-height:1.7}
-.about-dialog-body ul{padding-left:21px;margin:9px 0 14px}
-.about-dialog-body li{margin:6px 0}
-.about-footnote{font-size:.8rem;color:#718096;border-top:1px solid #e7edf5;padding-top:12px;margin-top:18px}
-.creator-banner,.donate-banner{max-width:1300px;margin:16px auto 0;padding:0 18px}
-.creator-banner-inner,.donate-banner-inner{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid #e2e9f3;border-radius:13px;padding:12px 15px;box-shadow:0 5px 16px rgba(18,48,91,.035)}
-.creator-icon,.donate-icon{display:grid;place-items:center;width:36px;height:36px;flex:0 0 36px;border-radius:10px;background:#edf3ff;color:#174ea6;font-weight:900}
-.creator-copy{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
-.creator-copy strong{color:#17345e;font-size:.88rem}
-.creator-sub,.donate-copy{color:#718096;font-size:.76rem}
-.creator-actions{display:flex;align-items:center;gap:8px}
-.creator-follow,.donate-button{display:inline-flex;align-items:center;gap:7px;text-decoration:none;background:#174ea6;color:#fff;border-radius:999px;padding:8px 13px;font-size:.75rem;font-weight:850;white-space:nowrap}
-.donate-button{background:#d62839}
-@media(max-width:600px){.creator-banner,.donate-banner{padding:0 12px}.creator-banner-inner,.donate-banner-inner{align-items:flex-start;flex-wrap:wrap}.creator-actions{width:100%;padding-left:49px}.creator-follow,.donate-button{justify-content:center}.donate-button{margin-left:auto}}
+body {
+  margin:0;
+  background:linear-gradient(180deg,#eaf1fc 0,#f6f8fc 360px,#f6f8fc 100%);
+  color:var(--ink);
+  font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
 
+header {
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(115deg,#071d49 0%,#123d83 58%,#1c5ab2 100%);
+  padding:34px 22px 56px;
+  color:white;
+}
+
+header:before {
+  content:"";
+  position:absolute;
+  width:360px;
+  height:360px;
+  border:34px solid rgba(255,255,255,.06);
+  border-radius:50%;
+  right:-95px;
+  top:-190px;
+}
+
+.header-inner,main,footer {
+  max-width:1300px;
+  margin:0 auto;
+}
+
+.header-inner { position:relative;z-index:1; }
+
+.eyebrow {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:#dce8ff;
+  letter-spacing:.15em;
+  font-size:.7rem;
+  font-weight:800;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.logo {
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:white;
+  color:#123d83;
+  box-shadow:0 5px 15px #00143755;
+  font-weight:950;
+}
+
+h1 {
+  font-size:clamp(2.1rem,5vw,3.4rem);
+  letter-spacing:-.055em;
+  line-height:1.1;
+  max-width:800px;
+  margin:0;
+}
+
+header p {
+  max-width:650px;
+  color:#dce7fb;
+  font-size:1.02rem;
+  line-height:1.65;
+  margin-top:14px;
+}
+
+/* Follow banner */
+
+.creator-banner {
+  padding:14px 18px;
+  background:linear-gradient(110deg,#eaf1ff 0%,#f7f9ff 52%,#fff 100%);
+  border-bottom:1px solid #dce6f5;
+}
+
+.creator-banner-inner {
+  position:relative;
+  overflow:hidden;
+  max-width:1260px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px 19px;
+  border:1px solid #d7e3f7;
+  border-radius:16px;
+  background:linear-gradient(115deg,#0a2456 0%,#174ea6 75%,#2163bd 100%);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(14,48,103,.15);
+}
+
+.creator-banner-inner:after {
+  content:"";
+  position:absolute;
+  right:150px;
+  top:-42px;
+  width:140px;
+  height:140px;
+  border:18px solid rgba(255,255,255,.07);
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.creator-icon,.donate-icon {
+  position:relative;
+  z-index:1;
+  display:grid;
+  place-items:center;
+  flex:0 0 46px;
+  height:46px;
+  border-radius:14px;
+  background:#fff;
+  color:#123c78;
+  font-size:1.35rem;
+  font-weight:900;
+  box-shadow:0 4px 12px #00143735;
+}
+
+.creator-copy {
+  position:relative;
+  z-index:1;
+  display:block;
+  min-width:0;
+}
+
+.creator-banner-inner strong,.donate-banner-inner strong {
+  display:block;
+  font-size:1rem;
+  line-height:1.35;
+  letter-spacing:-.015em;
+}
+
+.creator-sub {
+  display:block;
+  color:#e0eaff;
+  font-size:.81rem;
+  margin-top:3px;
+}
+
+.creator-actions {
+  position:relative;
+  z-index:1;
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:9px;
+  flex-wrap:wrap;
+}
+
+.creator-banner-inner .creator-actions a {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:900;
+  padding:14px 18px;
+  min-width:263px;
+  min-height:54px;
+  border:1px solid #fff;
+  border-radius:15px;
+  white-space:nowrap;
+  box-shadow:0 4px 12px #00143730;
+  transition:transform .15s,background .15s;
+}
+
+.creator-banner-inner .creator-follow {
+  background:#fff;
+  color:#123c78;
+}
+
+.creator-banner-inner .creator-actions a:hover {
+  background:#edf3ff;
+  transform:translateY(-1px);
+}
+
+/* Donate banner */
+
+.donate-banner {
+  padding:0 18px 14px;
+  background:linear-gradient(110deg,#eaf1ff 0%,#f7f9ff 52%,#fff 100%);
+}
+
+.donate-banner-inner {
+  position:relative;
+  overflow:hidden;
+  max-width:1260px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px 19px;
+  border:1px solid #d7e3f7;
+  border-radius:16px;
+  background:linear-gradient(115deg,#0a2456 0%,#174ea6 75%,#2163bd 100%);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(14,48,103,.15);
+}
+
+.donate-banner-inner:after {
+  content:"";
+  position:absolute;
+  right:150px;
+  top:-42px;
+  width:140px;
+  height:140px;
+  border:18px solid rgba(255,255,255,.07);
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.donate-copy {
+  position:relative;
+  z-index:1;
+  display:block;
+  min-width:0;
+  color:#e0eaff;
+  font-size:.81rem;
+  line-height:1.45;
+}
+
+.donate-icon {
+  font-size:1.35rem;
+}
+
+.donate-button {
+  position:relative;
+  z-index:1;
+  margin-left:auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:14px 22px;
+  min-width:188px;
+  min-height:54px;
+  border:1px solid #fff;
+  border-radius:15px;
+  background:#fff;
+  color:#123c78;
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:900;
+  white-space:nowrap;
+  box-shadow:0 4px 12px #00143730;
+  transition:transform .15s,background .15s;
+}
+
+.donate-button:hover {
+  background:#edf3ff;
+  transform:translateY(-1px);
+}
+
+/* Main content */
+
+main { padding:26px 18px 42px; }
+
+.intro {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:12px;
+  flex-wrap:wrap;
+  background:#fff;
+  border:1px solid #e4eaf4;
+  border-radius:18px;
+  padding:22px 24px;
+  box-shadow:0 10px 28px rgba(18,48,91,.06);
+  margin-top:-8px;
+  position:relative;
+}
+
+h2 {
+  font-size:1.55rem;
+  letter-spacing:-.035em;
+  margin:0;
+}
+
+.muted { color:var(--muted); }
+
+.subtext {
+  margin:5px 0 0;
+  font-size:.9rem;
+  line-height:1.6;
+}
+
+.about-button {
+  border:1px solid #cbd9ed;
+  background:#fff;
+  color:#173f7b;
+  border-radius:999px;
+  padding:8px 13px;
+  font-size:.8rem;
+  font-weight:800;
+  box-shadow:0 3px 10px rgba(7,29,73,.06);
+  cursor:pointer;
+}
+
+.about-button:hover {
+  background:#edf3ff;
+  border-color:#9bb9e8;
+}
+
+.about-dialog {
+  width:min(560px,calc(100% - 28px));
+  border:1px solid #dce5f2;
+  border-radius:18px;
+  padding:0;
+  color:var(--ink);
+  box-shadow:0 24px 80px rgba(4,22,55,.3);
+}
+
+.about-dialog::backdrop {
+  background:rgba(5,19,43,.62);
+  backdrop-filter:blur(3px);
+}
+
+.about-dialog-head {
+  background:linear-gradient(115deg,#071d49,#174ea6);
+  color:#fff;
+  padding:20px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.about-dialog-head h2 {
+  font-size:1.25rem;
+  margin:0;
+}
+
+.about-close {
+  border:1px solid #ffffff66;
+  background:#ffffff16;
+  color:#fff;
+  border-radius:8px;
+  padding:7px 11px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.about-dialog-body {
+  padding:21px 23px;
+  line-height:1.7;
+}
+
+.about-dialog-body ul {
+  padding-left:21px;
+  margin:9px 0 14px;
+}
+
+.about-dialog-body li { margin:6px 0; }
+
+.about-footnote {
+  font-size:.82rem;
+  color:var(--muted);
+  background:#f2f6fc;
+  border-radius:9px;
+  padding:11px 13px;
+  margin-top:14px;
+}
+
+/* Controls */
+
+.controls-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:18px 0 12px;
+}
+
+button,input,select { font:inherit; }
+
+button { cursor:pointer; }
+
+button:focus-visible,input:focus-visible,select:focus-visible {
+  outline:3px solid var(--orange);
+  outline-offset:2px;
+}
+
+.nav-btn,.week-btn {
+  border:1px solid #dbe3ef;
+  background:#fff;
+  color:#3a4b64;
+  border-radius:10px;
+  min-height:44px;
+  padding:10px 16px;
+  box-shadow:0 2px 5px rgba(20,40,80,.025);
+  transition:transform .15s,box-shadow .15s,background .15s;
+  font-size:.86rem;
+  font-weight:800;
+}
+
+.nav-btn:hover,.week-btn:hover {
+  transform:translateY(-1px);
+  box-shadow:0 5px 12px rgba(20,40,80,.09);
+}
+
+.nav-btn.active {
+  background:var(--navy);
+  border-color:var(--navy);
+  color:#fff;
+  box-shadow:inset 0 -3px 0 var(--orange),0 5px 12px #071d4920;
+}
+
+.week-btn[aria-pressed="true"] {
+  background:var(--blue);
+  border-color:var(--blue);
+  color:#fff;
+  box-shadow:inset 0 -3px 0 var(--orange),0 4px 12px #174ea628;
+}
+
+/* Filters */
+
+.filters {
+  display:grid;
+  grid-template-columns:minmax(220px,1.5fr) minmax(160px,.7fr) minmax(160px,.7fr);
+  gap:14px;
+  padding:17px;
+  background:#fff;
+  border:1px solid #e2e9f3;
+  border-radius:15px;
+  margin:16px 0;
+  box-shadow:0 6px 20px rgba(18,48,91,.035);
+}
+
+label {
+  display:block;
+  font-size:.72rem;
+  font-weight:850;
+  letter-spacing:.035em;
+  color:#53647c;
+  margin-bottom:6px;
+}
+
+input,select {
+  width:100%;
+  min-height:45px;
+  padding:10px 12px;
+  border:1px solid #d5deeb;
+  border-radius:9px;
+  background:#fff;
+  color:var(--ink);
+  font-size:.9rem;
+  transition:border .15s,box-shadow .15s;
+}
+
+input:focus,select:focus {
+  border-color:#3975ce;
+  box-shadow:0 0 0 3px #3975ce1a;
+  outline:0;
+}
+
+/* Player table */
+
+.table-wrap {
+  background:#fff;
+  border:1px solid #e1e8f2;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(18,48,91,.07);
+}
+
+.table-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:17px 19px;
+  background:linear-gradient(90deg,#fff,#f9fbff);
+  border-bottom:1px solid #e5ebf4;
+}
+
+.table-title {
+  font-weight:900;
+  font-size:1rem;
+}
+
+.count {
+  background:#edf3ff;
+  color:#28538f;
+  padding:5px 9px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:750;
+}
+
+.table-scroll { overflow-x:auto; }
+
+table {
+  border-collapse:collapse;
+  width:100%;
+  min-width:820px;
+  font-size:.85rem;
+}
+
+thead th {
+  text-align:left;
+  background:#edf3ff;
+  color:#29476f;
+  text-transform:uppercase;
+  letter-spacing:.045em;
+  font-size:.67rem;
+  padding:14px 13px;
+  white-space:nowrap;
+}
+
+tbody td {
+  padding:14px 13px;
+  border-bottom:1px solid #eef2f7;
+  vertical-align:top;
+}
+
+tbody tr:nth-child(even) { background:#fbfcff; }
+tbody tr:hover { background:#f0f5ff; }
+tbody tr:last-child td { border-bottom:0; }
+
+.player {
+  color:#102d5c;
+  font-weight:850;
+  white-space:nowrap;
+}
+
+.rank,.age {
+  font-weight:900;
+  font-variant-numeric:tabular-nums;
+}
+
+.badge {
+  display:inline-block;
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:.69rem;
+  font-weight:850;
+  white-space:nowrap;
+}
+
+.atp { background:#e6efff;color:#214f9c; }
+.challenger { background:#eee9ff;color:#6042a2; }
+.itf { background:#e7f7ef;color:#14734b; }
+
+.event {
+  font-weight:750;
+  color:#1c477f;
+  margin-top:6px;
+}
+
+.empty {
+  padding:28px;
+  text-align:center;
+  color:var(--muted);
+}
+
+footer {
+  text-align:center;
+  color:#7a8799;
+  font-size:.78rem;
+  padding:0 18px 30px;
+}
+
+/* Mobile layout */
+
+@media(max-width:720px) {
+  header { padding:27px 16px 48px; }
+
+  header:before {
+    width:240px;
+    height:240px;
+    right:-100px;
+    top:-120px;
+  }
+
+  main { padding:20px 12px 30px; }
+
+  .intro {
+    padding:18px 16px;
+    border-radius:14px;
+  }
+
+  .filters {
+    grid-template-columns:1fr;
+    padding:14px;
+    border-radius:13px;
+  }
+
+  .controls-row { gap:8px; }
+
+  .nav-btn,.week-btn {
+    font-size:.82rem;
+    padding:10px 8px;
+    border-radius:9px;
+  }
+
+  .table-wrap { border-radius:13px; }
+  .table-head { padding:14px; }
+}
+
+@media(max-width:650px) {
+  .creator-banner { padding:11px 10px; }
+
+  .creator-banner-inner {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    gap:10px;
+    padding:13px 12px;
+    border-radius:13px;
+  }
+
+  .creator-icon,.donate-icon {
+    flex:0 0 39px;
+    width:39px;
+    height:39px;
+    border-radius:11px;
+    font-size:1.15rem;
+  }
+
+  .creator-copy {
+    flex:1 1 calc(100% - 50px);
+    min-width:0;
+  }
+
+  .creator-banner-inner strong,.donate-banner-inner strong {
+    font-size:.9rem;
+  }
+
+  .creator-sub,.donate-copy { font-size:.76rem; }
+
+  .creator-actions {
+    width:100%;
+    flex:0 0 100%;
+    margin:0;
+    display:flex;
+  }
+
+  .creator-banner-inner .creator-actions a {
+    width:100%;
+    flex:1 1 100%;
+    padding:10px 12px;
+    font-size:.82rem;
+    min-height:44px;
+  }
+
+  .donate-banner { padding:0 10px 11px; }
+
+  .donate-banner-inner {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    gap:10px;
+    padding:13px 12px;
+    border-radius:13px;
+  }
+
+  .donate-banner-inner .creator-copy {
+    flex:1 1 calc(100% - 50px);
+    min-width:0;
+  }
+
+  .donate-copy { line-height:1.45; }
+
+  .donate-button {
+    flex:0 0 100%;
+    width:100%;
+    min-width:0;
+    min-height:44px;
+    margin:0;
+    padding:10px 12px;
+    font-size:.82rem;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="header-inner">
-  <div class="eyebrow"><span class="logo">BT</span> British tennis data</div>
-  <h1>British Tennis Players</h1>
-  <p>Rankings and tournament entries for British players across the professional tours.</p>
-</div></header>
+
+<header>
+  <div class="header-inner">
+    <div class="eyebrow"><span class="logo">BT</span> British tennis data</div>
+    <h1>British Tennis Players</h1>
+    <p>Rankings and tournament entries for British players across the professional tours.</p>
+  </div>
+</header>
 
 <div class="creator-banner" role="complementary" aria-label="Website creator">
   <div class="creator-banner-inner">
     <span class="creator-icon" aria-hidden="true">𝕏</span>
-    <span class="creator-copy"><strong>BritishTennisUp</strong><span class="creator-sub">Follow on X for more British tennis news, rankings and updates.</span></span>
-    <div class="creator-actions"><a class="creator-follow" href="https://x.com/BritishTennisUp" target="_blank" rel="noopener noreferrer">Follow @BritishTennisUp <span aria-hidden="true">↗</span></a></div>
+    <span class="creator-copy">
+      <strong>BritishTennisUp</strong>
+      <span class="creator-sub">Follow on X for more British tennis news, rankings and updates.</span>
+    </span>
+    <div class="creator-actions">
+      <a class="creator-follow" href="https://x.com/BritishTennisUp" target="_blank" rel="noopener noreferrer">
+        Follow @BritishTennisUp <span aria-hidden="true">↗</span>
+      </a>
+    </div>
   </div>
 </div>
 
 <div class="donate-banner" role="complementary" aria-label="Support the website">
   <div class="donate-banner-inner">
     <span class="donate-icon" aria-hidden="true">☕</span>
-    <span class="creator-copy"><strong>Support This Website</strong><span class="donate-copy">Enjoying the site? Help keep it running and support future updates with a small donation.</span></span>
-    <a class="donate-button" href="https://buymeacoffee.com/britishtennisupdates" target="_blank" rel="noopener noreferrer">Donate <span aria-hidden="true">↗</span></a>
+    <span class="creator-copy">
+      <strong>Support This Website</strong>
+      <span class="donate-copy">Enjoying the site? Help keep it running and support future updates with a small donation.</span>
+    </span>
+    <a class="donate-button" href="https://buymeacoffee.com/britishtennisupdates" target="_blank" rel="noopener noreferrer">
+      Donate <span aria-hidden="true">↗</span>
+    </a>
   </div>
 </div>
 
 <main>
   <div class="intro">
-    <div><h2 id="heading">Men's player summary</h2><p class="subtext muted">Player rankings and tournament schedules for the next three weeks.</p></div>
+    <div>
+      <h2 id="heading">Men's player summary</h2>
+      <p class="subtext muted">Player rankings and tournament schedules for the next three weeks.</p>
+    </div>
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-      <button type="button" class="about-button" id="aboutOpen" aria-haspopup="dialog" aria-controls="aboutDialog">ⓘ What is this page?</button>
+      <button type="button" class="about-button" id="aboutOpen" aria-haspopup="dialog" aria-controls="aboutDialog">
+        ⓘ What is this page?
+      </button>
     </div>
   </div>
 
   <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutTitle">
-    <div class="about-dialog-head"><h2 id="aboutTitle">About British Tennis Players</h2><button type="button" class="about-close" id="aboutClose" aria-label="Close description">Close ✕</button></div>
+    <div class="about-dialog-head">
+      <h2 id="aboutTitle">About British Tennis Players</h2>
+      <button type="button" class="about-close" id="aboutClose" aria-label="Close description">Close ✕</button>
+    </div>
     <div class="about-dialog-body">
       <p>This page brings together British players’ world rankings and their tournament entries for <strong>this week, next week and the following week</strong>.</p>
       <ul>
@@ -166,9 +780,26 @@ footer{padding:0 18px 30px;color:#7a8799}
   </div>
 
   <div class="filters">
-    <div><label for="search">Search player or tournament</label><input id="search" type="search" placeholder="Search a player or tournament…"></div>
-    <div><label for="ranking">Ranking filter</label><select id="ranking"><option value="all">All rankings</option><option value="top50">Top 50</option><option value="top100">Top 100</option><option value="outside100">Outside top 100</option></select></div>
-    <div><label for="sort">Sort by</label><select id="sort"><option value="rank">World ranking</option><option value="name">Player name A–Z</option></select></div>
+    <div>
+      <label for="search">Search player or tournament</label>
+      <input id="search" type="search" placeholder="Search a player or tournament…">
+    </div>
+    <div>
+      <label for="ranking">Ranking filter</label>
+      <select id="ranking">
+        <option value="all">All rankings</option>
+        <option value="top50">Top 50</option>
+        <option value="top100">Top 100</option>
+        <option value="outside100">Outside top 100</option>
+      </select>
+    </div>
+    <div>
+      <label for="sort">Sort by</label>
+      <select id="sort">
+        <option value="rank">World ranking</option>
+        <option value="name">Player name A–Z</option>
+      </select>
+    </div>
   </div>
 
   <div class="controls-row" aria-label="Schedule week">
@@ -179,8 +810,16 @@ footer{padding:0 18px 30px;color:#7a8799}
   </div>
 
   <section class="table-wrap" aria-live="polite">
-    <div class="table-head"><div class="table-title" id="tableTitle">Men's player summary</div><div class="count" id="count">10 players</div></div>
-    <div class="table-scroll"><table><thead id="columns"></thead><tbody id="rows"></tbody></table></div>
+    <div class="table-head">
+      <div class="table-title" id="tableTitle">Men's player summary</div>
+      <div class="count" id="count">21 players</div>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead id="columns"></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
     <div id="empty" class="empty" hidden>No matching players found, or no data has been added for this category yet.</div>
   </section>
 </main>
@@ -191,48 +830,65 @@ footer{padding:0 18px 30px;color:#7a8799}
 (function () {
   const players = {
     men: [
-      {"name":"Arthur Fery","rank":32,"age":24,"thisEvent":"ATP Masters 1000 Paris","nextEvent":"ATP 250 Stockholm","laterEvent":"—"},
-      {"name":"Cameron Norrie","rank":45,"age":31,"thisEvent":"ATP Masters 1000 Paris","nextEvent":"ATP 250 Stockholm","laterEvent":"—"},
-      {"name":"Jake Fearnley","rank":90,"age":25,"thisEvent":"—","nextEvent":"—","laterEvent":"Ch 125 Helsinki"},
-      {"name":"Toby Samuel","rank":97,"age":24,"thisEvent":"Ch 100 Bratislava","nextEvent":"—","laterEvent":"Ch 125 Helsinki"},
-      {"name":"Jan Choinski","rank":113,"age":30,"thisEvent":"—","nextEvent":"—","laterEvent":"Ch 125 Metz"},
-      {"name":"Jack Pinnington Jones","rank":190,"age":23,"thisEvent":"—","nextEvent":"Ch 75 Knoxville","laterEvent":"—"},
-      {"name":"Liam Broady","rank":212,"age":32,"thisEvent":"Ch 100 Taipei","nextEvent":"Ch 75 Matsuyama","laterEvent":"Ch 75 Kobe"},
-      {"name":"Harry Wendelken","rank":213,"age":24,"thisEvent":"Ch 75 Charlottesville","nextEvent":"Ch 75 Knoxville","laterEvent":"Ch 50 Champaign"},
-      {"name":"Henry Searle","rank":217,"age":20,"thisEvent":"—","nextEvent":"Ch 50 Hersonissos","laterEvent":"—"},
-      {"name":"Felix Gill","rank":228,"age":24,"thisEvent":"Ch 50 Taranto","nextEvent":"Ch 50 Hersonissos","laterEvent":"—"},
-      {"name":"Billy Harris","rank":232,"age":31,"thisEvent":"Ch 100 Taipei","nextEvent":"Ch 75 Matsuyama","laterEvent":"Ch 75 Kobe"},
-      {"name":"Jay Clarke","rank":241,"age":28,"thisEvent":"Ch 50 Taranto","nextEvent":"Ch 50 Monastir","laterEvent":"—"},
-      {"name":"Max Basing","rank":259,"age":24,"thisEvent":"—","nextEvent":"Ch 75 Matsuyama","laterEvent":"—"},
-      {"name":"Charles Broom","rank":264,"age":28,"thisEvent":"Ch 100 Taipei","nextEvent":"Ch 75 Brisbane","laterEvent":"Ch 75 Sydney"},
-      {"name":"Alastair Gray","rank":270,"age":28,"thisEvent":"Ch 75 Charlottesville","nextEvent":"Ch 75 Knoxville Qualifying","laterEvent":"Ch 50 Champaign"},
-      {"name":"Ollie Tarvet","rank":275,"age":23,"thisEvent":"—","nextEvent":"Ch 75 Knoxville Qualifying","laterEvent":"Ch 50 Champaign"},
-      {"name":"Giles Hussey","rank":330,"age":29,"thisEvent":"Ch 75 Charlottesville Qualifying","nextEvent":"Ch 75 Knoxville Qualifying","laterEvent":"—"},
-      {"name":"Lui Maxted","rank":428,"age":22,"thisEvent":"—","nextEvent":"Ch 75 Knoxville Qualifying","laterEvent":"—"},
-      {"name":"Emile Hudd","rank":466,"age":26,"thisEvent":"Ch 75 Charlottesville Qualifying","nextEvent":"—","laterEvent":"—"},
-      {"name":"Johannus Monday","rank":509,"age":24,"thisEvent":"—","nextEvent":"Ch 50 Hersonissos Qualifying","laterEvent":"—"},
-      {"name":"Ryan Peniston","rank":886,"age":30,"thisEvent":"Ch 50 Taranto Qualifying","nextEvent":"—","laterEvent":"—"},
-      {"name":"Marcus Walters","rank":898,"age":28,"thisEvent":"Ch 50 Taranto Qualifying","nextEvent":"—","laterEvent":"—"}
+      {name:"Arthur Fery",rank:32,age:24,thisEvent:"ATP Masters 1000 Paris",nextEvent:"ATP 250 Stockholm",laterEvent:"—"},
+      {name:"Cameron Norrie",rank:45,age:31,thisEvent:"ATP Masters 1000 Paris",nextEvent:"ATP 250 Stockholm",laterEvent:"—"},
+      {name:"Jake Fearnley",rank:90,age:25,thisEvent:"—",nextEvent:"—",laterEvent:"Ch 125 Helsinki"},
+      {name:"Toby Samuel",rank:97,age:24,thisEvent:"Ch 100 Bratislava",nextEvent:"—",laterEvent:"Ch 125 Helsinki"},
+      {name:"Jan Choinski",rank:113,age:30,thisEvent:"—",nextEvent:"—",laterEvent:"Ch 125 Metz"},
+      {name:"Jack Pinnington Jones",rank:190,age:23,thisEvent:"—",nextEvent:"Ch 75 Knoxville",laterEvent:"—"},
+      {name:"Liam Broady",rank:212,age:32,thisEvent:"Ch 100 Taipei",nextEvent:"Ch 75 Matsuyama",laterEvent:"Ch 75 Kobe"},
+      {name:"Harry Wendelken",rank:213,age:24,thisEvent:"Ch 75 Charlottesville",nextEvent:"Ch 75 Knoxville",laterEvent:"Ch 50 Champaign"},
+      {name:"Henry Searle",rank:217,age:20,thisEvent:"—",nextEvent:"Ch 50 Hersonissos",laterEvent:"—"},
+      {name:"Felix Gill",rank:228,age:24,thisEvent:"Ch 50 Taranto",nextEvent:"Ch 50 Hersonissos",laterEvent:"—"},
+      {name:"Billy Harris",rank:232,age:31,thisEvent:"Ch 100 Taipei",nextEvent:"Ch 75 Matsuyama",laterEvent:"Ch 75 Kobe"},
+      {name:"Jay Clarke",rank:241,age:28,thisEvent:"Ch 50 Taranto",nextEvent:"Ch 50 Monastir",laterEvent:"—"},
+      {name:"Max Basing",rank:259,age:24,thisEvent:"—",nextEvent:"Ch 75 Matsuyama",laterEvent:"—"},
+      {name:"Charles Broom",rank:264,age:28,thisEvent:"Ch 100 Taipei",nextEvent:"Ch 75 Brisbane",laterEvent:"Ch 75 Sydney"},
+      {name:"Alastair Gray",rank:270,age:28,thisEvent:"Ch 75 Charlottesville",nextEvent:"Ch 75 Knoxville Qualifying",laterEvent:"Ch 50 Champaign"},
+      {name:"Ollie Tarvet",rank:275,age:23,thisEvent:"—",nextEvent:"Ch 75 Knoxville Qualifying",laterEvent:"Ch 50 Champaign"},
+      {name:"Giles Hussey",rank:330,age:29,thisEvent:"Ch 75 Charlottesville Qualifying",nextEvent:"Ch 75 Knoxville Qualifying",laterEvent:"—"},
+      {name:"Lui Maxted",rank:428,age:22,thisEvent:"—",nextEvent:"Ch 75 Knoxville Qualifying",laterEvent:"—"},
+      {name:"Emile Hudd",rank:466,age:26,thisEvent:"Ch 75 Charlottesville Qualifying",nextEvent:"—",laterEvent:"—"},
+      {name:"Johannus Monday",rank:509,age:24,thisEvent:"—",nextEvent:"Ch 50 Hersonissos Qualifying",laterEvent:"—"},
+      {name:"Ryan Peniston",rank:886,age:30,thisEvent:"Ch 50 Taranto Qualifying",nextEvent:"—",laterEvent:"—"},
+      {name:"Marcus Walters",rank:898,age:28,thisEvent:"Ch 50 Taranto Qualifying",nextEvent:"—",laterEvent:"—"}
     ],
+
     women: [
-      {"name":"Katie Boulter","rank":49,"age":30,"thisEvent":"WTA250 Hong Kong","nextEvent":"—","laterEvent":"—"},
-      {"name":"Harriet Dart","rank":84,"age":30,"thisEvent":"—","nextEvent":"W50 Yokohama","laterEvent":"—"},
-      {"name":"Fran Jones","rank":98,"age":26,"thisEvent":"—","nextEvent":"WTA125 Sopo","laterEvent":"WTA125 Colina"},
-      {"name":"Katie Swan","rank":205,"age":27,"thisEvent":"W100 Incheon","nextEvent":"W75 Brisbane","laterEvent":"—"},
-      {"name":"Naiktha Bains","rank":354,"age":28,"thisEvent":"—","nextEvent":"W75 Brisbane Qualifying","laterEvent":"—"},
-      {"name":"Heather Watson","rank":361,"age":34,"thisEvent":"WTA250 Hong Kong Qualifying","nextEvent":"W50 Yokohama Qualifying","laterEvent":"—"},
-      {"name":"Sofia Johnson","rank":363,"age":22,"thisEvent":"W50 Huamantla","nextEvent":"W50 Chihuahua Qualifying","laterEvent":"—"},
-      {"name":"Millie Rajecki","rank":382,"age":24,"thisEvent":"WTA250 Chennai (Doubles)","nextEvent":"—","laterEvent":"—"},
-      {"name":"Mika Stojsavljevic","rank":411,"age":17,"thisEvent":"WTA250 Hong Kong Qualifying","nextEvent":"—","laterEvent":"—"},
-      {"name":"Jodie Burrage","rank":474,"age":27,"thisEvent":"WTA250 Chennai","nextEvent":"—","laterEvent":"—"},
-      {"name":"Vic Allen","rank":639,"age":25,"thisEvent":"W50 Heraklion","nextEvent":"—","laterEvent":"—"}
+      {name:"Katie Boulter",rank:49,age:30,thisEvent:"WTA250 Hong Kong",nextEvent:"—",laterEvent:"—"},
+      {name:"Harriet Dart",rank:84,age:30,thisEvent:"—",nextEvent:"W50 Yokohama",laterEvent:"—"},
+      {name:"Fran Jones",rank:98,age:26,thisEvent:"—",nextEvent:"WTA125 Sopo",laterEvent:"WTA125 Colina"},
+      {name:"Katie Swan",rank:205,age:27,thisEvent:"W100 Incheon",nextEvent:"W75 Brisbane",laterEvent:"—"},
+      {name:"Naiktha Bains",rank:354,age:28,thisEvent:"—",nextEvent:"W75 Brisbane Qualifying",laterEvent:"—"},
+      {name:"Heather Watson",rank:361,age:34,thisEvent:"WTA250 Hong Kong Qualifying",nextEvent:"W50 Yokohama Qualifying",laterEvent:"—"},
+      {name:"Sofia Johnson",rank:363,age:22,thisEvent:"W50 Huamantla",nextEvent:"W50 Chihuahua Qualifying",laterEvent:"—"},
+      {name:"Millie Rajecki",rank:382,age:24,thisEvent:"WTA250 Chennai (Doubles)",nextEvent:"—",laterEvent:"—"},
+      {name:"Mika Stojsavljevic",rank:411,age:17,thisEvent:"WTA250 Hong Kong Qualifying",nextEvent:"—",laterEvent:"—"},
+      {name:"Jodie Burrage",rank:474,age:27,thisEvent:"WTA250 Chennai",nextEvent:"—",laterEvent:"—"},
+      {name:"Vic Allen",rank:639,age:25,thisEvent:"W50 Heraklion",nextEvent:"—",laterEvent:"—"}
     ]
   };
 
-  const state = {gender:"men",view:"threeweek",week:"this"};
+  const state = {
+    gender:"men",
+    view:"threeweek",
+    week:"this"
+  };
+
   const el = id => document.getElementById(id);
-  const safe = value => String(value == null ? "—" : value).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
-  const eventKey = () => state.week === "this" ? "thisEvent" : state.week === "next" ? "nextEvent" : "laterEvent";
+
+  const safe = value =>
+    String(value == null ? "—" : value).replace(/[&<>"']/g, ch => ({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    }[ch]));
+
+  const eventKey = () =>
+    state.week === "this" ? "thisEvent" :
+    state.week === "next" ? "nextEvent" : "laterEvent";
 
   function tourLevel(event) {
     if (!event || event === "—") return "—";
@@ -246,64 +902,136 @@ footer{padding:0 18px 30px;color:#7a8799}
   function filtered() {
     const query = el("search").value.trim().toLowerCase();
     const range = el("ranking").value;
+
     let list = players[state.gender].filter(p => {
-      const rankOK = range === "all" || (range === "top50" && p.rank <= 50) ||
-        (range === "top100" && p.rank <= 100) || (range === "outside100" && p.rank > 100);
-      const textOK = (p.name+" "+p.thisEvent+" "+p.nextEvent+" "+p.laterEvent).toLowerCase().includes(query);
+      const rankOK =
+        range === "all" ||
+        (range === "top50" && p.rank <= 50) ||
+        (range === "top100" && p.rank <= 100) ||
+        (range === "outside100" && p.rank > 100);
+
+      const textOK =
+        (p.name+" "+p.thisEvent+" "+p.nextEvent+" "+p.laterEvent)
+        .toLowerCase().includes(query);
+
       const key = eventKey();
-      const scheduleOK = state.view === "schedule" ? p[key] !== "—" :
-        state.view === "threeweek" ? [p.thisEvent,p.nextEvent,p.laterEvent].some(event => event !== "—") : true;
+
+      const scheduleOK =
+        state.view === "schedule" ? p[key] !== "—" :
+        state.view === "threeweek" ?
+        [p.thisEvent,p.nextEvent,p.laterEvent].some(event => event !== "—") :
+        true;
+
       return rankOK && textOK && scheduleOK;
     });
+
     const sort = el("sort").value;
-    list.sort((a,b) => sort === "name" ? a.name.localeCompare(b.name) : a.rank-b.rank);
+
+    list.sort((a,b) =>
+      sort === "name" ?
+      a.name.localeCompare(b.name) :
+      a.rank-b.rank
+    );
+
     return list;
   }
 
   function render() {
     const list = filtered();
     const gender = state.gender === "men" ? "Men's" : "Women's";
-    const weekLabel = state.week === "this" ? "This week" : state.week === "next" ? "Next week" : "Following week";
+
+    const weekLabel =
+      state.week === "this" ? "This week" :
+      state.week === "next" ? "Next week" : "Following week";
+
     const isThreeWeek = state.view === "threeweek";
-    el("heading").textContent = gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
-    el("tableTitle").textContent = gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
+
+    el("heading").textContent =
+      gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
+
+    el("tableTitle").textContent =
+      gender + (isThreeWeek ? " three-week schedule" : " schedule · " + weekLabel);
 
     if (isThreeWeek) {
-      const entries = list.reduce((n,p) => n + [p.thisEvent,p.nextEvent,p.laterEvent].filter(event => event !== "—").length, 0);
-      el("count").textContent = list.length + (list.length === 1 ? " player" : " players") + " · " + entries + (entries === 1 ? " entry" : " entries");
-      el("columns").innerHTML = "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>This week</th><th>Next week</th><th>Following week</th></tr>";
+      const entries = list.reduce((n,p) =>
+        n + [p.thisEvent,p.nextEvent,p.laterEvent]
+        .filter(event => event !== "—").length,0
+      );
+
+      el("count").textContent =
+        list.length + (list.length === 1 ? " player" : " players") +
+        " · " + entries + (entries === 1 ? " entry" : " entries");
+
+      el("columns").innerHTML =
+        "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>This week</th><th>Next week</th><th>Following week</th></tr>";
 
       const eventCell = event => {
-        if (!event || event === "—") return '<span class="muted">—</span>';
+        if (!event || event === "—") {
+          return '<span class="muted">—</span>';
+        }
+
         const level = tourLevel(event);
-        const badgeClass = level === "Challenger" ? "challenger" : level === "ITF" ? "itf" : "atp";
-        return '<span class="badge '+badgeClass+'">'+safe(level)+'</span><div class="event" style="margin-top:6px">'+safe(event)+'</div>';
+
+        const badgeClass =
+          level === "Challenger" ? "challenger" :
+          level === "ITF" ? "itf" : "atp";
+
+        return '<span class="badge '+badgeClass+'">'+safe(level)+'</span>' +
+          '<div class="event">'+safe(event)+'</div>';
       };
 
-      el("rows").innerHTML = list.map(p => '<tr><td class="player">'+safe(p.name)+'</td><td class="rank">'+safe(p.rank)+'</td><td class="age">'+safe(p.age)+'</td><td>'+eventCell(p.thisEvent)+'</td><td>'+eventCell(p.nextEvent)+'</td><td>'+eventCell(p.laterEvent)+'</td></tr>').join("");
+      el("rows").innerHTML = list.map(p =>
+        '<tr>' +
+          '<td class="player">'+safe(p.name)+'</td>' +
+          '<td class="rank">'+safe(p.rank)+'</td>' +
+          '<td class="age">'+safe(p.age)+'</td>' +
+          '<td>'+eventCell(p.thisEvent)+'</td>' +
+          '<td>'+eventCell(p.nextEvent)+'</td>' +
+          '<td>'+eventCell(p.laterEvent)+'</td>' +
+        '</tr>'
+      ).join("");
+
     } else {
       const key = eventKey();
+
       el("count").textContent = list.length + " entries";
-      el("columns").innerHTML = "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>Tour level</th><th>Tournament</th><th>Week</th></tr>";
+
+      el("columns").innerHTML =
+        "<tr><th>Player</th><th>World ranking</th><th>Age</th><th>Tour level</th><th>Tournament</th><th>Week</th></tr>";
 
       el("rows").innerHTML = list.map(p => {
         const level = tourLevel(p[key]);
-        const badgeClass = level === "Challenger" ? "challenger" : level === "ITF" ? "itf" : "atp";
-        return '<tr><td class="player">'+safe(p.name)+'</td><td class="rank">'+safe(p.rank)+'</td><td class="age">'+safe(p.age)+'</td><td>'+(level === "—" ? '—' : '<span class="badge '+badgeClass+'">'+safe(level)+'</span>')+'</td><td class="event">'+safe(p[key])+'</td><td>'+safe(weekLabel)+'</td></tr>';
+
+        const badgeClass =
+          level === "Challenger" ? "challenger" :
+          level === "ITF" ? "itf" : "atp";
+
+        return '<tr>' +
+          '<td class="player">'+safe(p.name)+'</td>' +
+          '<td class="rank">'+safe(p.rank)+'</td>' +
+          '<td class="age">'+safe(p.age)+'</td>' +
+          '<td>'+(level === "—" ? '—' :
+            '<span class="badge '+badgeClass+'">'+safe(level)+'</span>')+'</td>' +
+          '<td class="event">'+safe(p[key])+'</td>' +
+          '<td>'+safe(weekLabel)+'</td>' +
+        '</tr>';
       }).join("");
     }
 
     el("empty").hidden = list.length !== 0;
+
     document.querySelectorAll("[data-gender]").forEach(b => {
       const active = b.dataset.gender === state.gender;
       b.classList.toggle("active",active);
       b.setAttribute("aria-pressed",String(active));
     });
+
     document.querySelectorAll("[data-view]").forEach(b => {
       const active = b.dataset.view === state.view;
       b.classList.toggle("active",active);
       b.setAttribute("aria-pressed",String(active));
     });
+
     document.querySelectorAll("[data-week]").forEach(b => {
       const active = state.view === "schedule" && b.dataset.week === state.week;
       b.classList.toggle("active",active);
@@ -311,27 +1039,42 @@ footer{padding:0 18px 30px;color:#7a8799}
     });
   }
 
-  document.querySelectorAll("[data-gender]").forEach(b => b.addEventListener("click", () => {
-    state.gender = b.dataset.gender;
-    render();
-  }));
-  document.querySelectorAll("[data-view]").forEach(b => b.addEventListener("click", () => {
-    state.view = b.dataset.view;
-    render();
-  }));
-  document.querySelectorAll("[data-week]").forEach(b => b.addEventListener("click", () => {
-    state.week = b.dataset.week;
-    state.view = "schedule";
-    render();
-  }));
+  document.querySelectorAll("[data-gender]").forEach(b =>
+    b.addEventListener("click", () => {
+      state.gender = b.dataset.gender;
+      render();
+    })
+  );
+
+  document.querySelectorAll("[data-view]").forEach(b =>
+    b.addEventListener("click", () => {
+      state.view = b.dataset.view;
+      render();
+    })
+  );
+
+  document.querySelectorAll("[data-week]").forEach(b =>
+    b.addEventListener("click", () => {
+      state.week = b.dataset.week;
+      state.view = "schedule";
+      render();
+    })
+  );
 
   el("search").addEventListener("input",render);
   el("ranking").addEventListener("change",render);
   el("sort").addEventListener("change",render);
 
   const aboutDialog = el("aboutDialog");
-  el("aboutOpen").addEventListener("click", () => aboutDialog.showModal());
-  el("aboutClose").addEventListener("click", () => aboutDialog.close());
+
+  el("aboutOpen").addEventListener("click", () =>
+    aboutDialog.showModal()
+  );
+
+  el("aboutClose").addEventListener("click", () =>
+    aboutDialog.close()
+  );
+
   aboutDialog.addEventListener("click", event => {
     if (event.target === aboutDialog) aboutDialog.close();
   });
@@ -339,5 +1082,6 @@ footer{padding:0 18px 30px;color:#7a8799}
   render();
 })();
 </script>
+
 </body>
 </html>
